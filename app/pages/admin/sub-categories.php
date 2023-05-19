@@ -1,5 +1,6 @@
-<?php if($action == 'add'): ?>
-    <h2>Create Category</h2>
+<?php if($sub_action == 'add'): ?>
+    <h2>Create Sub-Category</h2>
+
     <form method="post" enctype="multipart/form-data">
 
         <?php if (!empty($errors)): ?>
@@ -21,10 +22,10 @@
             }
         </script>
 
-        <label>Category</label>
-        <input name="category" type="text" value="<?=old_value('category')?>" />
-        <?php if(!empty($errors['category'])): ?>
-            <p><?=$errors['category']?></p>
+        <label>Sub-Category</label>
+        <input name="sub-category" type="text" value="<?=old_value('sub-category')?>" />
+        <?php if(!empty($errors['sub-category'])): ?>
+            <p><?=$errors['sub-category']?></p>
         <?php endif; ?>
 
         <label>Active</label>
@@ -33,13 +34,13 @@
             <option value="1">No</option>
         </select>
 
-        <a href="<?php echo ROOT; ?>/admin/categories">Cancel</a>
+        <a href="<?php echo ROOT; ?>/admin/categories/sub-categories/<?=$id?>">Cancel</a>
         <button type="submit">Create</button>
     </form>
 
-<?php elseif($action == 'edit'): ?>
+<?php elseif($sub_action == 'edit'): ?>
 
-    <h2>Edit Category</h2>
+    <h2>Edit Sub-Category</h2>
     <form method="post" enctype="multipart/form-data">
 
         <?php if(!empty($row)): ?>
@@ -62,10 +63,10 @@
             </script>
         </div>
 
-        <label>Category</label>
-        <input name="category" type="text" value="<?=old_value('category', $row['category'])?>" />
-        <?php if(!empty($errors['category'])): ?>
-            <p><?=$errors['category']?></p>
+        <label>Sub-Category</label>
+        <input name="sub-category" type="text" value="<?=old_value('sub-category', $row['sub_category'])?>" />
+        <?php if(!empty($errors['sub-category'])): ?>
+            <p><?=$errors['sub-category']?></p>
         <?php endif; ?>
 
         <label>Active</label>
@@ -77,11 +78,11 @@
             <p><?=$errors['disabled']?></p>
         <?php endif; ?>
 
-        <a href="<?=ROOT?>/admin/categories">Cancel</a>
+        <a href="<?=ROOT?>/admin/categories/sub-categories/<?=$id?>">Cancel</a>
         <button type="submit">Submit Changes</button>
         <?php else: ?>
 
-            <p>Category not found.</p>
+            <p>Sub-Category not found.</p>
 
         <?php endif; ?>
     </form>
@@ -118,58 +119,56 @@
 
         <?php endif; ?>
     </form>
-<?php elseif($action == 'sub-categories'): ?>
-
-    <?php require_once('sub-categories.php'); ?>
 
 <?php else: ?>
-
-<h2>Categories</h2>
-<a href="<?php echo ROOT; ?>/admin/categories/add">Add New</a>
-
-<table>
-    <tr>
-        <th>#</th>
-        <th>Category</th>
-        <th>Image</th>
-        <th>Slug</th>
-        <th>Sub-Categories</th>
-        <th>Posts</th>
-        <th>Active</th>
-        <th>Action</th>
-    </tr>
     <?php
-    
         $limit = 10;
         $offset = ($PAGE['page_number'] - 1) * $limit;
 
-        $query = "SELECT categories.*, 
-          (SELECT COUNT(*) FROM sub_categories WHERE sub_categories.category_id = categories.id) as sub_category_count, 
-          (SELECT COUNT(*) FROM posts WHERE posts.category_id = categories.id) as post_count
-          FROM categories 
+        $query = "SELECT sub_categories.*, 
+          (SELECT COUNT(*) FROM posts WHERE posts.sub_category_id = sub_categories.id) as post_count
+          FROM sub_categories 
+          WHERE category_id = $id
           ORDER BY id DESC 
           LIMIT 10 
           OFFSET $offset";
 
         $rows = query($query);
+        
+        $query = "SELECT category FROM categories WHERE id= :id LIMIT 1";
+
+        $category_row = query_row($query, ['id' => $id]);
     
     ?>
+
+    <h2>Sub-Categories For <?=$category_row['category']?></h2>
+<a href="<?php echo ROOT; ?>/admin/categories/sub-categories/<?=$id?>/add">Add New</a>
+
+<table>
+    <tr>
+        <th>#</th>
+        <th>Sub-Category</th>
+        <th>Image</th>
+        <th>Slug</th>
+        <th>Posts</th>
+        <th>Active</th>
+        <th>Action</th>
+    </tr>
 
     <?php if(!empty($rows)): ?>
         <?php foreach($rows as $row): ?>
     <tr>
         <td><?=$row['id'] ?></td>
-        <td><?=$row['category'] ?></td>
+        <td><?=$row['sub_category'] ?></td>
         <td>
             <img src="<?=get_image($row['image'] ?? '')?>" style="width: 100px; height: 100px; object-fit: cover;" />
         </td>
         <td><?=$row['slug']?></td>
-        <td><a href="<?php echo ROOT; ?>/admin/categories/sub-categories/<?php echo $row['id'] ?>"><?=$row['sub_category_count']?></a></td>
         <td><?=$row['post_count']?></td>
         <td><?=$row['disabled'] == 0 ? 'True': 'False'?></td>
         <td>
-            <a href="<?php echo ROOT; ?>/admin/categories/edit/<?php echo $row['id'] ?>">Edit</a>
-            <a href="<?php echo ROOT; ?>/admin/categories/delete/<?php echo $row['id'] ?>">Delete</a>
+            <a href="<?php echo ROOT; ?>/admin/categories/sub-categories/<?php echo $id . "/edit" . "/" . $row['id'] ?>">Edit</a>
+            <a href="<?php echo ROOT; ?>/admin/categories/sub-categories/<?php echo $id . "delete" . $row['id'] ?>">Delete</a>
         </td>
     </tr>
         <?php endforeach; ?>
