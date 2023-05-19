@@ -108,10 +108,10 @@
             <p><?=$errors['category']?></p>
         <?php endif; ?>
 
-        <label>Email</label>
-        <input name="email" type="email" value="<?=old_value('email', $row['email'])?>" readonly />
-        <?php if(!empty($errors['email'])): ?>
-            <p><?=$errors['email']?></p>
+        <label>Slug</label>
+        <input name="slug" type="text" value="<?=old_value('slug', $row['slug'])?>" readonly />
+        <?php if(!empty($errors['slug'])): ?>
+            <p><?=$errors['slug']?></p>
         <?php endif; ?>
 
         

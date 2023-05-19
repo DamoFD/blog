@@ -158,7 +158,7 @@ if ($action == 'add') {
   }
 } elseif ($action == 'delete') {
 
-  $query = "SELECT * FROM admin WHERE id = :id LIMIT 1";
+  $query = "SELECT * FROM categories WHERE id = :id LIMIT 1";
   $row = query_row($query, ['id' => $id]);
 
   if (!empty($_POST)) {
@@ -173,14 +173,14 @@ if ($action == 'add') {
         $data = [];
         $data['id'] = $id;
 
-        $query = "DELETE FROM admin WHERE id = :id LIMIT 1";
+        $query = "DELETE FROM categories WHERE id = :id LIMIT 1";
 
         query($query, $data);
 
         if(file_exists($row['image']))
         unlink($row['image']);
         
-        redirect('admin/users');
+        redirect('admin/categories');
       }
     }
   }
