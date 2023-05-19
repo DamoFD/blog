@@ -8,11 +8,11 @@ if ($action == 'add') {
     //validate
     $errors = [];
 
-    if (empty($_POST['name'])) {
-      $errors['name'] = "A name is required";
+    if (empty($_POST['category'])) {
+      $errors['category'] = "A category is required";
     } else
           if (!preg_match("/^[a-zA-Z]+[a-zA-Z ]*$/", $_POST['name'])) {
-      $errors['name'] = "name can only have letters and spaces";
+      $errors['category'] = "category can only have letters and spaces";
     }
 
     $query = "SELECT id FROM admin WHERE email = :email LIMIT 1";
