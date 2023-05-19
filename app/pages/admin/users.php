@@ -71,6 +71,37 @@
 
 <?php elseif($action == 'delete'): ?>
 
+    <h2>Delete User</h2>
+    <p>Are you sure that you want to delete this user?</p>
+    <form method="post">
+
+        <?php if(!empty($row)): ?>
+        <?php if (!empty($errors)): ?>
+            <p>Please fix the errors below</p>
+        <?php endif; ?>
+
+        <label>Name</label>
+        <input name="name" type="text" value="<?=old_value('name', $row['name'])?>" readonly />
+        <?php if(!empty($errors['name'])): ?>
+            <p><?=$errors['name']?></p>
+        <?php endif; ?>
+
+        <label>Email</label>
+        <input name="email" type="email" value="<?=old_value('email', $row['email'])?>" readonly />
+        <?php if(!empty($errors['email'])): ?>
+            <p><?=$errors['email']?></p>
+        <?php endif; ?>
+
+        
+        <a href="<?php echo ROOT; ?>/admin/users">Cancel</a>
+        <button type="submit">DELETE</button>
+        <?php else: ?>
+
+            <p>User not found.</p>
+
+        <?php endif; ?>
+    </form>
+
 <?php else: ?>
 
 <h2>Users</h2>
@@ -97,6 +128,9 @@
         <td><?=$row['id'] ?></td>
         <td><?=$row['name'] ?></td>
         <td><?=esc($row['email']) ?></td>
+        <td>
+            <img src="<?=get_image($row['image'] ?? '')?>" style="width: 100px; height: 100px; object-fit: cover;" />
+        </td>
         <td><?=date("jS M, Y", strtotime($row['date'])) ?></td>
         <td>
             <a href="<?php echo ROOT; ?>/admin/users/edit/<?php echo $row['id'] ?>">Edit</a>
