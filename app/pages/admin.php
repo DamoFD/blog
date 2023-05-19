@@ -64,7 +64,7 @@
             $errors['password'] = "Passwords do not match";
           }
 
-          }
+          
    
           if(empty($errors))
           {
@@ -79,7 +79,7 @@
             query($query, $data);
 
             redirect('admin/users');
-
+          }
           }
         
           // Edit User

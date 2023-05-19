@@ -26,6 +26,7 @@
 
         <label>Confirm Password</label>
         <input name="confirm_pwd" type="password" value="<?=old_value('confirm_pwd')?>" />
+        <a href="<?php echo ROOT; ?>/admin/users">Cancel</a>
         <button type="submit">Create</button>
     </form>
 
@@ -51,7 +52,7 @@
             <p><?=$errors['email']?></p>
         <?php endif; ?>
 
-        <label>Password</label>
+        <label>Password (Leave Empty to Keep Old Password)</label>
         <input name="password" type="password" value="<?=old_value('password')?>" />
         <?php if(!empty($errors['password'])): ?>
             <p><?=$errors['password']?></p>
@@ -59,6 +60,7 @@
 
         <label>Confirm Password</label>
         <input name="confirm_pwd" type="password" value="<?=old_value('confirm_pwd')?>" />
+        <a href="<?php echo ROOT; ?>/admin/users">Cancel</a>
         <button type="submit">Submit Changes</button>
         <?php else: ?>
 
