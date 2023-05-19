@@ -22,9 +22,9 @@
         </script>
 
         <label>Category</label>
-        <input name="Category" type="text" value="<?=old_value('Category')?>" />
-        <?php if(!empty($errors['Category'])): ?>
-            <p><?=$errors['Category']?></p>
+        <input name="category" type="text" value="<?=old_value('category')?>" />
+        <?php if(!empty($errors['category'])): ?>
+            <p><?=$errors['category']?></p>
         <?php endif; ?>
 
         <label>Active</label>
@@ -102,10 +102,10 @@
             <p>Please fix the errors below</p>
         <?php endif; ?>
 
-        <label>Name</label>
-        <input name="name" type="text" value="<?=old_value('name', $row['name'])?>" readonly />
-        <?php if(!empty($errors['name'])): ?>
-            <p><?=$errors['name']?></p>
+        <label>Category</label>
+        <input name="category" type="text" value="<?=old_value('category', $row['category'])?>" readonly />
+        <?php if(!empty($errors['category'])): ?>
+            <p><?=$errors['category']?></p>
         <?php endif; ?>
 
         <label>Email</label>
@@ -137,7 +137,7 @@
         <th>Slug</th>
         <th>Sub-Categories</th>
         <th>Posts</th>
-        <th>Disabled</th>
+        <th>Active</th>
         <th>Action</th>
     </tr>
     <?php
@@ -166,9 +166,9 @@
             <img src="<?=get_image($row['image'] ?? '')?>" style="width: 100px; height: 100px; object-fit: cover;" />
         </td>
         <td><?=$row['slug']?></td>
-        <td><?=$row['sub_category_count'] ?? 0?></td>
-        <td><?=$row['post_count'] ?? 0?></td>
-        <td><?=$row['disabled']?></td>
+        <td><?=$row['sub_category_count']?></td>
+        <td><?=$row['post_count']?></td>
+        <td><?=$row['disabled'] == 0 ? 'True': 'False'?></td>
         <td>
             <a href="<?php echo ROOT; ?>/admin/categories/edit/<?php echo $row['id'] ?>">Edit</a>
             <a href="<?php echo ROOT; ?>/admin/categories/delete/<?php echo $row['id'] ?>">Delete</a>

@@ -11,31 +11,19 @@ if ($action == 'add') {
     if (empty($_POST['category'])) {
       $errors['category'] = "A category is required";
     } else
-          if (!preg_match("/^[a-zA-Z]+[a-zA-Z ]*$/", $_POST['name'])) {
-      $errors['category'] = "category can only have letters and spaces";
+          if (!preg_match("/^[a-zA-Z]+[a-zA-Z ]*$/", $_POST['category'])) {
+      $errors['category'] = "Category can only have letters and spaces";
     }
 
-    $query = "SELECT id FROM admin WHERE email = :email LIMIT 1";
-    $email = query($query, ['email' => $_POST['email']]);
+    $slug = str_to_url($_POST['category']);
 
-    if (empty($_POST['email'])) {
-      $errors['email'] = "A email is required";
-    } else
-          if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-      $errors['email'] = "Email not valid";
-    } else
-          if ($email) {
-      $errors['email'] = "That email is already in use";
-    }
+    $query = "SELECT id FROM categories WHERE slug = :slug LIMIT 1";
+    $slug_row = query($query, ['slug' => $slug]);
 
-    if (empty($_POST['password'])) {
-      $errors['password'] = "A password is required";
-    } else
-          if (strlen($_POST['password']) < 8) {
-      $errors['password'] = "Password must be 8 character or more";
-    } else
-          if ($_POST['password'] !== $_POST['confirm_pwd']) {
-      $errors['password'] = "Passwords do not match";
+    if ($slug_row){
+
+        $slug .= rand(1000, 9999);
+
     }
 
     // validate image
@@ -61,20 +49,20 @@ if ($action == 'add') {
     if (empty($errors)) {
       //save to database
       $data = [];
-      $data['name'] = $_POST['name'];
-      $data['email']    = $_POST['email'];
-      $data['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
+      $data['category'] = $_POST['category'];
+      $data['slug']    = $slug;
+      $data['disabled'] = $_POST['disabled'];
 
-      $query = "INSERT INTO admin (name,email,password) VALUES (:name,:email,:password)";
+      $query = "INSERT INTO categories (category,slug,disabled) VALUES (:category,:slug,:disabled)";
 
       if(!empty($destination)){
         $data['image'] = $destination;
-        $query = "INSERT INTO admin (name,email,password,image) VALUES (:name,:email,:password,:image)";
+        $query = "INSERT INTO categories (category,slug,disabled,image) VALUES (:category,:slug,:disabled,:image)";
       }
       
       query($query, $data);
 
-      redirect('admin/users');
+      redirect('admin/categories');
     }
   }
 
