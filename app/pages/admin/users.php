@@ -1,10 +1,25 @@
 <?php if($action == 'add'): ?>
     <h2>Create User</h2>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
 
         <?php if (!empty($errors)): ?>
             <p>Please fix the errors below</p>
         <?php endif; ?>
+
+        <label>
+            <img class="image-preview-edit" src="<?=get_image('') ?? ''?>" style="width: 100px; height: 100px; object-fit: cover;" />
+            <input onchange="display_image_edit(this.files[0])" type="file" name="image" style="display: none;" />
+        </label>
+
+        <?php if(!empty($errors['image'])): ?>
+            <p><?=$errors['image']?></p>
+        <?php endif; ?>
+
+        <script>
+            function display_image_edit(file) {
+                document.querySelector(".image-preview-edit").src = URL.createObjectURL(file);
+            }
+        </script>
 
         <label>Name</label>
         <input name="name" type="text" value="<?=old_value('name')?>" />
@@ -33,7 +48,7 @@
 <?php elseif($action == 'edit'): ?>
 
     <h2>Edit User</h2>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
 
         <?php if(!empty($row)): ?>
         <?php if (!empty($errors)): ?>
@@ -132,7 +147,10 @@
     </tr>
     <?php
     
-        $query = "SELECT * FROM admin ORDER BY id DESC";
+        $limit = 10;
+        $offset = ($PAGE['page_number'] - 1) * $limit;
+
+        $query = "SELECT * FROM admin ORDER BY id DESC LIMIT 10 OFFSET $offset";
         $rows = query($query);
     
     ?>
@@ -155,5 +173,10 @@
         <?php endforeach; ?>
     <?php endif; ?>
 </table>
+<div>
+    <a href="<?=$PAGE['first_link']?>">First Page</a>
+    <a href="<?=$PAGE['prev_link']?>">Prev Page</a>
+    <a href="<?=$PAGE['next_link']?>">Next Page</a>
+</div>
 
 <?php endif; ?>

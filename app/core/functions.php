@@ -145,7 +145,8 @@ $result = [
     'current_link' => $current_link,
     'next_link' => $next_link,
     'prev_link' => $prev_link,
-    'first_link' => $first_link
+    'first_link' => $first_link,
+    'page_number' => $page_number
 ];
 
 return $result;
@@ -168,5 +169,67 @@ function str_to_url($url){
 function esc($str){
 
     return htmlspecialchars($str ?? '');
+
+}
+
+function resize_image($filename, $max_size = 1000){
+
+    if(file_exists($filename)){
+
+        $type = mime_content_type($filename);
+        switch ($type){
+            case 'image/jpeg':
+                $image = imagecreatefromjpeg($filename);
+                break;
+            case 'image/png':
+                $image = imagecreatefrompng($filename);
+                break;
+            case 'image/gif':
+                $image = imagecreatefromgif($filename);
+                break;
+            case 'image/webp':
+                $image = imagecreatefromwebp($filename);
+                break;
+            default:
+                return;
+                break;
+        }
+
+        $src_width = imagesx($image);
+        $src_height = imagesy($image);
+
+        if($src_width > $src_height){
+            
+            if($src_width < $max_size){
+
+                $max_size = $src_width;
+
+            }
+
+            $dst_width = $max_size;
+            $dst_height = ($src_height / $src_width) * $max_size;
+
+        }else{
+            
+            if($src_height < $max_size){
+    
+                $max_size = $src_height;
+    
+            }
+    
+            $dst_height = $max_size;
+            $dst_width = ($src_width / $src_height) * $max_size;
+        }
+
+        $dst_height = round($dst_height);
+        $dst_width = round($dst_width);
+
+        $dst_image = imagecreatetruecolor($dst_width, $dst_height);
+        imagecopyresampled($dst_image, $image, 0, 0, 0, 0, $dst_width, $dst_height, $src_width, $src_height);
+
+        imagejpeg($dst_image, $filename, 90);
+
+        
+    }
 
 }
