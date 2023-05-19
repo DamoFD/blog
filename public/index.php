@@ -1,8 +1,10 @@
 <?php
+session_start();
 
-require("../app/core/config.php");
+require("../app/core/init.php");
 
 $url = $_GET['url'] ?? 'home';
+$url = strtoLower($url);
 $url = explode("/", $url);
 
 $page_name = trim($url[0]);

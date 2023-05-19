@@ -1,3 +1,13 @@
+<?php
+
+    if(!logged_in()){
+
+        redirect('login');
+
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,18 +19,42 @@
     <link href="<?php echo ROOT; ?>/assets/css/dashboard.css" rel="stylesheet" />
 </head>
 <body>
-    <h1>Dashboard</h1>
-    <input type="text" placeholder="Search" />
-    <button>Sign Out</button>
-    <nav>
+<nav>
         <ul>
             <li>
-                Dashboard
+                <a href="<?php echo ROOT; ?>/admin">Dashboard</a>
             </li>
             <li>
                 Front-End
             </li>
+            <li>
+            <a href="<?php echo ROOT; ?>/admin/users">Users</a>
+            </li>
+            <li>
+            <a href="<?php echo ROOT; ?>/admin/categories">Categories</a>
+            </li>
+            <li>
+            <a href="<?php echo ROOT; ?>/admin/posts">Posts</a>
+            </li>
         </ul>
     </nav>
+    <h1>Dashboard</h1>
+    <input type="text" placeholder="Search" />
+    <a href="<?php echo ROOT; ?>/logout">Sign Out</a>
+
+    <?php
+    
+    $section = $url[1] ?? 'dashboard';
+    $action = $url[2] ?? 'dashboard';
+
+    $filename = "../app/pages/admin/" . $section . ".php";
+    if(file_exists($filename)){
+        require_once($filename);
+    }else{
+        require_once("../app/pages/admin/404.php");
+    }
+
+    ?>
+
 </body>
 </html>
