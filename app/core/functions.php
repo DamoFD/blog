@@ -28,6 +28,34 @@ function query(string $query, array $data = []){
 
 }
 
+// Database Row query
+function query_row(string $query, array $data = []){
+
+    // Database Credentials
+    $string = "mysql:hostname=" . DBHOST. ";dbname=". DBNAME;
+
+    // Create Connection
+    $con = new PDO($string, DBUSER, DBPASS);
+
+    // Prepare Statement
+    $stm = $con->prepare($query);
+
+    // Execute Query
+    $stm->execute($data);
+
+    // Fetch Result as Associative Array
+    $result = $stm->fetchAll(PDO::FETCH_ASSOC);
+    if(is_array($result) && !empty($result)){
+
+        // Return The Result
+        return $result[0];
+
+    }
+
+    return false;
+
+}
+
 function redirect($page){
 
     header('Location: ' . ROOT . '/' . $page);
@@ -41,6 +69,14 @@ function old_value($key, $default = ''){
 
         return $default;
 
+}
+
+function old_checked($key, $default = ''){
+
+    if(!empty($_POST[$key]))
+        return " checked ";
+
+    return "";
 }
 
 function authenticate($row){
