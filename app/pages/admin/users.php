@@ -40,6 +40,21 @@
             <p>Please fix the errors below</p>
         <?php endif; ?>
 
+        <div>
+            <label>
+                <img class="image-preview-edit" src="<?=get_image($row['image'] ?? '')?>" style="width: 100px; height: 100px; object-fit: cover;" />
+                <input onchange="display_image_edit(this.files[0])" type="file" name="image" style="display: none;" />
+            </label>
+
+            <script>
+
+                function display_image_edit(file) {
+                    document.querySelector(".image-preview-edit").src = URL.createObjectURL(file);
+                }
+
+            </script>
+        </div>
+
         <label>Name</label>
         <input name="name" type="text" value="<?=old_value('name', $row['name'])?>" />
         <?php if(!empty($errors['name'])): ?>
