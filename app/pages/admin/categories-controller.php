@@ -1,6 +1,6 @@
 <?php
 
-// Add New User
+// Add New Category
 if ($action == 'add') {
 
   if (!empty($_POST)) {
@@ -69,7 +69,7 @@ if ($action == 'add') {
   // Edit User
 } elseif ($action == 'edit') {
 
-  $query = "SELECT * FROM admin WHERE id = :id LIMIT 1";
+  $query = "SELECT * FROM categories WHERE id = :id LIMIT 1";
   $row = query_row($query, ['id' => $id]);
 
   if (!empty($_POST)) {
@@ -79,33 +79,11 @@ if ($action == 'add') {
       //validate
       $errors = [];
 
-      if (empty($_POST['name'])) {
-        $errors['name'] = "A name is required";
+      if (empty($_POST['category'])) {
+        $errors['category'] = "A category is required";
       } else
-        if (!preg_match("/^[a-zA-Z]+[a-zA-Z ]*$/", $_POST['name'])) {
-        $errors['name'] = "name can only have letters and spaces";
-      }
-
-      $query = "SELECT id FROM admin WHERE email = :email && id != :id LIMIT 1";
-      $email = query($query, ['email' => $_POST['email'], 'id' => $id]);
-
-      if (empty($_POST['email'])) {
-        $errors['email'] = "A email is required";
-      } else
-        if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-        $errors['email'] = "Email not valid";
-      } else
-        if ($email) {
-        $errors['email'] = "That email is already in use";
-      }
-
-      if (empty($_POST['password'])) {
-      } else
-        if (strlen($_POST['password']) < 8) {
-        $errors['password'] = "Password must be 8 character or more";
-      } else
-        if ($_POST['password'] !== $_POST['confirm_pwd']) {
-        $errors['password'] = "Passwords do not match";
+        if (!preg_match("/^[a-zA-Z]+[a-zA-Z ]*$/", $_POST['category'])) {
+        $errors['category'] = "category can only have letters and spaces";
       }
 
       // Validate Image
@@ -132,27 +110,21 @@ if ($action == 'add') {
       if (empty($errors)) {
         //save to database
         $data = [];
-        $data['name'] = $_POST['name'];
-        $data['email']    = $_POST['email'];
+        $data['category'] = $_POST['category'];
+        $data['disabled'] = $_POST['disabled'];
         $data['id'] = $id;
 
-        $update_fields = "name = :name, email = :email";
-
-        if (!empty($_POST['password'])) {
-
-          $data['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
-          $update_fields .= ", password = :password";
-        }
+        $update_fields = "category = :category, disabled = :disabled";
 
         if (!empty($destination)) {
           $data['image'] = $destination;
           $update_fields .= ", image = :image";
         }
 
-        $query = "UPDATE admin SET $update_fields WHERE id = :id LIMIT 1";
+        $query = "UPDATE categories SET $update_fields WHERE id = :id LIMIT 1";
 
         query($query, $data);
-        redirect('admin/users');
+        redirect('admin/categories');
       }
     }
   }

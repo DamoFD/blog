@@ -33,13 +33,13 @@
             <option value="1">No</option>
         </select>
 
-        <a href="<?php echo ROOT; ?>/admin/users">Cancel</a>
+        <a href="<?php echo ROOT; ?>/admin/categories">Cancel</a>
         <button type="submit">Create</button>
     </form>
 
 <?php elseif($action == 'edit'): ?>
 
-    <h2>Edit User</h2>
+    <h2>Edit Category</h2>
     <form method="post" enctype="multipart/form-data">
 
         <?php if(!empty($row)): ?>
@@ -62,31 +62,26 @@
             </script>
         </div>
 
-        <label>Name</label>
-        <input name="name" type="text" value="<?=old_value('name', $row['name'])?>" />
-        <?php if(!empty($errors['name'])): ?>
-            <p><?=$errors['name']?></p>
+        <label>Category</label>
+        <input name="category" type="text" value="<?=old_value('category', $row['category'])?>" />
+        <?php if(!empty($errors['category'])): ?>
+            <p><?=$errors['category']?></p>
         <?php endif; ?>
 
-        <label>Email</label>
-        <input name="email" type="email" value="<?=old_value('email', $row['email'])?>" />
-        <?php if(!empty($errors['email'])): ?>
-            <p><?=$errors['email']?></p>
+        <label>Active</label>
+        <select name="disabled">
+            <option <?=old_select('disabled', '0', $row['disabled'])?> value="0">Yes</option>
+            <option <?=old_select('disabled', '1', $row['disabled'])?> value="1">No</option>
+        </select>
+        <?php if(!empty($errors['disabled'])): ?>
+            <p><?=$errors['disabled']?></p>
         <?php endif; ?>
 
-        <label>Password (Leave Empty to Keep Old Password)</label>
-        <input name="password" type="password" value="<?=old_value('password')?>" />
-        <?php if(!empty($errors['password'])): ?>
-            <p><?=$errors['password']?></p>
-        <?php endif; ?>
-
-        <label>Confirm Password</label>
-        <input name="confirm_pwd" type="password" value="<?=old_value('confirm_pwd')?>" />
-        <a href="<?php echo ROOT; ?>/admin/users">Cancel</a>
+        <a href="<?=ROOT?>/admin/categories">Cancel</a>
         <button type="submit">Submit Changes</button>
         <?php else: ?>
 
-            <p>User not found.</p>
+            <p>Category not found.</p>
 
         <?php endif; ?>
     </form>
@@ -119,7 +114,7 @@
         <button type="submit">DELETE</button>
         <?php else: ?>
 
-            <p>User not found.</p>
+            <p>Category not found.</p>
 
         <?php endif; ?>
     </form>

@@ -79,6 +79,18 @@ function old_checked($key, $default = ''){
     return "";
 }
 
+function old_select($key, $value, $default = ''){
+
+    if(!empty($_POST[$key]) && $_POST[$key] == $value)
+        return " selected ";
+
+    if($default == $value)
+        return " selected ";
+
+        return "";
+
+}
+
 function get_image($file){
 
     $file = $file ?? '';
