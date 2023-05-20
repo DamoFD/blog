@@ -50,6 +50,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - <?=APP_NAME?></title>
 
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo ROOT; ?>/assets/css/dashboard.css" rel="stylesheet" />
 </head>
 <body>

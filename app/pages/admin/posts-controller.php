@@ -61,13 +61,15 @@ if ($action == 'add') {
 
 
     if (empty($errors)) {
+
+      $new_content = remove_images_from_content($_POST['content']);
       //save to database
       $data = [];
       $data['title'] = $_POST['title'];
       $data['user_id'] = user('id');
       $data['category_id'] = $_POST['category'];
       $data['sub_category_id'] = $_POST['sub-category'];
-      $data['content'] = $_POST['content'];
+      $data['content'] = $new_content;
       $data['slug']    = $slug;
       $data['disabled'] = $_POST['disabled'];
 
@@ -89,7 +91,6 @@ if ($action == 'add') {
   $row = query_row($query, ['id' => $id]);
 
   if (!empty($_POST)) {
-    var_dump($_POST);
 
     if ($row) {
 
@@ -134,12 +135,16 @@ if ($action == 'add') {
       }
 
       if (empty($errors)) {
+
+        $new_content = remove_images_from_content($_POST['content']);
+        $new_content = remove_root_from_content($new_content);
+
         //save to database
         $data = [];
         $data['title'] = $_POST['title'];
         $data['category_id'] = $_POST['category'];
         $data['sub_category_id'] = $_POST['sub-category'];
-        $data['content'] = $_POST['content'];
+        $data['content'] = $new_content;
         $data['disabled'] = $_POST['disabled'];
         $data['id'] = $id;
 

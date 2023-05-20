@@ -1,4 +1,7 @@
 <?php if ($action == 'add') : ?>
+
+    <link rel="stylesheet" type="text/css" href="<?=ROOT?>/assets/summernote/summernote-lite.min.css" />
+
     <h2>Create Post</h2>
     <form method="post" enctype="multipart/form-data">
 
@@ -29,7 +32,7 @@
         <?php endif; ?>
 
         <label>Content</label>
-        <textarea rows="8" name="content">
+        <textarea id="summernote" rows="8" name="content">
             <?= old_value('content') ?>
         </textarea>
         <?php if (!empty($errors['content'])) : ?>
@@ -105,8 +108,20 @@
         <button type="submit">Create</button>
     </form>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="<?=ROOT?>/assets/summernote/summernote-lite.min.js"></script>
+    <script>
+        $('#summernote').summernote({
+            placeholder: 'Post Content',
+            tabsize: 2,
+            height: 400
+        })
+    </script>
+
 <?php elseif ($action == 'edit') : ?>
 
+    <link rel="stylesheet" type="text/css" href="<?=ROOT?>/assets/summernote/summernote-lite.min.css" />
     <h2>Edit Post</h2>
     <form method="post" enctype="multipart/form-data">
 
@@ -135,8 +150,8 @@
             <?php endif; ?>
 
             <label>Content</label>
-            <textarea rows="8" name="content">
-            <?= old_value('content',$row['content']) ?>
+            <textarea id="summernote" rows="8" name="content">
+            <?= old_value('content',add_root_to_images($row['content'])) ?>
             </textarea>
             <?php if (!empty($errors['content'])) : ?>
                 <p><?= $errors['content'] ?></p>
@@ -218,7 +233,16 @@
 
         <?php endif; ?>
     </form>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="<?=ROOT?>/assets/summernote/summernote-lite.min.js"></script>
+    <script>
+        $('#summernote').summernote({
+            placeholder: 'Post Content',
+            tabsize: 2,
+            height: 400
+        })
+    </script>
 <?php elseif ($action == 'delete') : ?>
 
     <h2>Delete Post</h2>
