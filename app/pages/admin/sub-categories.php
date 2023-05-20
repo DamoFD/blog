@@ -87,9 +87,9 @@
         <?php endif; ?>
     </form>
 
-<?php elseif($action == 'delete'): ?>
+<?php elseif($sub_action == 'delete'): ?>
 
-    <h2>Delete Category</h2>
+    <h2>Delete Sub-Category</h2>
     <p>Are you sure that you want to delete this category?</p>
     <form method="post">
 
@@ -98,10 +98,10 @@
             <p>Please fix the errors below</p>
         <?php endif; ?>
 
-        <label>Category</label>
-        <input name="category" type="text" value="<?=old_value('category', $row['category'])?>" readonly />
-        <?php if(!empty($errors['category'])): ?>
-            <p><?=$errors['category']?></p>
+        <label>Sub-Category</label>
+        <input name="sub-category" type="text" value="<?=old_value('sub-category', $row['sub_category'])?>" readonly />
+        <?php if(!empty($errors['sub-category'])): ?>
+            <p><?=$errors['sub-category']?></p>
         <?php endif; ?>
 
         <label>Slug</label>
@@ -111,11 +111,11 @@
         <?php endif; ?>
 
         
-        <a href="<?php echo ROOT; ?>/admin/categories">Cancel</a>
+        <a href="<?php echo ROOT; ?>/admin/categories/sub-categories/<?=$id?>">Cancel</a>
         <button type="submit">DELETE</button>
         <?php else: ?>
 
-            <p>Category not found.</p>
+            <p>Sub-Category not found.</p>
 
         <?php endif; ?>
     </form>
@@ -168,7 +168,7 @@
         <td><?=$row['disabled'] == 0 ? 'True': 'False'?></td>
         <td>
             <a href="<?php echo ROOT; ?>/admin/categories/sub-categories/<?php echo $id . "/edit" . "/" . $row['id'] ?>">Edit</a>
-            <a href="<?php echo ROOT; ?>/admin/categories/sub-categories/<?php echo $id . "delete" . $row['id'] ?>">Delete</a>
+            <a href="<?php echo ROOT; ?>/admin/categories/sub-categories/<?php echo $id . "/delete" . "/" . $row['id'] ?>">Delete</a>
         </td>
     </tr>
         <?php endforeach; ?>

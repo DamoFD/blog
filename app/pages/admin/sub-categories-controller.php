@@ -130,10 +130,10 @@ if ($sub_action == 'add') {
       }
     }
   }
-} elseif ($action == 'delete') {
+} elseif ($sub_action == 'delete') {
 
-  $query = "SELECT * FROM categories WHERE id = :id LIMIT 1";
-  $row = query_row($query, ['id' => $id]);
+  $query = "SELECT * FROM sub_categories WHERE id = :id LIMIT 1";
+  $row = query_row($query, ['id' => $sub_id]);
 
   if (!empty($_POST)) {
 
@@ -145,16 +145,16 @@ if ($sub_action == 'add') {
       if (empty($errors)) {
         // Delete from database
         $data = [];
-        $data['id'] = $id;
+        $data['id'] = $sub_id;
 
-        $query = "DELETE FROM categories WHERE id = :id LIMIT 1";
+        $query = "DELETE FROM sub_categories WHERE id = :id LIMIT 1";
 
         query($query, $data);
 
         if(file_exists($row['image']))
         unlink($row['image']);
         
-        redirect('admin/categories');
+        redirect("admin/categories/$id");
       }
     }
   }
