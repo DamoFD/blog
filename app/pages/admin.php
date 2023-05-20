@@ -56,19 +56,19 @@
 <nav>
         <ul>
             <li>
-                <a href="<?php echo ROOT; ?>/admin">Dashboard</a>
+                <a class="<?=$section == 'dashboard' ? 'active' : ''?>" href="<?php echo ROOT; ?>/admin">Dashboard</a>
             </li>
             <li>
-                Front-End
+                <a href="<?=ROOT?>">Front-End</a>
             </li>
             <li>
-            <a href="<?php echo ROOT; ?>/admin/users">Users</a>
+            <a class="<?=$section == 'users' ? 'active' : ''?>" href="<?php echo ROOT; ?>/admin/users">Users</a>
             </li>
             <li>
-            <a href="<?php echo ROOT; ?>/admin/categories">Categories</a>
+            <a class="<?=$section == 'categories' ? 'active' : ''?>" href="<?php echo ROOT; ?>/admin/categories">Categories</a>
             </li>
             <li>
-            <a href="<?php echo ROOT; ?>/admin/posts">Posts</a>
+            <a class="<?=$section == 'posts' ? 'active' : ''?>" href="<?php echo ROOT; ?>/admin/posts">Posts</a>
             </li>
         </ul>
     </nav>

@@ -89,6 +89,7 @@ if ($action == 'add') {
   $row = query_row($query, ['id' => $id]);
 
   if (!empty($_POST)) {
+    var_dump($_POST);
 
     if ($row) {
 
@@ -112,17 +113,6 @@ if ($action == 'add') {
   
       if (empty($_POST['content'])){
         $errors['content'] = "Some content is required.";
-      }
-  
-      $slug = str_to_url($_POST['title']);
-  
-      $query = "SELECT id FROM posts WHERE slug = :slug LIMIT 1";
-      $slug_row = query($query, ['slug' => $slug]);
-  
-      if ($slug_row){
-  
-          $slug .= rand(1000, 9999);
-  
       }
   
       // validate image
