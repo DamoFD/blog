@@ -66,7 +66,7 @@ if ($action == 'add') {
     }
   }
 
-  // Edit User
+  // Edit Category
 } elseif ($action == 'edit') {
 
   $query = "SELECT * FROM categories WHERE id = :id LIMIT 1";
