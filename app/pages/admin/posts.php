@@ -44,7 +44,7 @@
 
         <label>Category</label>
         <select id="category" name="category">
-
+            <option value="">Select</option>
             <?php
             $query = "SELECT * FROM categories ORDER BY id DESC";
             $categories = query($query);
@@ -52,7 +52,7 @@
 
             <?php if (!empty($categories)) : ?>
                 <?php foreach ($categories as $cat) : ?>
-                    <option value="<?= $cat['id'] ?>"><?= $cat['category'] ?></option>
+                    <option <?=old_select('category', $cat['id'])?> value="<?= $cat['id'] ?>"><?= $cat['category'] ?></option>
                 <?php endforeach; ?>
             <?php endif; ?>
 
@@ -70,7 +70,7 @@
             ?>
             <?php if (!empty($subcategories)) : ?>
                 <?php foreach ($subcategories as $subcategory) : ?>
-                    <option data-category="<?= $subcategory['category_id'] ?>" value="<?= $subcategory['id'] ?>"><?= $subcategory['sub_category'] ?></option>
+                    <option <?=old_select('sub-category', $subcategory['id'])?> data-category="<?= $subcategory['category_id'] ?>" value="<?= $subcategory['id'] ?>"><?= $subcategory['sub_category'] ?></option>
                 <?php endforeach; ?>
             <?php endif; ?>
 
@@ -154,8 +154,8 @@
 
 <?php elseif ($action == 'delete') : ?>
 
-    <h2>Delete Category</h2>
-    <p>Are you sure that you want to delete this category?</p>
+    <h2>Delete Post</h2>
+    <p>Are you sure that you want to delete this Post?</p>
     <form method="post">
 
         <?php if (!empty($row)) : ?>
@@ -163,10 +163,10 @@
                 <p>Please fix the errors below</p>
             <?php endif; ?>
 
-            <label>Category</label>
-            <input name="category" type="text" value="<?= old_value('category', $row['category']) ?>" readonly />
-            <?php if (!empty($errors['category'])) : ?>
-                <p><?= $errors['category'] ?></p>
+            <label>Title</label>
+            <input name="title" type="text" value="<?= old_value('title', $row['title']) ?>" readonly />
+            <?php if (!empty($errors['title'])) : ?>
+                <p><?= $errors['title'] ?></p>
             <?php endif; ?>
 
             <label>Slug</label>
@@ -176,7 +176,7 @@
             <?php endif; ?>
 
 
-            <a href="<?php echo ROOT; ?>/admin/categories">Cancel</a>
+            <a href="<?php echo ROOT; ?>/admin/posts">Cancel</a>
             <button type="submit">DELETE</button>
         <?php else : ?>
 
@@ -221,8 +221,8 @@
                     <td><?= $row['slug'] ?></td>
                     <td><?= date("jS M, Y", strtotime($row['date'])) ?></td>
                     <td>
-                        <a href="<?php echo ROOT; ?>/admin/categories/edit/<?php echo $row['id'] ?>">Edit</a>
-                        <a href="<?php echo ROOT; ?>/admin/categories/delete/<?php echo $row['id'] ?>">Delete</a>
+                        <a href="<?php echo ROOT; ?>/admin/posts/edit/<?php echo $row['id'] ?>">Edit</a>
+                        <a href="<?php echo ROOT; ?>/admin/posts/delete/<?php echo $row['id'] ?>">Delete</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

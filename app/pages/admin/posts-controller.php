@@ -1,6 +1,6 @@
 <?php
 
-// Add New Category
+// Add New Post
 if ($action == 'add') {
 
   if (!empty($_POST)) {
@@ -8,16 +8,28 @@ if ($action == 'add') {
     //validate
     $errors = [];
 
-    if (empty($_POST['category'])) {
-      $errors['category'] = "A category is required";
+    if (empty($_POST['title'])) {
+      $errors['title'] = "A Title is required";
     } else
-          if (!preg_match("/^[a-zA-Z]+[a-zA-Z ]*$/", $_POST['category'])) {
-      $errors['category'] = "Category can only have letters and spaces";
+          if (!preg_match("/^[a-zA-Z]+[a-zA-Z ]*$/", $_POST['title'])) {
+      $errors['title'] = "Title can only have letters and spaces";
     }
 
-    $slug = str_to_url($_POST['category']);
+    if (empty($_POST['category'])){
+      $errors['category'] = "A Category is required.";
+    }
 
-    $query = "SELECT id FROM categories WHERE slug = :slug LIMIT 1";
+    if (empty($_POST['sub-category'])){
+      $errors['sub-category'] = "A Sub-Category is required.";
+    }
+
+    if (empty($_POST['content'])){
+      $errors['content'] = "Some content is required.";
+    }
+
+    $slug = str_to_url($_POST['title']);
+
+    $query = "SELECT id FROM posts WHERE slug = :slug LIMIT 1";
     $slug_row = query($query, ['slug' => $slug]);
 
     if ($slug_row){
@@ -42,6 +54,8 @@ if ($action == 'add') {
         move_uploaded_file($_FILES['image']['tmp_name'], $destination);
         resize_image($destination);
       }
+    }else{
+      $errors['image'] = "Add a featured image to your post.";
     }
 
 
@@ -49,20 +63,22 @@ if ($action == 'add') {
     if (empty($errors)) {
       //save to database
       $data = [];
-      $data['category'] = $_POST['category'];
+      $data['title'] = $_POST['title'];
+      $data['user_id'] = user('id');
+      $data['category_id'] = $_POST['category'];
+      $data['sub_category_id'] = $_POST['sub-category'];
+      $data['content'] = $_POST['content'];
       $data['slug']    = $slug;
       $data['disabled'] = $_POST['disabled'];
 
-      $query = "INSERT INTO categories (category,slug,disabled) VALUES (:category,:slug,:disabled)";
-
       if(!empty($destination)){
         $data['image'] = $destination;
-        $query = "INSERT INTO categories (category,slug,disabled,image) VALUES (:category,:slug,:disabled,:image)";
+        $query = "INSERT INTO posts (title,user_id,category_id,sub_category_id,content,slug,disabled,image) VALUES (:title,:user_id,:category_id,:sub_category_id,:content,:slug,:disabled,:image)";
       }
       
       query($query, $data);
 
-      redirect('admin/categories');
+      redirect('admin/posts');
     }
   }
 
@@ -128,9 +144,11 @@ if ($action == 'add') {
       }
     }
   }
+
+  // Delete Post
 } elseif ($action == 'delete') {
 
-  $query = "SELECT * FROM categories WHERE id = :id LIMIT 1";
+  $query = "SELECT * FROM posts WHERE id = :id LIMIT 1";
   $row = query_row($query, ['id' => $id]);
 
   if (!empty($_POST)) {
@@ -145,14 +163,14 @@ if ($action == 'add') {
         $data = [];
         $data['id'] = $id;
 
-        $query = "DELETE FROM categories WHERE id = :id LIMIT 1";
+        $query = "DELETE FROM posts WHERE id = :id LIMIT 1";
 
         query($query, $data);
 
         if(file_exists($row['image']))
         unlink($row['image']);
         
-        redirect('admin/categories');
+        redirect('admin/posts');
       }
     }
   }
