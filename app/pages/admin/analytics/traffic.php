@@ -4,11 +4,10 @@
 
 <script>
 
-    const trafficLabels = ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
-
     const trafficRequestData = <?php
     $trafficRequestDataArray = [];
     foreach ($last_requests_by_weekday as $key => $value) {
+        $trafficLabelsArray[] = $key;
         $trafficRequestDataArray[] = $value;
     }
     echo json_encode($trafficRequestDataArray);
@@ -20,6 +19,10 @@
         $trafficVisitorDataArray[] = array_sum($value);
     }
     echo json_encode($trafficVisitorDataArray);
+    ?>;
+
+    const trafficLabels = <?php
+    echo json_encode($trafficLabelsArray)
     ?>;
 
     const trafficData = {
