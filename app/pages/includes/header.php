@@ -9,6 +9,18 @@
     <link href="<?php echo ROOT; ?>/assets/css/dashboard.css" rel="stylesheet" />
 </head>
 
+<!-- Google Analytics -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-796KMRC183"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-796KMRC183');
+</script>
+
 <body>
     <header>
         <nav>

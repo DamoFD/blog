@@ -314,5 +314,13 @@ a {
     transform: translate(0%) !important;
   }
 }
+/* Dashboard */
+/* Mobile-First */
+#dashboard {
+  margin-top: 100px;
+}
+#dashboard .header-text span {
+  color: #71717A;
+}
 
 /*# sourceMappingURL=admin.css.map */

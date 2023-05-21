@@ -12,6 +12,8 @@ $filename = "../app/pages/" . $page_name . ".php";
 
 $PAGE = get_pagination_vars();
 
+include("../app/pages/webanalytics.php");
+
 if(file_exists($filename)){
     require_once($filename);
 }else{
