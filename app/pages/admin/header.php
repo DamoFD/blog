@@ -28,7 +28,7 @@
     <header id="header" class="header__main">
         <!--Primary Navigation-->
         <nav class="navbar">
-            <a href="/">
+            <a href="<?=ROOT?>/admin">
                 <img src="<?=ROOT?>/assets/svg/site-logo.svg" class="header-img" />
             </a>
             <div class="menu-toggle" id="mobile-menu">
@@ -38,25 +38,25 @@
             </div>
             <ul class="nav no-search">
                 <li class="nav-item">
-                    <a class="<?=$section == 'dashboard' ? 'active' : ''?>" href="<?php echo ROOT; ?>/admin">Dashboard</a>
+                    <a class="<?=$section == 'dashboard' ? 'active' : ''?>" href="<?=ROOT?>/admin">Dashboard</a>
                 </li>
                 <li class="nav-item">
                     <p>ANALYTICS</p>
                 </li>
-                <li class="nav-item"><a class="<?=$section == 'performance' ? 'active' : ''?>" href="<?php echo ROOT; ?>/admin/performance">Performance</a></li>
+                <li class="nav-item"><a class="<?=$section == 'performance' ? 'active' : ''?>" href="<?=ROOT?>/admin/performance">Performance</a></li>
                 <li class="nav-item"><a href="<?=ROOT?>">Live Site</a></li>
                 <li class="nav-item">
                     <p>BLOG</p>
                 </li>
                 <li class="nav-item">
-                    <a class="<?=$section == 'posts' ? 'active' : ''?>" href="<?php echo ROOT; ?>/admin/posts">Posts</a>
+                    <a class="<?=$section == 'posts' ? 'active' : ''?>" href="<?=ROOT?>/admin/posts">Posts</a>
                 </li>
-                <li class="nav-item"><a class="<?=$section == 'categories' ? 'active' : ''?>" href="<?php echo ROOT; ?>/admin/categories">Categories</a></li>
-                <li class="nav-item"><a class="<?=$section == 'users' ? 'active' : ''?>" href="<?php echo ROOT; ?>/admin/users">Users</a></li>
+                <li class="nav-item"><a class="<?=$section == 'categories' ? 'active' : ''?>" href="<?=ROOT?>/admin/categories">Categories</a></li>
+                <li class="nav-item"><a class="<?=$section == 'users' ? 'active' : ''?>" href="<?=ROOT?>/admin/users">Users</a></li>
                 <li class="nav-item"><p>NOTIFICATIONS</p></li>
                 <li class="nav-item"><a>Emails</a></li>
                 <li class="nav-item"><a>Comments</a></li>
-                <li class="nav-item"><a href="<?php echo ROOT; ?>/logout">Log Out</a></li>
+                <li class="nav-item"><a href="<?=ROOT?>/logout">Log Out</a></li>
             </ul>
         </nav>
         <!--!Primary Navigation-->

@@ -6,6 +6,9 @@ $user = $_SESSION['USER'];
 
 ?>
 
+<!-- Graph JS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <section id="dashboard">
     <div class="header-text">
         <h1 class="font-size-header color-black-1 font-sans">Dashboard</h1>
@@ -13,5 +16,8 @@ $user = $_SESSION['USER'];
     </div>
     <div>
         <?php include("../app/pages/admin/analytics/all-time-stats.php"); ?>
+    </div>
+    <div>
+        <?php include("../app/pages/admin/analytics/traffic.php"); ?>
     </div>
 </section>
