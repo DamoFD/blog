@@ -24,4 +24,7 @@ include("../app/pages/admin/analytics/analytics-functions.php");
     <div>
         <?php include("../app/pages/admin/analytics/languages.php"); ?>
     </div>
+    <div>
+        <?php include("../app/pages/admin/analytics/browsers.php"); ?>
+    </div>
 </section>
