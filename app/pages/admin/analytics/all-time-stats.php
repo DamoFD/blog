@@ -1,0 +1,31 @@
+<h2>All Time Statistics</h2>
+<div>
+    <div>
+        <p>Requests</p>
+        <p><?=$total_requests?></p>
+    </div>
+    <div>
+        <p>Unique Visitors</p>
+        <p><?=$total_visitors?></p>
+    </div>
+    <div>
+        <p>Networks</p>
+        <p><?=$total_networks?></p>
+    </div>
+    <div>
+        <p>ISPs</p>
+        <p><?=$total_isps?></p>
+    </div>
+    <div>
+        <p>Countries</p>
+        <p><?=$total_countries?></p>
+    </div>
+    <div>
+        <p>Continents</p>
+        <p><?=$total_continents?></p>
+    </div>
+    <div>
+        <p>Languages</p>
+        <p><?=$total_languages?></p>
+    </div>
+</div>

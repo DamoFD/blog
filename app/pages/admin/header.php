@@ -43,7 +43,7 @@
                 <li class="nav-item">
                     <p>ANALYTICS</p>
                 </li>
-                <li class="nav-item"><a href="#about">Performance</a></li>
+                <li class="nav-item"><a class="<?=$section == 'performance' ? 'active' : ''?>" href="<?php echo ROOT; ?>/admin/performance">Performance</a></li>
                 <li class="nav-item"><a href="<?=ROOT?>">Live Site</a></li>
                 <li class="nav-item">
                     <p>BLOG</p>
