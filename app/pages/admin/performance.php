@@ -18,4 +18,7 @@ include("../app/pages/admin/analytics/analytics-functions.php");
     <div>
         <?php include("../app/pages/admin/analytics/traffic.php"); ?>
     </div>
+    <div>
+        <?php include("../app/pages/admin/analytics/realtime.php"); ?>
+    </div>
 </section>

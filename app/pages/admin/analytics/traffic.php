@@ -3,49 +3,46 @@
 <canvas id="trafficChart"></canvas>
 
 <script>
-    const DATA_COUNT = 7;
-    const NUMBER_CFG = {count: DATA_COUNT, min: -100, max: 100};
 
-    const labels = ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+    const trafficLabels = ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
 
-    const requestData = <?php
-    $requestDataArray = [];
-    foreach ($last_requests_by_day as $key => $value) {
-        $requestDataArray[] = $value;
+    const trafficRequestData = <?php
+    $trafficRequestDataArray = [];
+    foreach ($last_requests_by_weekday as $key => $value) {
+        $trafficRequestDataArray[] = $value;
     }
-    echo json_encode($requestDataArray);
+    echo json_encode($trafficRequestDataArray);
     ?>;
 
-    const visitorData = <?php
-    // Replace this with the actual data for visitors
-    $visitorDataArray = [];
-    foreach ($last_visitors_by_day as $key => $value) {
-        $visitorDataArray[] = array_sum($value);
+    const trafficVisitorData = <?php
+    $trafficVisitorDataArray = [];
+    foreach ($last_visitors_by_weekday as $key => $value) {
+        $trafficVisitorDataArray[] = array_sum($value);
     }
-    echo json_encode($visitorDataArray);
+    echo json_encode($trafficVisitorDataArray);
     ?>;
 
-    const data = {
-        labels: labels,
+    const trafficData = {
+        labels: trafficLabels,
         datasets: [
             {
                 label: 'Requests',
-                data: requestData,
+                data: trafficRequestData,
                 borderColor: "red",
                 backgroundColor: "red",
             },
             {
                 label: 'Visitors',
-                data: visitorData,
+                data: trafficVisitorData,
                 borderColor: "blue",
                 backgroundColor: "blue",
             }
         ]
     };
 
-    const config = {
+    const trafficConfig = {
         type: 'line',
-        data: data,
+        data: trafficData,
         options: {
             responsive: true,
             plugins: {
@@ -63,7 +60,7 @@
     // Render the chart
     var trafficChart = new Chart(
         document.getElementById('trafficChart'),
-        config
+        trafficConfig
     );
 </script>
 
