@@ -200,17 +200,31 @@ a {
 }
 
 .nav-item a, .nav-item p {
-  color: #FFFFFF;
   font-size: 30px;
   font-weight: 400;
   text-decoration: none;
   transition: color 0.3s ease-out;
   margin-right: 20px;
-  font-family: "roboto-regular", sans-serif;
+  font-family: "poppins-medium", sans-serif;
+}
+
+.nav-item a {
+  color: #84CFBB;
+  font-family: "poppins-medium", sans-serif;
+}
+
+.nav-item p {
+  color: #FFFFFF;
+  font-family: "worksans-bold", sans-serif;
 }
 
 .nav-item a:hover {
   color: gray;
+}
+
+.active {
+  border-left: 1px solid #84CFBB;
+  background-color: rgb(40, 40, 40);
 }
 
 /* MOBILE MENU & ANIMATION */
@@ -268,25 +282,29 @@ a {
     position: fixed;
     justify-content: start;
     top: 0;
-    background-color: rgba(21, 21, 21, 0.9);
-    width: 100%;
+    background-color: rgb(21, 21, 21);
+    width: 80%;
     height: 100vh;
     transform: translate(-100%);
-    text-align: center;
     overflow: hidden;
     z-index: 5;
     transition: transform 0.5s ease-out;
   }
   .navbar li {
     padding: 15px;
+    margin-left: 20px;
   }
   .navbar li:first-child {
     margin-top: 50px;
   }
   .navbar li a {
-    font-size: 40px;
-    color: white;
+    font-size: 23px;
+    padding: 10px 20px;
+    border-radius: 10px;
     font-family: "roboto-regular", sans-serif;
+  }
+  .navbar li p {
+    padding-left: 20px;
   }
   .menu-toggle, .bar {
     display: block;

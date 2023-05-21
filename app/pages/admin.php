@@ -46,8 +46,6 @@
 
     include('../app/pages/admin/header.php');
     
-    include('../app/pages/admin/nav.php');
-    
 ?>
     <h1>Dashboard</h1>
 
