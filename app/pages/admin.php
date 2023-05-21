@@ -42,40 +42,14 @@
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - <?=APP_NAME?></title>
+<?php
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo ROOT; ?>/assets/css/dashboard.css" rel="stylesheet" />
-</head>
-<body>
-<nav>
-        <ul>
-            <li>
-                <a class="<?=$section == 'dashboard' ? 'active' : ''?>" href="<?php echo ROOT; ?>/admin">Dashboard</a>
-            </li>
-            <li>
-                <a href="<?=ROOT?>">Front-End</a>
-            </li>
-            <li>
-            <a class="<?=$section == 'users' ? 'active' : ''?>" href="<?php echo ROOT; ?>/admin/users">Users</a>
-            </li>
-            <li>
-            <a class="<?=$section == 'categories' ? 'active' : ''?>" href="<?php echo ROOT; ?>/admin/categories">Categories</a>
-            </li>
-            <li>
-            <a class="<?=$section == 'posts' ? 'active' : ''?>" href="<?php echo ROOT; ?>/admin/posts">Posts</a>
-            </li>
-        </ul>
-    </nav>
+    include('../app/pages/admin/header.php');
+    
+    include('../app/pages/admin/nav.php');
+    
+?>
     <h1>Dashboard</h1>
-    <input type="text" placeholder="Search" />
-    <a href="<?php echo ROOT; ?>/logout">Sign Out</a>
 
     <?php
 
@@ -83,5 +57,7 @@
 
     ?>
 
+</main>
+<script src="<?=ROOT?>/assets/js/admin.js"></script>
 </body>
 </html>

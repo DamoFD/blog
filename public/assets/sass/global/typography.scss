@@ -1,0 +1,59 @@
+/* Typography Classes */
+
+/* Fonts */
+
+.font-sans {
+    font-family: $font-sans;
+}
+
+.font-poppins {
+    font-family: $font-poppins;
+}
+
+.font-roboto {
+    font-family: $font-roboto;
+}
+
+/* Font Sizes */
+
+/* Mobile First */
+
+.font-size-header {
+    font-size: 35px;
+}
+
+.font-size-med {
+    font-size: 20px;
+}
+
+.font-size-small {
+    font-size: 20px;
+}
+
+@media only screen and (min-width: 900px){
+    .font-size-header {
+        font-size: 60px;
+    }
+
+    .font-size-med {
+        font-size: 32px;
+    }
+
+    .font-size-small {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-height: 650px) {
+    .font-size-header {
+        font-size: 35px;
+    }
+
+    .font-size-med {
+        font-size: 20px;
+    }
+
+    .font-size-small {
+        font-size: 20px;
+    }
+}

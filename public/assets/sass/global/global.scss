@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+button, button:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+ul, li {
+    list-style: none;
+}
+
+input, input:focus {
+    border: none;
+    outline: none;
+}
+
+textarea, textarea:focus {
+    border: none;
+    outline: none;
+}
+
+.btn {
+    padding: 12px 34px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.5s ease;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #466d62;
+}
+
+.line-break {
+    width: 123px;
+    height: 4px;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 900px) {
+    .line-break {
+        width: 224px;
+    }
+}
+
+/* Lovely Galaxy Fold */
+
+@media only screen and (max-width: 300px) {
+    .btn {
+        padding: 6px 17px;
+    }
+}
