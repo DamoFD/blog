@@ -41,7 +41,7 @@ if($visitorsYesterday > 0){
         <p class="font-size-small font-poppins color-black-2">Hey <?= $user['name'] ?> - <span class="font-roboto">here's what's happening with your blog today.</span></p>
     </div>
     <div class="card">
-        <h2 class="font-poppins">TODAY'S VIEWS</h2>
+        <h2 class="font-poppins light-header">TODAY'S VIEWS</h2>
         <div class="row">
         <p class="font-roboto amount"><?=array_sum($last_requests_by_daytime)?></p>
         <div class="percent">
@@ -51,7 +51,7 @@ if($visitorsYesterday > 0){
         </div>
     </div>
     <div class="card">
-        <h2 class="font-poppins">TODAY'S VISITORS</h2>
+        <h2 class="font-poppins light-header">TODAY'S VISITORS</h2>
         <div class="row">
             <p class="font-roboto amount"><?=$visitorsToday?></p>
             <div class="percent">
@@ -61,13 +61,13 @@ if($visitorsYesterday > 0){
         </div>
     </div>
     <div class="card">
-        <h2 class="font-poppins">UNREAD NOTIFICATIONS</h2>
+        <h2 class="font-poppins light-header">UNREAD NOTIFICATIONS</h2>
         <div class="row">
         <p class="font-roboto amount">35</p>
         </div>
     </div>
     <div class="card">
-        <h2 class="font-poppins">UNREAD EMAILS</h2>
+        <h2 class="font-poppins light-header">UNREAD EMAILS</h2>
         <div class="row">
         <p class="font-roboto amount">13</p>
         </div>
@@ -77,5 +77,66 @@ if($visitorsYesterday > 0){
     </div>
     <div class="card">
         <?php include("../app/pages/admin/analytics/referrers.php");?>
+    </div>
+    <div class="card">
+        <h2 class="font-sans font-size-med email-header">Emails</h2>
+        <p class="font-poppins font-size-small email-header-text">Recent Emails</p>
+        <div class="email-row">
+            <div class="email-read">
+                <p>Read</p>
+            </div>
+            <div class="email-subject">
+                <h3>Wordpress Website</h3>
+                <p class="mobile-hidden">question about how too...</p>
+            </div>
+            <div class="email-date mobile-hidden">
+                <p>Jan 17, 2022</p>
+                <p>Sent from form</p>
+            </div>
+            <div class="reply-email">
+                <p>john@john.com</p>
+            </div>
+            <div class="email-btn">
+                <img src="<?=ROOT?>/assets/svg/three-dots.svg" />
+            </div>
+        </div>
+        <div class="email-row">
+            <div class="email-read">
+                <p>Read</p>
+            </div>
+            <div class="email-subject">
+                <h3>Wordpress Website</h3>
+                <p class="mobile-hidden">question about how too...</p>
+            </div>
+            <div class="email-date mobile-hidden">
+                <p>Jan 17, 2022</p>
+                <p>Sent from form</p>
+            </div>
+            <div class="reply-email">
+                <p>john@john.com</p>
+            </div>
+            <div class="email-btn">
+                <img src="<?=ROOT?>/assets/svg/three-dots.svg" />
+            </div>
+        </div>
+        <div class="email-row">
+            <div class="email-read">
+                <p>Read</p>
+            </div>
+            <div class="email-subject">
+                <h3>Wordpress Website</h3>
+                <p class="mobile-hidden">question about how too...</p>
+            </div>
+            <div class="email-date mobile-hidden">
+                <p>Jan 17, 2022</p>
+                <p>Sent from form</p>
+            </div>
+            <div class="reply-email">
+                <p>john@john.com</p>
+            </div>
+            <div class="email-btn">
+                <img src="<?=ROOT?>/assets/svg/three-dots.svg" />
+            </div>
+        </div>
     </div>
 </section>
