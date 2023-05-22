@@ -175,4 +175,39 @@
         margin: 10px 16px;
         display: inline-block;
     }
+
+    /* Desktop */
+    @media only screen and (min-width: 900px) {
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 16px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .grid .card:nth-child(5) {
+            grid-column: span 3;
+            grid-row: span 2;
+        }
+
+        .grid .card:nth-child(6) {
+            grid-row: span 2;
+        }
+
+        .grid .card:nth-child(7) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .grid .card:nth-child(8) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .card {
+            margin: 0;
+        }
+    }
 }

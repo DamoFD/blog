@@ -71,6 +71,10 @@ a {
   .line-break {
     width: 224px;
   }
+  .admin-wrapper {
+    width: 85%;
+    margin-left: 15%;
+  }
 }
 /* Lovely Galaxy Fold */
 @media only screen and (max-width: 300px) {
@@ -189,18 +193,32 @@ a {
 }
 
 .navbar ul {
-  list-style: none;
   display: flex;
-  justify-content: space-around;
-  width: 50%;
+  flex-direction: column;
+  position: fixed;
+  justify-content: start;
+  padding-top: 20px;
+  padding-left: 20px;
+  top: 60px;
+  left: 0;
+  background-color: rgb(21, 21, 21);
+  width: calc(15% - 20px);
+  height: 100vh;
+  overflow: hidden;
+  z-index: 5;
+  transition: transform 0.5s ease-out;
 }
 
 .navbar .nav-right {
   justify-self: end;
 }
 
+.nav-item {
+  margin-top: 10px;
+}
+
 .nav-item a, .nav-item p {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 400;
   text-decoration: none;
   transition: color 0.3s ease-out;
@@ -216,6 +234,7 @@ a {
 .nav-item p {
   color: #FFFFFF;
   font-family: "worksans-bold", sans-serif;
+  margin-top: 50px;
 }
 
 .nav-item a:hover {
@@ -225,6 +244,8 @@ a {
 .active {
   border-left: 1px solid #84CFBB;
   background-color: rgb(40, 40, 40);
+  padding: 5px 40px 5px 10px;
+  border-radius: 10px;
 }
 
 /* MOBILE MENU & ANIMATION */
@@ -320,6 +341,7 @@ a {
   margin-top: 100px;
   width: calc(100% - 32px);
   margin-left: 16px;
+  /* Desktop */
 }
 #dashboard .header-text span {
   color: #71717A;
@@ -453,6 +475,34 @@ a {
   margin: 10px 16px;
   display: inline-block;
 }
+@media only screen and (min-width: 900px) {
+  #dashboard .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #dashboard .grid .card:nth-child(5) {
+    grid-column: span 3;
+    grid-row: span 2;
+  }
+  #dashboard .grid .card:nth-child(6) {
+    grid-row: span 2;
+  }
+  #dashboard .grid .card:nth-child(7) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  #dashboard .grid .card:nth-child(8) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  #dashboard .card {
+    margin: 0;
+  }
+}
 
 /* All Time Statistics Graph */
 /* Mobile-First */
@@ -487,6 +537,27 @@ a {
   border-radius: 10px;
   margin-top: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+@media only screen and (min-width: 900px) {
+  #performance .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    height: 200vh;
+    gap: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  #performance .grid .graph-card:nth-child(3), #performance .grid .graph-card:nth-child(4) {
+    grid-row: span 1;
+    grid-column: span 2;
+  }
+  #performance .grid .graph-card:nth-child(5) {
+    grid-row: span 2;
+  }
+  #performance .graph-card {
+    margin: 0;
+  }
 }
 
 /* Graph Sections */

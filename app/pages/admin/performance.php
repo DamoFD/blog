@@ -9,6 +9,7 @@ include("../app/pages/admin/analytics/analytics-functions.php");
 
 <section id="performance">
     <h1 class="font-size-header font-sans">Performance</h1>
+    <div class="grid">
     <div class="graph-card">
         <?php include("../app/pages/admin/analytics/all-time-stats.php"); ?>
     </div>
@@ -35,5 +36,6 @@ include("../app/pages/admin/analytics/analytics-functions.php");
     </div>
     <div class="graph-card">
         <?php include("../app/pages/admin/analytics/pages.php"); ?>
+    </div>
     </div>
 </section>

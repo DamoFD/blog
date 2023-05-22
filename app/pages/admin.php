@@ -47,13 +47,13 @@
     include('../app/pages/admin/header.php');
     
 ?>
-
+<div class="admin-wrapper">
     <?php
 
         require_once($filename);
 
     ?>
-
+</div>
 </main>
 <script src="<?=ROOT?>/assets/js/admin.js"></script>
 </body>

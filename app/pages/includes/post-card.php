@@ -1,4 +1,4 @@
-<a href="<?=ROOT?>/post/<?=$row['slug']?>">
+<a href="<?=ROOT?>/post/<?=$row['category_slug']?>/<?=$row['sub_category_slug']?>/<?=$row['slug']?>">
 <div>
     <img src="<?=get_image($row['image'])?>" style="width: 200px; height: 200px; object-fit: cover;" />
     <h3><?=esc($row['title'])?></h3>
