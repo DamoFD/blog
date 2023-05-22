@@ -363,12 +363,25 @@ a {
 #dashboard .negative {
   color: #cc3a3a;
 }
-#dashboard .email-header {
+#dashboard .email-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 32px);
   margin-left: 16px;
   margin-top: 20px;
 }
-#dashboard .email-header-text {
-  margin-left: 16px;
+#dashboard .email-head h2 {
+  font-size: 20px;
+}
+#dashboard .email-head .email-header-text {
+  color: #71717A;
+}
+#dashboard .email-head a {
+  background-color: #84CFBB;
+  color: #18181B;
+  padding: 3px 10px;
+  border-radius: 100px;
 }
 #dashboard .email-row {
   display: flex;
@@ -376,12 +389,69 @@ a {
   align-items: center;
   margin: 10px 16px;
   justify-content: space-between;
+  border-bottom: 1px solid #84CFBB;
+  padding-bottom: 5px;
 }
 #dashboard .card .email-row:last-child {
   margin-bottom: 20px;
 }
+#dashboard .email-read {
+  display: flex;
+  background-color: #a7ebbf;
+  padding: 1px 10px;
+  border-radius: 100px;
+}
+#dashboard .email-read img {
+  margin-right: 5px;
+}
+#dashboard .email-read p {
+  font-size: 16px;
+}
+#dashboard .email-subject h3 {
+  font-size: 16px;
+  text-align: center;
+}
+#dashboard .reply-email p {
+  font-size: 16px;
+  text-align: center;
+  word-wrap: break-word;
+  color: #71717A;
+}
 #dashboard .mobile-hidden {
   display: none;
+}
+#dashboard .comment-header {
+  font-size: 20px;
+  margin-left: 16px;
+  margin-top: 10px;
+}
+#dashboard .comment-header-text {
+  margin-left: 16px;
+  color: #71717A;
+}
+#dashboard .comment-row {
+  width: calc(100% - 32px);
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 16px;
+  border-bottom: 1px solid #84CFBB;
+  padding-bottom: 5px;
+}
+#dashboard .comment-text-dark {
+  font-size: 20px;
+  color: #18181B;
+}
+#dashboard .comment-text-light {
+  font-size: 16px;
+  color: #71717A;
+}
+#dashboard .comments-link {
+  color: #18181B;
+  background-color: #84CFBB;
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin: 10px 16px;
+  display: inline-block;
 }
 
 /* All Time Statistics Graph */
