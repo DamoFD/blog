@@ -1,6 +1,8 @@
-<h2>Traffic</h2>
+<section id="traffic">
+<h2 class="font-poppins font-size-med">Traffic</h2>
 
 <canvas id="trafficChart"></canvas>
+</section>
 
 <script>
 
@@ -31,14 +33,16 @@
             {
                 label: 'Requests',
                 data: trafficRequestData,
-                borderColor: "red",
-                backgroundColor: "red",
+                borderColor: "#17c294",
+                backgroundColor: "#17c294",
+                tension: 0.4,
             },
             {
                 label: 'Visitors',
                 data: trafficVisitorData,
-                borderColor: "blue",
-                backgroundColor: "blue",
+                borderColor: "#c21745",
+                backgroundColor: "#c21745",
+                tension: 0.4,
             }
         ]
     };
@@ -48,6 +52,10 @@
         data: trafficData,
         options: {
             responsive: true,
+            interaction: {
+                intersect: false,
+                mode: 'index',
+            },
             plugins: {
                 legend: {
                     position: 'top',

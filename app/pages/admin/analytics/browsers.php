@@ -1,6 +1,9 @@
-<h2>Browsers</h2>
+<section id="browsers">
+<h2 class="font-poppins font-size-med">Browsers</h2>
 
 <canvas id="browsersChart"></canvas>
+
+</section>
 
 <script>
 
@@ -24,8 +27,8 @@
             {
                 label: 'Browser',
                 data: browserRequestData,
-                borderColor: "red",
-                backgroundColor: "red",
+                borderColor: "#17c294",
+                backgroundColor: "#17c294",
             }
         ]
     };

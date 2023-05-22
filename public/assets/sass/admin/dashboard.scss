@@ -4,11 +4,61 @@
 
 #dashboard {
     margin-top: 100px;
+    width: calc(100% - 32px);
+    margin-left: 16px;
 
     .header-text {
 
         span {
             color: #71717A;
         }
+    }
+
+    .card {
+        border: 1px solid #71717A;
+        border-radius: 10px;
+        margin-top: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+
+        h2 {
+            font-size: 20px;
+            color: #71717A;
+            letter-spacing: 2px;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        .amount {
+            font-size: 25px;
+            font-weight: bold;
+        }
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 10px 10px 10px;
+    }
+
+    .percent {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .positive, .negative {
+        font-size: 16px;
+    }
+
+    .positive {
+        color: #16b952;
+    }
+
+    .negative {
+        color: #cc3a3a;
     }
 }

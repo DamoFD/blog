@@ -12,6 +12,23 @@ if($total_requests == 0) {
     return;
 }
 
+$top_referrers = array();
+
+$referrers = $web_analytics_db->query("SELECT `referrer`, COUNT(*) as count FROM wa_requests GROUP BY `referrer` ORDER BY count DESC LIMIT 1000;");
+while($row = $referrers->fetch(PDO::FETCH_ASSOC)){
+    $url = $row['referrer'];
+    $parsed_url = parse_url($url);
+    $host = isset($parsed_url['host']) ? $parsed_url['host'] : $parsed_url['path'];
+
+    if(array_key_exists($host, $top_referrers)){
+        $top_referrers[$host] += $row['count'];
+    }else{
+        $top_referrers[$host] = $row['count'];
+    }
+}
+
+
+
 // Total Visitors
 $total_visitors = $web_analytics_db->count("wa_browsers");
 

@@ -1,31 +1,33 @@
-<h2>All Time Statistics</h2>
-<div>
-    <div>
-        <p>Requests</p>
-        <p><?=$total_requests?></p>
+<section id="all-time-stats">
+<h2 class="font-size-med font-poppins">All Time Statistics</h2>
+<div class="content-container">
+    <div class="row">
+        <p class="font-size-small font-roboto">Views</p>
+        <p class="font-size-small font-roboto amount"><?=$total_requests?></p>
     </div>
-    <div>
-        <p>Unique Visitors</p>
-        <p><?=$total_visitors?></p>
+    <div class="row">
+        <p class="font-size-small font-roboto">Unique Visitors</p>
+        <p class="font-size-small font-roboto amount"><?=$total_visitors?></p>
     </div>
-    <div>
-        <p>Networks</p>
-        <p><?=$total_networks?></p>
+    <div class="row">
+        <p class="font-size-small font-roboto">Networks</p>
+        <p class="font-size-small font-roboto amount"><?=$total_networks?></p>
     </div>
-    <div>
-        <p>ISPs</p>
-        <p><?=$total_isps?></p>
+    <div class="row">
+        <p class="font-size-small font-roboto">ISPs</p>
+        <p class="font-size-small font-roboto amount"><?=$total_isps?></p>
     </div>
-    <div>
-        <p>Countries</p>
-        <p><?=$total_countries?></p>
+    <div class="row">
+        <p class="font-size-small font-roboto">Countries</p>
+        <p class="font-size-small font-roboto amount"><?=$total_countries?></p>
     </div>
-    <div>
-        <p>Continents</p>
-        <p><?=$total_continents?></p>
+    <div class="row">
+        <p class="font-size-small font-roboto">Continents</p>
+        <p class="font-size-small font-roboto amount"><?=$total_continents?></p>
     </div>
-    <div>
-        <p>Languages</p>
-        <p><?=$total_languages?></p>
+    <div class="row">
+        <p class="font-size-small font-roboto">Languages</p>
+        <p class="font-size-small font-roboto amount"><?=$total_languages?></p>
     </div>
 </div>
+</section>

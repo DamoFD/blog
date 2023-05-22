@@ -318,14 +318,92 @@ a {
 /* Mobile-First */
 #dashboard {
   margin-top: 100px;
+  width: calc(100% - 32px);
+  margin-left: 16px;
 }
 #dashboard .header-text span {
   color: #71717A;
 }
+#dashboard .card {
+  border: 1px solid #71717A;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+#dashboard .card h2 {
+  font-size: 20px;
+  color: #71717A;
+  letter-spacing: 2px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+#dashboard .card .amount {
+  font-size: 25px;
+  font-weight: bold;
+}
+#dashboard .row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 10px 10px 10px;
+}
+#dashboard .percent {
+  display: flex;
+  align-items: center;
+}
+#dashboard .percent img {
+  width: 18px;
+  height: 18px;
+}
+#dashboard .positive, #dashboard .negative {
+  font-size: 16px;
+}
+#dashboard .positive {
+  color: #16b952;
+}
+#dashboard .negative {
+  color: #cc3a3a;
+}
+
+/* All Time Statistics Graph */
+/* Mobile-First */
+#all-time-stats, #average-user {
+  width: calc(100% - 20px);
+  margin-left: 10px;
+  margin-top: 20px;
+}
+#all-time-stats .row, #average-user .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  border-bottom: 1px solid #84CFBB;
+  padding-bottom: 10px;
+}
+#all-time-stats .amount, #average-user .amount {
+  background-color: #84CFBB;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
 
 /* Performance Section */
+/* Mobile-First */
 #performance {
   margin-top: 100px;
+  width: calc(100% - 32px);
+  margin-left: 16px;
+}
+#performance .graph-card {
+  border: 1px solid #71717A;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Graph Sections */
+/* Mobile-First */
+#traffic, #realtime, #languages, #browsers, #os, #pages, #referrers {
+  width: calc(100% - 32px);
+  margin: 16px;
 }
 
 /*# sourceMappingURL=admin.css.map */

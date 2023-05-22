@@ -1,0 +1,25 @@
+/* All Time Statistics Graph */
+
+/* Mobile-First */
+
+#all-time-stats, #average-user {
+
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-top: 20px;
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0;
+        border-bottom: 1px solid $color-primary;
+        padding-bottom: 10px;
+    }
+
+    .amount {
+        background-color: $color-primary;
+        padding: 5px 10px;
+        border-radius: 20px;
+    }
+}

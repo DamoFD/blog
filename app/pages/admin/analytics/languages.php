@@ -1,6 +1,9 @@
-<h2>Languages</h2>
+<section id="languages">
+<h2 class="font-poppins font-size-med">Languages</h2>
 
 <canvas id="languageChart"></canvas>
+
+</section>
 
 <script>
 
@@ -24,8 +27,8 @@
             {
                 label: 'Language',
                 data: languageRequestData,
-                borderColor: "red",
-                backgroundColor: "red",
+                borderColor: "#17c294",
+                backgroundColor: "#17c294",
             }
         ]
     };
