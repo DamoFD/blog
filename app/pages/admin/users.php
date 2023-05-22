@@ -1,62 +1,66 @@
 <?php if ($action == 'add') : ?>
-    <h2>Create User</h2>
-    <form method="post" enctype="multipart/form-data">
+    <section id="add-user">
+        <h1 class="font-sans font-size-header">Create User</h1>
+        <form method="post" enctype="multipart/form-data">
 
-        <?php if (!empty($errors)) : ?>
-            <p>Please fix the errors below</p>
-        <?php endif; ?>
-
-        <label>
-            <img class="image-preview-edit" src="<?= get_image('') ?? '' ?>" style="width: 100px; height: 100px; object-fit: cover;" />
-            <input onchange="display_image_edit(this.files[0])" type="file" name="image" style="display: none;" />
-        </label>
-
-        <?php if (!empty($errors['image'])) : ?>
-            <p><?= $errors['image'] ?></p>
-        <?php endif; ?>
-
-        <script>
-            function display_image_edit(file) {
-                document.querySelector(".image-preview-edit").src = URL.createObjectURL(file);
-            }
-        </script>
-
-        <label>Name</label>
-        <input name="name" type="text" value="<?= old_value('name') ?>" />
-        <?php if (!empty($errors['name'])) : ?>
-            <p><?= $errors['name'] ?></p>
-        <?php endif; ?>
-
-        <label>Email</label>
-        <input name="email" type="email" value="<?= old_value('email') ?>" />
-        <?php if (!empty($errors['email'])) : ?>
-            <p><?= $errors['email'] ?></p>
-        <?php endif; ?>
-
-        <label>Password</label>
-        <input name="password" type="password" value="<?= old_value('password') ?>" />
-        <?php if (!empty($errors['password'])) : ?>
-            <p><?= $errors['password'] ?></p>
-        <?php endif; ?>
-
-        <label>Confirm Password</label>
-        <input name="confirm_pwd" type="password" value="<?= old_value('confirm_pwd') ?>" />
-        <a href="<?php echo ROOT; ?>/admin/users">Cancel</a>
-        <button type="submit">Create</button>
-    </form>
-
-<?php elseif ($action == 'edit') : ?>
-
-    <h2>Edit User</h2>
-    <form method="post" enctype="multipart/form-data">
-
-        <?php if (!empty($row)) : ?>
             <?php if (!empty($errors)) : ?>
                 <p>Please fix the errors below</p>
             <?php endif; ?>
 
-            <div>
-                <label>
+            <label class="img">
+                <img class="image-preview-edit" src="<?= get_image('') ?? '' ?>" style="width: 100px; height: 100px; object-fit: cover;" />
+                <input onchange="display_image_edit(this.files[0])" type="file" name="image" style="display: none;" />
+            </label>
+
+            <?php if (!empty($errors['image'])) : ?>
+                <p><?= $errors['image'] ?></p>
+            <?php endif; ?>
+
+            <script>
+                function display_image_edit(file) {
+                    document.querySelector(".image-preview-edit").src = URL.createObjectURL(file);
+                }
+            </script>
+
+            <label>Name</label>
+            <input name="name" type="text" value="<?= old_value('name') ?>" />
+            <?php if (!empty($errors['name'])) : ?>
+                <p><?= $errors['name'] ?></p>
+            <?php endif; ?>
+
+            <label>Email</label>
+            <input name="email" type="email" value="<?= old_value('email') ?>" />
+            <?php if (!empty($errors['email'])) : ?>
+                <p><?= $errors['email'] ?></p>
+            <?php endif; ?>
+
+            <label>Password</label>
+            <input name="password" type="password" value="<?= old_value('password') ?>" />
+            <?php if (!empty($errors['password'])) : ?>
+                <p><?= $errors['password'] ?></p>
+            <?php endif; ?>
+
+            <label>Confirm Password</label>
+            <input name="confirm_pwd" type="password" value="<?= old_value('confirm_pwd') ?>" />
+            <div class="btns">
+                <a href="<?php echo ROOT; ?>/admin/users">Cancel</a>
+                <button type="submit">Create</button>
+            </div>
+        </form>
+    </section>
+
+<?php elseif ($action == 'edit') : ?>
+
+    <section id="edit-user">
+        <h1 class="font-sans font-size-header">Edit User</h1>
+        <form method="post" enctype="multipart/form-data">
+
+            <?php if (!empty($row)) : ?>
+                <?php if (!empty($errors)) : ?>
+                    <p>Please fix the errors below</p>
+                <?php endif; ?>
+
+                <label class="img">
                     <img class="image-preview-edit" src="<?= get_image($row['image'] ?? '') ?>" style="width: 100px; height: 100px; object-fit: cover;" />
                     <input onchange="display_image_edit(this.files[0])" type="file" name="image" style="display: none;" />
                 </label>
@@ -66,69 +70,75 @@
                         document.querySelector(".image-preview-edit").src = URL.createObjectURL(file);
                     }
                 </script>
-            </div>
 
-            <label>Name</label>
-            <input name="name" type="text" value="<?= old_value('name', $row['name']) ?>" />
-            <?php if (!empty($errors['name'])) : ?>
-                <p><?= $errors['name'] ?></p>
+                <label>Name</label>
+                <input name="name" type="text" value="<?= old_value('name', $row['name']) ?>" />
+                <?php if (!empty($errors['name'])) : ?>
+                    <p><?= $errors['name'] ?></p>
+                <?php endif; ?>
+
+                <label>Email</label>
+                <input name="email" type="email" value="<?= old_value('email', $row['email']) ?>" />
+                <?php if (!empty($errors['email'])) : ?>
+                    <p><?= $errors['email'] ?></p>
+                <?php endif; ?>
+
+                <label>Password (Leave Empty to Keep Old Password)</label>
+                <input name="password" type="password" value="<?= old_value('password') ?>" />
+                <?php if (!empty($errors['password'])) : ?>
+                    <p><?= $errors['password'] ?></p>
+                <?php endif; ?>
+
+                <label>Confirm Password</label>
+                <input name="confirm_pwd" type="password" value="<?= old_value('confirm_pwd') ?>" />
+
+                <div class="btns">
+                    <a href="<?php echo ROOT; ?>/admin/users">Cancel</a>
+                    <button type="submit">Submit Changes</button>
+                </div>
+            <?php else : ?>
+
+                <p>User not found.</p>
+
             <?php endif; ?>
-
-            <label>Email</label>
-            <input name="email" type="email" value="<?= old_value('email', $row['email']) ?>" />
-            <?php if (!empty($errors['email'])) : ?>
-                <p><?= $errors['email'] ?></p>
-            <?php endif; ?>
-
-            <label>Password (Leave Empty to Keep Old Password)</label>
-            <input name="password" type="password" value="<?= old_value('password') ?>" />
-            <?php if (!empty($errors['password'])) : ?>
-                <p><?= $errors['password'] ?></p>
-            <?php endif; ?>
-
-            <label>Confirm Password</label>
-            <input name="confirm_pwd" type="password" value="<?= old_value('confirm_pwd') ?>" />
-            <a href="<?php echo ROOT; ?>/admin/users">Cancel</a>
-            <button type="submit">Submit Changes</button>
-        <?php else : ?>
-
-            <p>User not found.</p>
-
-        <?php endif; ?>
-    </form>
+        </form>
+    </section>
 
 <?php elseif ($action == 'delete') : ?>
 
-    <h2>Delete User</h2>
-    <p>Are you sure that you want to delete this user?</p>
-    <form method="post">
+    <section id="delete-user">
+        <h1 class="font-sans font-size-header">Delete User</h1>
+        <p class="font-roboto font-size-med warning">Are you sure that you want to delete this user?</p>
+        <form method="post">
 
-        <?php if (!empty($row)) : ?>
-            <?php if (!empty($errors)) : ?>
-                <p>Please fix the errors below</p>
+            <?php if (!empty($row)) : ?>
+                <?php if (!empty($errors)) : ?>
+                    <p>Please fix the errors below</p>
+                <?php endif; ?>
+
+                <label>Name</label>
+                <input name="name" type="text" value="<?= old_value('name', $row['name']) ?>" readonly />
+                <?php if (!empty($errors['name'])) : ?>
+                    <p><?= $errors['name'] ?></p>
+                <?php endif; ?>
+
+                <label>Email</label>
+                <input name="email" type="email" value="<?= old_value('email', $row['email']) ?>" readonly />
+                <?php if (!empty($errors['email'])) : ?>
+                    <p><?= $errors['email'] ?></p>
+                <?php endif; ?>
+
+                <div class="btns">
+                    <a href="<?php echo ROOT; ?>/admin/users">Cancel</a>
+                    <button class="delete" type="submit">DELETE</button>
+                </div>
+            <?php else : ?>
+
+                <p>User not found.</p>
+
             <?php endif; ?>
-
-            <label>Name</label>
-            <input name="name" type="text" value="<?= old_value('name', $row['name']) ?>" readonly />
-            <?php if (!empty($errors['name'])) : ?>
-                <p><?= $errors['name'] ?></p>
-            <?php endif; ?>
-
-            <label>Email</label>
-            <input name="email" type="email" value="<?= old_value('email', $row['email']) ?>" readonly />
-            <?php if (!empty($errors['email'])) : ?>
-                <p><?= $errors['email'] ?></p>
-            <?php endif; ?>
-
-
-            <a href="<?php echo ROOT; ?>/admin/users">Cancel</a>
-            <button type="submit">DELETE</button>
-        <?php else : ?>
-
-            <p>User not found.</p>
-
-        <?php endif; ?>
-    </form>
+        </form>
+    </section>
 
 <?php else : ?>
 

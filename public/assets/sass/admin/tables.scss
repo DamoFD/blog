@@ -2,7 +2,7 @@
 
 #posts, #categories, #users, #sub-categories {
 
-    margin-top: 100px;
+    margin-top: 80px;
     width: calc(100% - 32px);
     margin-left: 16px;
 
@@ -28,6 +28,7 @@
         border-spacing: 0;
         border-collapse: collapse;
         width: 100%;
+        margin-top: 20px;
     }
 
     th {

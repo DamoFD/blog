@@ -2,14 +2,15 @@
 
     <link rel="stylesheet" type="text/css" href="<?= ROOT ?>/assets/summernote/summernote-lite.min.css" />
 
-    <h2>Create Post</h2>
+    <section id="add-post">
+    <h1 class="font-sans font-size-header">Create Post</h1>
     <form method="post" enctype="multipart/form-data">
 
         <?php if (!empty($errors)) : ?>
             <p>Please fix the errors below</p>
         <?php endif; ?>
 
-        <label>
+        <label class="img">
             <p>Featured Image</p>
             <img class="image-preview-edit" src="<?= get_image('') ?? '' ?>" style="width: 100px; height: 100px; object-fit: cover;" />
             <input onchange="display_image_edit(this.files[0])" type="file" name="image" style="display: none;" />
@@ -104,9 +105,12 @@
             <p><?= $errors['sub-category'] ?></p>
         <?php endif; ?>
 
-        <a href="<?php echo ROOT; ?>/admin/posts">Cancel</a>
-        <button type="submit">Create</button>
+        <div class="btns">
+        <a class="cancel" href="<?php echo ROOT; ?>/admin/posts">Cancel</a>
+        <button class="submit" type="submit">Create</button>
+        </div>
     </form>
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -122,7 +126,9 @@
 <?php elseif ($action == 'edit') : ?>
 
     <link rel="stylesheet" type="text/css" href="<?= ROOT ?>/assets/summernote/summernote-lite.min.css" />
-    <h2>Edit Post</h2>
+
+    <section id="edit-post">
+    <h1 class="font-sans font-size-header">Edit Post</h1>
     <form method="post" enctype="multipart/form-data">
 
         <?php if (!empty($row)) : ?>
@@ -130,8 +136,8 @@
                 <p>Please fix the errors below</p>
             <?php endif; ?>
 
-            <div>
-                <label>
+                <label class="img">
+                    <p>Featured Image</p>
                     <img class="image-preview-edit" src="<?= get_image($row['image'] ?? '') ?>" style="width: 100px; height: 100px; object-fit: cover;" />
                     <input onchange="display_image_edit(this.files[0])" type="file" name="image" style="display: none;" />
                 </label>
@@ -141,7 +147,6 @@
                         document.querySelector(".image-preview-edit").src = URL.createObjectURL(file);
                     }
                 </script>
-            </div>
 
             <label>Title</label>
             <input name="title" type="text" value="<?= old_value('title', $row['title']) ?>" />
@@ -225,14 +230,17 @@
                 <p><?= $errors['sub-category'] ?></p>
             <?php endif; ?>
 
-            <a href="<?= ROOT ?>/admin/posts">Cancel</a>
-            <button type="submit">Submit Changes</button>
+            <div class="btns">
+            <a class="cancel" href="<?= ROOT ?>/admin/posts">Cancel</a>
+            <button class="submit" type="submit">Submit Changes</button>
+            </div>
         <?php else : ?>
 
             <p>Post not found.</p>
 
         <?php endif; ?>
     </form>
+    </section>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="<?= ROOT ?>/assets/summernote/summernote-lite.min.js"></script>
@@ -245,8 +253,9 @@
     </script>
 <?php elseif ($action == 'delete') : ?>
 
-    <h2>Delete Post</h2>
-    <p>Are you sure that you want to delete this Post?</p>
+    <section id="delete-post">
+    <h1 class="font-sans font-size-header">Delete Post</h1>
+    <p class="font-roboto font-size-med warning">Are you sure that you want to delete this Post?</p>
     <form method="post">
 
         <?php if (!empty($row)) : ?>
@@ -266,15 +275,17 @@
                 <p><?= $errors['slug'] ?></p>
             <?php endif; ?>
 
-
+            <div class="btns">
             <a href="<?php echo ROOT; ?>/admin/posts">Cancel</a>
-            <button type="submit">DELETE</button>
+            <button class="delete" type="submit">DELETE</button>
+            </div>
         <?php else : ?>
 
             <p>Post not found.</p>
 
         <?php endif; ?>
     </form>
+    </section>
 
 <?php else : ?>
     <section id="posts">

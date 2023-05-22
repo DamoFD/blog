@@ -1,0 +1,61 @@
+/* Add and Edit Post Sections */
+
+/* Mobile First */
+
+#add-post, #edit-post {
+    margin-top: 80px;
+    width: calc(100% - 32px);
+    margin-left: 16px;
+
+    h1 {
+        text-align: center
+    }
+
+    form {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img {
+        align-self: center;
+        text-align: center;
+    }
+
+    label {
+        font-size: 23px;
+        font-family: $font-poppins;
+        margin-top: 20px;
+    }
+
+    input, select {
+        height: 50px;
+        border: 1px solid #71717A;
+        border-radius: 10px;
+        font-size: 23px;
+    }
+
+    .btns {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .cancel, .submit {
+        font-family: $font-roboto;
+        padding: 10px 20px;
+        font-size: 23px;
+        color: #18181B;
+        border-radius: 10px;
+    }
+
+    .cancel {
+        margin-right: 20px;
+        background-color: #c967a3;
+    }
+
+    .submit {
+        background-color: $color-primary;
+        margin-left: 20px;
+    }
+}

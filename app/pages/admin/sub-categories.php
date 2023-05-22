@@ -1,46 +1,51 @@
 <?php if ($sub_action == 'add') : ?>
-    <h2>Create Sub-Category</h2>
+    <section id="add-sub-category">
+        <h1 class="font-sans font-size-header">Create Sub-Category</h1>
 
-    <form method="post" enctype="multipart/form-data">
+        <form method="post" enctype="multipart/form-data">
 
-        <?php if (!empty($errors)) : ?>
-            <p>Please fix the errors below</p>
-        <?php endif; ?>
+            <?php if (!empty($errors)) : ?>
+                <p>Please fix the errors below</p>
+            <?php endif; ?>
 
-        <label>
-            <img class="image-preview-edit" src="<?= get_image('') ?? '' ?>" style="width: 100px; height: 100px; object-fit: cover;" />
-            <input onchange="display_image_edit(this.files[0])" type="file" name="image" style="display: none;" />
-        </label>
+            <label class="img">
+                <img class="image-preview-edit" src="<?= get_image('') ?? '' ?>" style="width: 100px; height: 100px; object-fit: cover;" />
+                <input onchange="display_image_edit(this.files[0])" type="file" name="image" style="display: none;" />
+            </label>
 
-        <?php if (!empty($errors['image'])) : ?>
-            <p><?= $errors['image'] ?></p>
-        <?php endif; ?>
+            <?php if (!empty($errors['image'])) : ?>
+                <p><?= $errors['image'] ?></p>
+            <?php endif; ?>
 
-        <script>
-            function display_image_edit(file) {
-                document.querySelector(".image-preview-edit").src = URL.createObjectURL(file);
-            }
-        </script>
+            <script>
+                function display_image_edit(file) {
+                    document.querySelector(".image-preview-edit").src = URL.createObjectURL(file);
+                }
+            </script>
 
-        <label>Sub-Category</label>
-        <input name="sub-category" type="text" value="<?= old_value('sub-category') ?>" />
-        <?php if (!empty($errors['sub-category'])) : ?>
-            <p><?= $errors['sub-category'] ?></p>
-        <?php endif; ?>
+            <label>Sub-Category</label>
+            <input name="sub-category" type="text" value="<?= old_value('sub-category') ?>" />
+            <?php if (!empty($errors['sub-category'])) : ?>
+                <p><?= $errors['sub-category'] ?></p>
+            <?php endif; ?>
 
-        <label>Active</label>
-        <select name="disabled">
-            <option value="0">Yes</option>
-            <option value="1">No</option>
-        </select>
+            <label>Active</label>
+            <select name="disabled">
+                <option value="0">Yes</option>
+                <option value="1">No</option>
+            </select>
 
-        <a href="<?php echo ROOT; ?>/admin/categories/sub-categories/<?= $id ?>">Cancel</a>
-        <button type="submit">Create</button>
-    </form>
+            <div class="btns">
+                <a href="<?php echo ROOT; ?>/admin/categories/sub-categories/<?= $id ?>">Cancel</a>
+                <button type="submit">Create</button>
+            </div>
+        </form>
+    </section>
 
 <?php elseif ($sub_action == 'edit') : ?>
 
-    <h2>Edit Sub-Category</h2>
+    <section id="edit-sub-category">
+    <h1 class="font-sans font-size-header">Edit Sub-Category</h1>
     <form method="post" enctype="multipart/form-data">
 
         <?php if (!empty($row)) : ?>
@@ -48,8 +53,7 @@
                 <p>Please fix the errors below</p>
             <?php endif; ?>
 
-            <div>
-                <label>
+                <label class="img">
                     <img class="image-preview-edit" src="<?= get_image($row['image'] ?? '') ?>" style="width: 100px; height: 100px; object-fit: cover;" />
                     <input onchange="display_image_edit(this.files[0])" type="file" name="image" style="display: none;" />
                 </label>
@@ -59,7 +63,6 @@
                         document.querySelector(".image-preview-edit").src = URL.createObjectURL(file);
                     }
                 </script>
-            </div>
 
             <label>Sub-Category</label>
             <input name="sub-category" type="text" value="<?= old_value('sub-category', $row['sub_category']) ?>" />
@@ -76,19 +79,23 @@
                 <p><?= $errors['disabled'] ?></p>
             <?php endif; ?>
 
-            <a href="<?= ROOT ?>/admin/categories/sub-categories/<?= $id ?>">Cancel</a>
-            <button type="submit">Submit Changes</button>
+            <div class="btns">
+                <a href="<?= ROOT ?>/admin/categories/sub-categories/<?= $id ?>">Cancel</a>
+                <button type="submit">Submit Changes</button>
+            </div>
         <?php else : ?>
 
             <p>Sub-Category not found.</p>
 
         <?php endif; ?>
     </form>
+    </section>
 
 <?php elseif ($sub_action == 'delete') : ?>
 
-    <h2>Delete Sub-Category</h2>
-    <p>Are you sure that you want to delete this category?</p>
+    <section id="delete-sub-category">
+    <h1 class="font-sans font-size-header">Delete Sub-Category</h1>
+    <p class="font-roboto font-size-med warning">Are you sure that you want to delete this category?</p>
     <form method="post">
 
         <?php if (!empty($row)) : ?>
@@ -108,15 +115,17 @@
                 <p><?= $errors['slug'] ?></p>
             <?php endif; ?>
 
-
+            <div class="btns">
             <a href="<?php echo ROOT; ?>/admin/categories/sub-categories/<?= $id ?>">Cancel</a>
-            <button type="submit">DELETE</button>
+            <button class="delete" type="submit">DELETE</button>
+            </div>
         <?php else : ?>
 
             <p>Sub-Category not found.</p>
 
         <?php endif; ?>
     </form>
+    </section>
 
 <?php else : ?>
     <?php

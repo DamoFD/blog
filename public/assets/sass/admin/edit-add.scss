@@ -1,0 +1,71 @@
+/* Edit and Add Sections */
+
+#add-user, #add-category,
+#delete-post, #edit-category,
+#delete-category, #edit-user,
+#delete-user, #add-sub-category,
+#edit-sub-category, #delete-sub-category {
+    margin-top: 80px;
+    width: calc(100% - 32px);
+    margin-left: 16px;
+
+    h1 {
+        text-align: center
+    }
+
+    .warning {
+        text-align: center;
+        color: rgb(247, 68, 68);
+    }
+
+    form {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img {
+        align-self: center;
+    }
+
+    label {
+        font-size: 23px;
+        font-family: $font-poppins;
+        margin-top: 20px;
+    }
+
+    input, select {
+        height: 50px;
+        border: 1px solid #71717A;
+        border-radius: 10px;
+        font-size: 23px;
+    }
+
+    .btns {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    a, button {
+        font-family: $font-roboto;
+        padding: 10px 20px;
+        font-size: 23px;
+        color: #18181B;
+        border-radius: 10px;
+    }
+
+    a {
+        margin-right: 20px;
+        background-color: #c967a3;
+    }
+
+    button {
+        background-color: $color-primary;
+        margin-left: 20px;
+    }
+
+    .delete {
+        background-color: rgb(247, 68, 68);
+    }
+}

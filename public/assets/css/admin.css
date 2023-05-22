@@ -498,7 +498,7 @@ a {
 
 /* Posts section */
 #posts, #categories, #users, #sub-categories {
-  margin-top: 100px;
+  margin-top: 80px;
   width: calc(100% - 32px);
   margin-left: 16px;
 }
@@ -521,6 +521,7 @@ a {
   border-spacing: 0;
   border-collapse: collapse;
   width: 100%;
+  margin-top: 20px;
 }
 #posts th, #categories th, #users th, #sub-categories th {
   background-color: #84CFBB;
@@ -550,6 +551,169 @@ a {
 #posts td .delete, #categories td .delete, #users td .delete, #sub-categories td .delete {
   background-color: #c21745;
   margin-top: 10px;
+}
+
+/* Edit and Add Sections */
+#add-user, #add-category,
+#delete-post, #edit-category,
+#delete-category, #edit-user,
+#delete-user, #add-sub-category,
+#edit-sub-category, #delete-sub-category {
+  margin-top: 80px;
+  width: calc(100% - 32px);
+  margin-left: 16px;
+}
+#add-user h1, #add-category h1,
+#delete-post h1, #edit-category h1,
+#delete-category h1, #edit-user h1,
+#delete-user h1, #add-sub-category h1,
+#edit-sub-category h1, #delete-sub-category h1 {
+  text-align: center;
+}
+#add-user .warning, #add-category .warning,
+#delete-post .warning, #edit-category .warning,
+#delete-category .warning, #edit-user .warning,
+#delete-user .warning, #add-sub-category .warning,
+#edit-sub-category .warning, #delete-sub-category .warning {
+  text-align: center;
+  color: rgb(247, 68, 68);
+}
+#add-user form, #add-category form,
+#delete-post form, #edit-category form,
+#delete-category form, #edit-user form,
+#delete-user form, #add-sub-category form,
+#edit-sub-category form, #delete-sub-category form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+#add-user .img, #add-category .img,
+#delete-post .img, #edit-category .img,
+#delete-category .img, #edit-user .img,
+#delete-user .img, #add-sub-category .img,
+#edit-sub-category .img, #delete-sub-category .img {
+  align-self: center;
+}
+#add-user label, #add-category label,
+#delete-post label, #edit-category label,
+#delete-category label, #edit-user label,
+#delete-user label, #add-sub-category label,
+#edit-sub-category label, #delete-sub-category label {
+  font-size: 23px;
+  font-family: "poppins-medium", sans-serif;
+  margin-top: 20px;
+}
+#add-user input, #add-user select, #add-category input, #add-category select,
+#delete-post input,
+#delete-post select, #edit-category input, #edit-category select,
+#delete-category input,
+#delete-category select, #edit-user input, #edit-user select,
+#delete-user input,
+#delete-user select, #add-sub-category input, #add-sub-category select,
+#edit-sub-category input,
+#edit-sub-category select, #delete-sub-category input, #delete-sub-category select {
+  height: 50px;
+  border: 1px solid #71717A;
+  border-radius: 10px;
+  font-size: 23px;
+}
+#add-user .btns, #add-category .btns,
+#delete-post .btns, #edit-category .btns,
+#delete-category .btns, #edit-user .btns,
+#delete-user .btns, #add-sub-category .btns,
+#edit-sub-category .btns, #delete-sub-category .btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+#add-user a, #add-user button, #add-category a, #add-category button,
+#delete-post a,
+#delete-post button, #edit-category a, #edit-category button,
+#delete-category a,
+#delete-category button, #edit-user a, #edit-user button,
+#delete-user a,
+#delete-user button, #add-sub-category a, #add-sub-category button,
+#edit-sub-category a,
+#edit-sub-category button, #delete-sub-category a, #delete-sub-category button {
+  font-family: "roboto-regular", sans-serif;
+  padding: 10px 20px;
+  font-size: 23px;
+  color: #18181B;
+  border-radius: 10px;
+}
+#add-user a, #add-category a,
+#delete-post a, #edit-category a,
+#delete-category a, #edit-user a,
+#delete-user a, #add-sub-category a,
+#edit-sub-category a, #delete-sub-category a {
+  margin-right: 20px;
+  background-color: #c967a3;
+}
+#add-user button, #add-category button,
+#delete-post button, #edit-category button,
+#delete-category button, #edit-user button,
+#delete-user button, #add-sub-category button,
+#edit-sub-category button, #delete-sub-category button {
+  background-color: #84CFBB;
+  margin-left: 20px;
+}
+#add-user .delete, #add-category .delete,
+#delete-post .delete, #edit-category .delete,
+#delete-category .delete, #edit-user .delete,
+#delete-user .delete, #add-sub-category .delete,
+#edit-sub-category .delete, #delete-sub-category .delete {
+  background-color: rgb(247, 68, 68);
+}
+
+/* Add and Edit Post Sections */
+/* Mobile First */
+#add-post, #edit-post {
+  margin-top: 80px;
+  width: calc(100% - 32px);
+  margin-left: 16px;
+}
+#add-post h1, #edit-post h1 {
+  text-align: center;
+}
+#add-post form, #edit-post form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+#add-post .img, #edit-post .img {
+  align-self: center;
+  text-align: center;
+}
+#add-post label, #edit-post label {
+  font-size: 23px;
+  font-family: "poppins-medium", sans-serif;
+  margin-top: 20px;
+}
+#add-post input, #add-post select, #edit-post input, #edit-post select {
+  height: 50px;
+  border: 1px solid #71717A;
+  border-radius: 10px;
+  font-size: 23px;
+}
+#add-post .btns, #edit-post .btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+#add-post .cancel, #add-post .submit, #edit-post .cancel, #edit-post .submit {
+  font-family: "roboto-regular", sans-serif;
+  padding: 10px 20px;
+  font-size: 23px;
+  color: #18181B;
+  border-radius: 10px;
+}
+#add-post .cancel, #edit-post .cancel {
+  margin-right: 20px;
+  background-color: #c967a3;
+}
+#add-post .submit, #edit-post .submit {
+  background-color: #84CFBB;
+  margin-left: 20px;
 }
 
 /*# sourceMappingURL=admin.css.map */
