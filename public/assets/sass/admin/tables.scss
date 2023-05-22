@@ -1,0 +1,66 @@
+/* Posts section */
+
+#posts, #categories, #users, #sub-categories {
+
+    margin-top: 100px;
+    width: calc(100% - 32px);
+    margin-left: 16px;
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+            background-color: $color-primary;
+            color: #18181B;
+            padding: 5px 15px;
+            border-radius: 100px;
+            white-space: nowrap;
+        }
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    table {
+        border-spacing: 0;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th {
+        background-color: $color-primary;
+        border-collapse: collapse;
+        color: #18181B;
+        font-family: $font-poppins;
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 0;
+        font-family: $font-roboto;
+        color: #18181B;
+        text-align: center;
+        border-bottom: 1px solid $color-primary;
+        white-space: nowrap;
+
+        .edit, .delete {
+            padding: 3px 10px;
+            display: block;
+            border-radius: 100px;
+            color: #18181B;
+        }
+
+        .edit { 
+            background-color: $color-primary;
+            margin-bottom: 10px;
+        }
+
+        .delete {
+            background-color: #c21745;
+            margin-top: 10px;
+        }
+    }
+}

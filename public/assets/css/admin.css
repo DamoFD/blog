@@ -496,4 +496,60 @@ a {
   margin: 16px;
 }
 
+/* Posts section */
+#posts, #categories, #users, #sub-categories {
+  margin-top: 100px;
+  width: calc(100% - 32px);
+  margin-left: 16px;
+}
+#posts .row, #categories .row, #users .row, #sub-categories .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#posts .row a, #categories .row a, #users .row a, #sub-categories .row a {
+  background-color: #84CFBB;
+  color: #18181B;
+  padding: 5px 15px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+#posts .table-wrapper, #categories .table-wrapper, #users .table-wrapper, #sub-categories .table-wrapper {
+  overflow-x: auto;
+}
+#posts table, #categories table, #users table, #sub-categories table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+#posts th, #categories th, #users th, #sub-categories th {
+  background-color: #84CFBB;
+  border-collapse: collapse;
+  color: #18181B;
+  font-family: "poppins-medium", sans-serif;
+  white-space: nowrap;
+}
+#posts td, #categories td, #users td, #sub-categories td {
+  padding: 0;
+  font-family: "roboto-regular", sans-serif;
+  color: #18181B;
+  text-align: center;
+  border-bottom: 1px solid #84CFBB;
+  white-space: nowrap;
+}
+#posts td .edit, #posts td .delete, #categories td .edit, #categories td .delete, #users td .edit, #users td .delete, #sub-categories td .edit, #sub-categories td .delete {
+  padding: 3px 10px;
+  display: block;
+  border-radius: 100px;
+  color: #18181B;
+}
+#posts td .edit, #categories td .edit, #users td .edit, #sub-categories td .edit {
+  background-color: #84CFBB;
+  margin-bottom: 10px;
+}
+#posts td .delete, #categories td .delete, #users td .delete, #sub-categories td .delete {
+  background-color: #c21745;
+  margin-top: 10px;
+}
+
 /*# sourceMappingURL=admin.css.map */
