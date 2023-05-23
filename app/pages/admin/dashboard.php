@@ -125,7 +125,7 @@ if ($visitorsYesterday > 0) {
                         (SELECT title FROM posts WHERE comments.post_id = posts.id) as post_title
                         FROM comments
                         ORDER BY id DESC
-                        LIMIT 10";
+                        LIMIT 5";
 
                         $comments = query($query);
                 
@@ -145,7 +145,7 @@ if ($visitorsYesterday > 0) {
                 </div>
                 <?php endforeach; ?>
                 <?php endif; ?>
-                <a class="font-roboto comments-link" href="">SEE ALL COMMENTS<img src="<?= ROOT ?>/assets/svg/arrow-right.svg" /></a>
+                <a class="font-roboto comments-link" href="<?=ROOT?>/admin/comments">SEE ALL COMMENTS<img src="<?= ROOT ?>/assets/svg/arrow-right.svg" /></a>
             </div>
         </div>
     </div>
