@@ -32,7 +32,7 @@
     <header id="header" class="header__main">
         <!--Primary Navigation-->
         <nav class="navbar">
-            <a href="/">
+            <a href="<?=ROOT?>">
                 <img src="<?=ROOT?>/assets/svg/site-logo.svg" class="header-img" />
             </a>
             <div class="menu-toggle" id="mobile-menu">

@@ -21,6 +21,7 @@
     ?>
 
 <section id="view-email">
+    <?php if(!empty($row)) : ?>
     <h1 class="font-sans font-size-header">Email From, <?=$row['name']?></h1>
     <div class="content-head">
         <h2 class="font-poppins font-size-med"><?=$row['name']?></h2>
@@ -35,6 +36,9 @@
         <form method="post"><button class="font-roboto font-size-small" type="submit">Delete</button></form>
         <a class="font-roboto font-size-small" href="mailto:<?=$row['email']?>">Reply</a>
     </div>
+    <?php else : ?>
+        <p>This email does not exist.</p>
+    <?php endif; ?>
 </section>
 
 <?php else : ?>

@@ -105,10 +105,10 @@ if ($visitorsYesterday > 0) {
                     <p class="font-roboto"><?=$email['seen'] == 1 ? "Read" : "Unread"; ?></p>
                 </div>
                 <div class="email-subject">
-                    <h3 class="font-poppins"><?= substr($email['content'], 0, 20) . (strlen($email['content']) > 20 ? "..." : "") ?></h3>
+                    <h3 class="font-poppins"><?= esc(substr($email['content'], 0, 20)) . esc((strlen($email['content'])) > 20 ? "..." : "") ?></h3>
                 </div>
                 <div class="reply-email">
-                    <p class="font-roboto"><?=$email['email']?></p>
+                    <p class="font-roboto"><?=esc($email['email'])?></p>
                 </div>
             </div>
             <?php endforeach; ?>
@@ -118,16 +118,33 @@ if ($visitorsYesterday > 0) {
             <h2 class="font-sans comment-header">Recent Comments</h2>
             <p class="font-poppins comment-header-text">Here are your latest comments</p>
             <div>
+                <?php
+                
+                        // Fetch comments
+                        $query = "SELECT comments.*,
+                        (SELECT title FROM posts WHERE comments.post_id = posts.id) as post_title
+                        FROM comments
+                        ORDER BY id DESC
+                        LIMIT 10";
+
+                        $comments = query($query);
+                
+                ?>
+
+                <?php if(!empty($comments)) : ?>
+                    <?php foreach($comments as $comment) : ?>
                 <div class="comment-row">
                     <div>
-                        <h3 class="font-poppins comment-text-dark">Jenny Wilson</h3>
-                        <p class="font-roboto comment-text-light">I really like how...</p>
+                        <h3 class="font-poppins comment-text-dark"><?=esc($comment['name'])?></h3>
+                        <p class="font-roboto comment-text-light"><?= esc(substr($comment['content'], 0, 20)) . esc((strlen($comment['content'])) > 20 ? "..." : "") ?></p>
                     </div>
                     <div class="message-info">
-                        <p class="font-poppins comment-text-dark">Cute Kitties</p>
-                        <p class="font-roboto comment-text-light">Jan 17, 2022</p>
+                        <p class="font-poppins comment-text-dark"><?=esc($comment['post_title'])?></p>
+                        <p class="font-roboto comment-text-light"><?=$comment['date']?></p>
                     </div>
                 </div>
+                <?php endforeach; ?>
+                <?php endif; ?>
                 <a class="font-roboto comments-link" href="">SEE ALL COMMENTS<img src="<?= ROOT ?>/assets/svg/arrow-right.svg" /></a>
             </div>
         </div>

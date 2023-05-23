@@ -9,7 +9,7 @@
     $limit = 10;
     $offset = ($PAGE['page_number'] - 1) * $limit;
     
-    $query = "SELECT posts.*, categories.category, sub_categories.sub_category 
+    $query = "SELECT posts.*, categories.category, categories.slug as category_slug, sub_categories.sub_category, sub_categories.slug as sub_category_slug 
           FROM posts 
           JOIN categories ON posts.category_id = categories.id 
           JOIN sub_categories ON posts.sub_category_id = sub_categories.id 
