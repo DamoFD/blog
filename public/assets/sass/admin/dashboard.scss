@@ -106,7 +106,6 @@
 
     .email-read {
         display: flex;
-        background-color: #a7ebbf;
         padding: 1px 10px;
         border-radius: 100px;
 
@@ -117,6 +116,14 @@
         p {
             font-size: 16px;
         }
+    }
+
+    .read {
+        background-color: #a7ebbf;
+    }
+
+    .unread {
+        background-color: #eba7a7;
     }
 
     .email-subject {

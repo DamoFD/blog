@@ -85,7 +85,7 @@ if ($visitorsYesterday > 0) {
                     <h2 class="font-sans font-size-med email-header">Emails</h2>
                     <p class="font-poppins email-header-text">Recent Emails</p>
                 </div>
-                <a class="font-roboto" href="<?= ROOT ?>/admin/email">See all Emails <img src="<?= ROOT ?>/assets/svg/arrow-right.svg" /></a>
+                <a class="font-roboto" href="<?= ROOT ?>/admin/emails">See all Emails <img src="<?= ROOT ?>/assets/svg/arrow-right.svg" /></a>
             </div>
 
             <?php
@@ -100,8 +100,8 @@ if ($visitorsYesterday > 0) {
                 <?php if (!empty($emails)) : ?>
                     <?php foreach ($emails as $email) : ?>
             <div class="email-row">
-                <div class="email-read">
-                    <img src="<?php echo $email['seen'] == 1 ? ROOT . "/assets/svg/green-dot.svg" : ROOT . "/assets/svg/yellow-dot.svg"; ?>" />
+                <div class="email-read <?=$email['seen'] == 1 ? "read" : "unread";?>">
+                    <img src="<?php echo $email['seen'] == 1 ? ROOT . "/assets/svg/green-dot.svg" : ROOT . "/assets/svg/red-dot.svg"; ?>" />
                     <p class="font-roboto"><?=$email['seen'] == 1 ? "Read" : "Unread"; ?></p>
                 </div>
                 <div class="email-subject">

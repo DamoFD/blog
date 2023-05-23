@@ -1,4 +1,4 @@
-<?php if ($action == 'mark-all') : ?>
+<?php if($action == 'mark-all') : ?>
 <section id="mark-all-emails">
     <h1 class="font-sans font-size-header">Mark All Emails As Read</h1>
     <p class="font-poppins font-size-med">Are you sure that you would like to mark all emails as read?</p>
@@ -8,6 +8,33 @@
         <button class="delete" type="submit">YES</button>
         </div>
     </form>
+</section>
+
+<?php elseif($action == 'read') : ?>
+
+    <?php
+        
+        $query =  "SELECT * FROM emails WHERE id = :id LIMIT 1";
+        
+        $row = query_row($query, ['id' => $id]);
+        
+    ?>
+
+<section id="view-email">
+    <h1 class="font-sans font-size-header">Email From, <?=$row['name']?></h1>
+    <div class="content-head">
+        <h2 class="font-poppins font-size-med"><?=$row['name']?></h2>
+        <p class="font-poppins font-size-med"><?= date("jS M, Y", strtotime($row['date'])) ?></p>
+    </div>
+    <p class="font-roboto font-size-small"><?=$row['email']?></p>
+    <div class="content">
+        <p class="font-roboto font-size-small"><?=$row['content']?></p>
+    </div>
+    <div class="btns">
+        <a class="font-roboto font-size-small" href="<?=ROOT?>/admin/emails">Back</a>
+        <form method="post"><button class="font-roboto font-size-small" type="submit">Delete</button></form>
+        <a class="font-roboto font-size-small" href="mailto:<?=$row['email']?>">Reply</a>
+    </div>
 </section>
 
 <?php else : ?>
@@ -46,7 +73,7 @@
                             <td><?= esc($row['email']) ?></td>
                             <td><?= date("jS M, Y", strtotime($row['date'])) ?></td>
                             <td>
-                                <a class="view" href="<?php echo ROOT; ?>/admin/emails/view/<?php echo $row['id'] ?>">View</a>
+                                <a class="view" href="<?=ROOT?>/admin/emails/read/<?=$row['id']?>">View</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

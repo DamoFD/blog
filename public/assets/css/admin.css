@@ -243,6 +243,7 @@ a {
 
 .active {
   border-left: 1px solid #84CFBB;
+  border-bottom: 1px solid #84CFBB;
   background-color: rgb(40, 40, 40);
   padding: 5px 40px 5px 10px;
   border-radius: 10px;
@@ -422,7 +423,6 @@ a {
 }
 #dashboard .email-read {
   display: flex;
-  background-color: #a7ebbf;
   padding: 1px 10px;
   border-radius: 100px;
 }
@@ -431,6 +431,12 @@ a {
 }
 #dashboard .email-read p {
   font-size: 16px;
+}
+#dashboard .read {
+  background-color: #a7ebbf;
+}
+#dashboard .unread {
+  background-color: #eba7a7;
 }
 #dashboard .email-subject h3 {
   font-size: 16px;
@@ -817,6 +823,74 @@ a {
 #add-post .submit, #edit-post .submit {
   background-color: #84CFBB;
   margin-left: 20px;
+}
+
+/* Email and comment views */
+/* Mobile-First */
+#view-email {
+  margin-top: 80px;
+  width: calc(100% - 32px);
+  margin-left: 16px;
+}
+#view-email h1 {
+  text-align: center;
+}
+#view-email h1, #view-email h2 {
+  color: #18181B;
+}
+#view-email .content-head {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 10px 0px 10px;
+}
+#view-email :nth-child(3) {
+  margin-left: 10px;
+}
+#view-email p {
+  color: #71717A;
+}
+#view-email .content {
+  margin-top: 20px;
+  border-top: 1px solid #71717A;
+  border-bottom: 1px solid #71717A;
+}
+#view-email .content p {
+  margin: 20px 10px;
+  color: #18181B;
+}
+#view-email .btns {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+#view-email .btns a, #view-email .btns button {
+  padding: 5px 20px;
+  color: #18181B;
+  border-radius: 10px;
+}
+#view-email .btns a {
+  background-color: #84CFBB;
+}
+#view-email .btns button {
+  background-color: rgb(248, 77, 77);
+}
+#view-email .btns button:hover {
+  cursor: pointer;
+}
+@media only screen and (min-width: 900px) {
+  #view-email {
+    width: calc(100% - 300px);
+    margin-left: 150px;
+  }
+  #view-email .content-head {
+    margin: 100px 20px 0px 20px;
+  }
+  #view-email :nth-child(3) {
+    margin-left: 20px;
+  }
+  #view-email .content p {
+    margin: 20px 20px;
+  }
 }
 
 /*# sourceMappingURL=admin.css.map */
