@@ -4,7 +4,8 @@
 #delete-post, #edit-category,
 #delete-category, #edit-user,
 #delete-user, #add-sub-category,
-#edit-sub-category, #delete-sub-category {
+#edit-sub-category, #delete-sub-category,
+#mark-all-emails {
     margin-top: 80px;
     width: calc(100% - 32px);
     margin-left: 16px;
@@ -67,5 +68,9 @@
 
     .delete {
         background-color: rgb(247, 68, 68);
+    }
+
+    p {
+        text-align: center;
     }
 }

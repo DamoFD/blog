@@ -1,5 +1,14 @@
-<?php if ($section == 'mark-all') : ?>
-
+<?php if ($action == 'mark-all') : ?>
+<section id="mark-all-emails">
+    <h1 class="font-sans font-size-header">Mark All Emails As Read</h1>
+    <p class="font-poppins font-size-med">Are you sure that you would like to mark all emails as read?</p>
+    <form method="post">
+        <div class="btns">
+        <a href="<?php echo ROOT; ?>/admin/emails">Cancel</a>
+        <button class="delete" type="submit">YES</button>
+        </div>
+    </form>
+</section>
 
 <?php else : ?>
     <section id="emails">
