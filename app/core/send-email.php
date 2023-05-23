@@ -42,8 +42,19 @@
         $errMessage = 'Please enter your message.';
     }
 
-    // If no errors, send email
+    // If no errors, send email, add to database
     if (!$errName && !$errEmail && !$errMessage) {
+
+        $data = [];
+        $data['content'] = $_POST['message'];
+        $data['email'] = $_POST['email'];
+        $data['name'] = $_POST['name'];
+
+        $query = "INSERT INTO emails (content,email,name) VALUES (:content,:email,:name)";
+
+        query($query, $data);
+
+
        if (mail ($to, $subject, $body, $headers)) {
             $result='<div><p class="color-primary font-size-small font-roboto">Email Sent! You will receive a reply shortly</p></div>';
         } else {
