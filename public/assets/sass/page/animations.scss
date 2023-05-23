@@ -1,0 +1,31 @@
+/* Animations */
+.slide-up {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 2s, opacity 2s;
+  }
+  
+  .slide-up.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .slide-up.offset-300 {
+    transition-delay: 300ms;
+  }
+
+  .slide-up.offset-600 {
+    transition-delay: 600ms;
+  }
+
+  .slide-up.offset-900 {
+    transition-delay: 900ms;
+  }
+
+  .bounce {
+    transition: transform 0.5s ease;
+  }
+
+  .bounce:hover {
+    transform: translateY(-5px);
+  }

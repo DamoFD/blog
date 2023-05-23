@@ -102,9 +102,5 @@
             </button>
           </form>
         </div>
-        <p class="created-by color-text font-roboto">
-          @2023 Created By <span class="color-primary">D</span>amion
-          <span class="color-primary">V</span>oshall
-        </p>
       </section>
       <!-- !Contact Section -->

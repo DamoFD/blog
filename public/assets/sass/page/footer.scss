@@ -1,0 +1,36 @@
+/* Footer section */
+
+footer {
+    background: radial-gradient(71.9% 71.9% at 50% 50%, #3A6559 0%, #0C0C0C 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .footer-logo {
+        margin-top: 20px;
+        width: 112px;
+        height: 112px;
+    }
+
+    .list-footer {
+        display: flex;
+    }
+
+    .footer-item {
+        margin: 45px;
+    }
+
+    .footer-item a {
+        transition: color ease 0.5s;
+    }
+
+    .footer-item a:hover {
+        color: gray
+    }
+
+    .created-by {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 16px;
+    }
+}

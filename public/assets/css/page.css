@@ -858,11 +858,6 @@ a {
   background-color: #466d62;
   cursor: pointer;
 }
-#contact .created-by {
-  margin-top: 50px;
-  text-align: center;
-  font-size: 16px;
-}
 #contact .err {
   color: rgb(231, 83, 83);
 }
@@ -942,6 +937,68 @@ a {
     max-width: 100%;
     word-break: break-word;
   }
+}
+
+/* Footer section */
+footer {
+  background: radial-gradient(71.9% 71.9% at 50% 50%, #3A6559 0%, #0C0C0C 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .footer-logo {
+  margin-top: 20px;
+  width: 112px;
+  height: 112px;
+}
+footer .list-footer {
+  display: flex;
+}
+footer .footer-item {
+  margin: 45px;
+}
+footer .footer-item a {
+  transition: color ease 0.5s;
+}
+footer .footer-item a:hover {
+  color: gray;
+}
+footer .created-by {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Animations */
+.slide-up {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 2s, opacity 2s;
+}
+
+.slide-up.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.slide-up.offset-300 {
+  transition-delay: 300ms;
+}
+
+.slide-up.offset-600 {
+  transition-delay: 600ms;
+}
+
+.slide-up.offset-900 {
+  transition-delay: 900ms;
+}
+
+.bounce {
+  transition: transform 0.5s ease;
+}
+
+.bounce:hover {
+  transform: translateY(-5px);
 }
 
 /*# sourceMappingURL=page.css.map */

@@ -1,4 +1,20 @@
-<p>This is a footer!</p>
+</main>
+<footer>
+<img class="footer-logo" src="<?=ROOT?>/assets/svg/site-logo.svg" class="header-img" />
+<nav class="footer-nav">
+    <ul class="list-footer">
+    <li class="footer-item"><a class="font-size-small color-secondary font-roboto bounce" href="<?= ROOT ?>">Home</a></li>
+    <li class="footer-item"><a class="font-size-small color-secondary font-roboto bounce" href="<?= ROOT ?>/about">About</a></li>
+    <li class="footer-item"><a class="font-size-small color-secondary font-roboto bounce" href="<?= ROOT ?>/portfolio">Portfolio</a></li>
+    <li class="footer-item"><a class="font-size-small color-secondary font-roboto bounce" href="<?= ROOT ?>/blog">Blog</a></li>
+    <li class="footer-item"><a class="font-size-small color-secondary font-roboto bounce" href="<?= ROOT ?>/contact">Contact</a></li>
+    </ul>
+</nav>
+<p class="created-by color-text font-roboto">
+          @2023 Created By <span class="color-primary">D</span>amion
+          <span class="color-primary">V</span>oshall
+        </p>
+</footer>
 
 
 <!-- JQuery -->
