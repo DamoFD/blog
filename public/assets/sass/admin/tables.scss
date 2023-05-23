@@ -1,6 +1,6 @@
 /* Posts section */
 
-#posts, #categories, #users, #sub-categories {
+#posts, #categories, #users, #sub-categories, #emails {
 
     margin-top: 80px;
     width: calc(100% - 32px);
@@ -63,5 +63,19 @@
             background-color: #c21745;
             margin-top: 10px;
         }
+    }
+
+    .green {
+        color: green;
+    }
+
+    .red {
+        color: red;
+    }
+}
+
+#emails {
+    td {
+        height: 30px;
     }
 }

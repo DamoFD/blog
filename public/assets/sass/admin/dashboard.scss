@@ -62,6 +62,10 @@
         color: #cc3a3a;
     }
 
+    .email-container {
+        overflow-x: auto;
+    }
+
     .email-head {
         display: flex;
         justify-content: space-between;
@@ -131,10 +135,6 @@
             word-wrap:break-word;
             color: #71717A;
         }
-    }
-
-    .mobile-hidden {
-        display: none;
     }
 
     .comment-header {

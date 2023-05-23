@@ -385,6 +385,9 @@ a {
 #dashboard .negative {
   color: #cc3a3a;
 }
+#dashboard .email-container {
+  overflow-x: auto;
+}
 #dashboard .email-head {
   display: flex;
   justify-content: space-between;
@@ -438,9 +441,6 @@ a {
   text-align: center;
   word-wrap: break-word;
   color: #71717A;
-}
-#dashboard .mobile-hidden {
-  display: none;
 }
 #dashboard .comment-header {
   font-size: 20px;
@@ -568,40 +568,40 @@ a {
 }
 
 /* Posts section */
-#posts, #categories, #users, #sub-categories {
+#posts, #categories, #users, #sub-categories, #emails {
   margin-top: 80px;
   width: calc(100% - 32px);
   margin-left: 16px;
 }
-#posts .row, #categories .row, #users .row, #sub-categories .row {
+#posts .row, #categories .row, #users .row, #sub-categories .row, #emails .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#posts .row a, #categories .row a, #users .row a, #sub-categories .row a {
+#posts .row a, #categories .row a, #users .row a, #sub-categories .row a, #emails .row a {
   background-color: #84CFBB;
   color: #18181B;
   padding: 5px 15px;
   border-radius: 100px;
   white-space: nowrap;
 }
-#posts .table-wrapper, #categories .table-wrapper, #users .table-wrapper, #sub-categories .table-wrapper {
+#posts .table-wrapper, #categories .table-wrapper, #users .table-wrapper, #sub-categories .table-wrapper, #emails .table-wrapper {
   overflow-x: auto;
 }
-#posts table, #categories table, #users table, #sub-categories table {
+#posts table, #categories table, #users table, #sub-categories table, #emails table {
   border-spacing: 0;
   border-collapse: collapse;
   width: 100%;
   margin-top: 20px;
 }
-#posts th, #categories th, #users th, #sub-categories th {
+#posts th, #categories th, #users th, #sub-categories th, #emails th {
   background-color: #84CFBB;
   border-collapse: collapse;
   color: #18181B;
   font-family: "poppins-medium", sans-serif;
   white-space: nowrap;
 }
-#posts td, #categories td, #users td, #sub-categories td {
+#posts td, #categories td, #users td, #sub-categories td, #emails td {
   padding: 0;
   font-family: "roboto-regular", sans-serif;
   color: #18181B;
@@ -609,19 +609,29 @@ a {
   border-bottom: 1px solid #84CFBB;
   white-space: nowrap;
 }
-#posts td .edit, #posts td .delete, #categories td .edit, #categories td .delete, #users td .edit, #users td .delete, #sub-categories td .edit, #sub-categories td .delete {
+#posts td .edit, #posts td .delete, #categories td .edit, #categories td .delete, #users td .edit, #users td .delete, #sub-categories td .edit, #sub-categories td .delete, #emails td .edit, #emails td .delete {
   padding: 3px 10px;
   display: block;
   border-radius: 100px;
   color: #18181B;
 }
-#posts td .edit, #categories td .edit, #users td .edit, #sub-categories td .edit {
+#posts td .edit, #categories td .edit, #users td .edit, #sub-categories td .edit, #emails td .edit {
   background-color: #84CFBB;
   margin-bottom: 10px;
 }
-#posts td .delete, #categories td .delete, #users td .delete, #sub-categories td .delete {
+#posts td .delete, #categories td .delete, #users td .delete, #sub-categories td .delete, #emails td .delete {
   background-color: #c21745;
   margin-top: 10px;
+}
+#posts .green, #categories .green, #users .green, #sub-categories .green, #emails .green {
+  color: green;
+}
+#posts .red, #categories .red, #users .red, #sub-categories .red, #emails .red {
+  color: red;
+}
+
+#emails td {
+  height: 30px;
 }
 
 /* Edit and Add Sections */

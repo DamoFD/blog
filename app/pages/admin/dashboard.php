@@ -79,7 +79,7 @@ if ($visitorsYesterday > 0) {
         <div class="card">
             <?php include("../app/pages/admin/analytics/referrers.php"); ?>
         </div>
-        <div class="card">
+        <div class="card email-container">
             <div class="email-head">
                 <div class="email-text-container">
                     <h2 class="font-sans font-size-med email-header">Emails</h2>
@@ -87,66 +87,32 @@ if ($visitorsYesterday > 0) {
                 </div>
                 <a class="font-roboto" href="<?= ROOT ?>/admin/email">See all Emails <img src="<?= ROOT ?>/assets/svg/arrow-right.svg" /></a>
             </div>
+
+            <?php
+            
+                // Retrieve Emails from database
+                $query = "SELECT * FROM emails ORDER BY id DESC LIMIT 10";
+
+                $emails = query($query);
+
+            ?>
+
+                <?php if (!empty($emails)) : ?>
+                    <?php foreach ($emails as $email) : ?>
             <div class="email-row">
                 <div class="email-read">
-                    <img src="<?= ROOT ?>/assets/svg/green-dot.svg" />
-                    <p class="font-roboto">Read</p>
+                    <img src="<?php echo $email['seen'] == 1 ? ROOT . "/assets/svg/green-dot.svg" : ROOT . "/assets/svg/yellow-dot.svg"; ?>" />
+                    <p class="font-roboto"><?=$email['seen'] == 1 ? "Read" : "Unread"; ?></p>
                 </div>
                 <div class="email-subject">
-                    <h3 class="font-poppins">Wordpress Website</h3>
-                    <p class="mobile-hidden">question about how too...</p>
-                </div>
-                <div class="email-date mobile-hidden">
-                    <p>Jan 17, 2022</p>
-                    <p>Sent from form</p>
+                    <h3 class="font-poppins"><?= substr($email['content'], 0, 20) . (strlen($email['content']) > 20 ? "..." : "") ?></h3>
                 </div>
                 <div class="reply-email">
-                    <p class="font-roboto">john@john.com</p>
-                </div>
-                <div class="email-btn mobile-hidden">
-                    <img src="<?= ROOT ?>/assets/svg/three-dots.svg" />
+                    <p class="font-roboto"><?=$email['email']?></p>
                 </div>
             </div>
-            <div class="email-row">
-                <div class="email-read">
-                    <img src="<?= ROOT ?>/assets/svg/green-dot.svg" />
-                    <p class="font-roboto">Read</p>
-                </div>
-                <div class="email-subject">
-                    <h3 class="font-poppins">Wordpress Website</h3>
-                    <p class="mobile-hidden">question about how too...</p>
-                </div>
-                <div class="email-date mobile-hidden">
-                    <p>Jan 17, 2022</p>
-                    <p>Sent from form</p>
-                </div>
-                <div class="reply-email">
-                    <p class="font-roboto">john@john.com</p>
-                </div>
-                <div class="email-btn mobile-hidden">
-                    <img src="<?= ROOT ?>/assets/svg/three-dots.svg" />
-                </div>
-            </div>
-            <div class="email-row">
-                <div class="email-read">
-                    <img src="<?= ROOT ?>/assets/svg/green-dot.svg" />
-                    <p class="font-roboto">Read</p>
-                </div>
-                <div class="email-subject">
-                    <h3 class="font-poppins">Wordpress Website</h3>
-                    <p class="mobile-hidden">question about how too...</p>
-                </div>
-                <div class="email-date mobile-hidden">
-                    <p>Jan 17, 2022</p>
-                    <p>Sent from form</p>
-                </div>
-                <div class="reply-email">
-                    <p class="font-roboto">john@john.com</p>
-                </div>
-                <div class="email-btn mobile-hidden">
-                    <img src="<?= ROOT ?>/assets/svg/three-dots.svg" />
-                </div>
-            </div>
+            <?php endforeach; ?>
+            <?php endif; ?>
         </div>
         <div class="card">
             <h2 class="font-sans comment-header">Recent Comments</h2>
