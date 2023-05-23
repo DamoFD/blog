@@ -64,13 +64,13 @@ if ($visitorsYesterday > 0) {
         <div class="card">
             <h2 class="font-poppins light-header">UNREAD NOTIFICATIONS</h2>
             <div class="row">
-                <p class="font-roboto amount">35</p>
+                <p class="font-roboto amount"><?=$unread['emails'] + $unread['comments']?></p>
             </div>
         </div>
         <div class="card">
             <h2 class="font-poppins light-header">UNREAD EMAILS</h2>
             <div class="row">
-                <p class="font-roboto amount">13</p>
+                <p class="font-roboto amount"><?=$unread['emails']?></p>
             </div>
         </div>
         <div class="card">

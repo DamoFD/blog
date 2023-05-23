@@ -1,3 +1,16 @@
+<?php
+
+    $query = "SELECT 
+    (SELECT COUNT(*) FROM emails WHERE seen = 0) AS emails,
+    (SELECT COUNT(*) FROM comments WHERE seen = 0) AS comments";
+
+
+    $unread = query_row($query);
+
+    var_dump($unread);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,8 +67,8 @@
                 <li class="nav-item"><a class="<?=$section == 'categories' ? 'active' : ''?>" href="<?=ROOT?>/admin/categories">Categories</a></li>
                 <li class="nav-item"><a class="<?=$section == 'users' ? 'active' : ''?>" href="<?=ROOT?>/admin/users">Users</a></li>
                 <li class="nav-item"><p>NOTIFICATIONS</p></li>
-                <li class="nav-item"><a class="<?=$section == 'emails' ? 'active' : ''?>" href="<?=ROOT?>/admin/emails">Emails</a></li>
-                <li class="nav-item"><a class="<?=$section == 'comments' ? 'active' : ''?>" href="<?=ROOT?>/admin/comments">Comments</a></li>
+                <li class="nav-item"><a class="<?=$section == 'emails' ? 'active' : ''?>" href="<?=ROOT?>/admin/emails">Emails</a><p class="color-secondary"><?=($unread['emails']) != 0 ? $unread['emails'] : '';?></p></li>
+                <li class="nav-item"><a class="<?=$section == 'comments' ? 'active' : ''?>" href="<?=ROOT?>/admin/comments">Comments</a><p class="color-secondary"><?=($unread['comments']) != 0 ? $unread['comments'] : '';?></p></li>
                 <li class="nav-item"><a href="<?=ROOT?>/logout">Log Out</a></li>
             </ul>
         </nav>

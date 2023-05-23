@@ -574,40 +574,40 @@ a {
 }
 
 /* Posts section */
-#posts, #categories, #users, #sub-categories, #emails {
+#posts, #categories, #users, #sub-categories, #emails, #comments {
   margin-top: 80px;
   width: calc(100% - 32px);
   margin-left: 16px;
 }
-#posts .row, #categories .row, #users .row, #sub-categories .row, #emails .row {
+#posts .row, #categories .row, #users .row, #sub-categories .row, #emails .row, #comments .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#posts .row a, #categories .row a, #users .row a, #sub-categories .row a, #emails .row a {
+#posts .row a, #categories .row a, #users .row a, #sub-categories .row a, #emails .row a, #comments .row a {
   background-color: #84CFBB;
   color: #18181B;
   padding: 5px 15px;
   border-radius: 100px;
   white-space: nowrap;
 }
-#posts .table-wrapper, #categories .table-wrapper, #users .table-wrapper, #sub-categories .table-wrapper, #emails .table-wrapper {
+#posts .table-wrapper, #categories .table-wrapper, #users .table-wrapper, #sub-categories .table-wrapper, #emails .table-wrapper, #comments .table-wrapper {
   overflow-x: auto;
 }
-#posts table, #categories table, #users table, #sub-categories table, #emails table {
+#posts table, #categories table, #users table, #sub-categories table, #emails table, #comments table {
   border-spacing: 0;
   border-collapse: collapse;
   width: 100%;
   margin-top: 20px;
 }
-#posts th, #categories th, #users th, #sub-categories th, #emails th {
+#posts th, #categories th, #users th, #sub-categories th, #emails th, #comments th {
   background-color: #84CFBB;
   border-collapse: collapse;
   color: #18181B;
   font-family: "poppins-medium", sans-serif;
   white-space: nowrap;
 }
-#posts td, #categories td, #users td, #sub-categories td, #emails td {
+#posts td, #categories td, #users td, #sub-categories td, #emails td, #comments td {
   padding: 0;
   font-family: "roboto-regular", sans-serif;
   color: #18181B;
@@ -615,28 +615,28 @@ a {
   border-bottom: 1px solid #84CFBB;
   white-space: nowrap;
 }
-#posts td .edit, #posts td .delete, #categories td .edit, #categories td .delete, #users td .edit, #users td .delete, #sub-categories td .edit, #sub-categories td .delete, #emails td .edit, #emails td .delete {
+#posts td .edit, #posts td .delete, #categories td .edit, #categories td .delete, #users td .edit, #users td .delete, #sub-categories td .edit, #sub-categories td .delete, #emails td .edit, #emails td .delete, #comments td .edit, #comments td .delete {
   padding: 3px 10px;
   display: block;
   border-radius: 100px;
   color: #18181B;
 }
-#posts td .edit, #categories td .edit, #users td .edit, #sub-categories td .edit, #emails td .edit {
+#posts td .edit, #categories td .edit, #users td .edit, #sub-categories td .edit, #emails td .edit, #comments td .edit {
   background-color: #84CFBB;
   margin-bottom: 10px;
 }
-#posts td .delete, #categories td .delete, #users td .delete, #sub-categories td .delete, #emails td .delete {
+#posts td .delete, #categories td .delete, #users td .delete, #sub-categories td .delete, #emails td .delete, #comments td .delete {
   background-color: #c21745;
   margin-top: 10px;
 }
-#posts .green, #categories .green, #users .green, #sub-categories .green, #emails .green {
+#posts .green, #categories .green, #users .green, #sub-categories .green, #emails .green, #comments .green {
   color: green;
 }
-#posts .red, #categories .red, #users .red, #sub-categories .red, #emails .red {
+#posts .red, #categories .red, #users .red, #sub-categories .red, #emails .red, #comments .red {
   color: red;
 }
 
-#emails td {
+#emails td, #comments td {
   height: 30px;
 }
 
@@ -646,7 +646,7 @@ a {
 #delete-category, #edit-user,
 #delete-user, #add-sub-category,
 #edit-sub-category, #delete-sub-category,
-#mark-all-emails {
+#mark-all-emails, #mark-all-comments {
   margin-top: 80px;
   width: calc(100% - 32px);
   margin-left: 16px;
@@ -656,7 +656,7 @@ a {
 #delete-category h1, #edit-user h1,
 #delete-user h1, #add-sub-category h1,
 #edit-sub-category h1, #delete-sub-category h1,
-#mark-all-emails h1 {
+#mark-all-emails h1, #mark-all-comments h1 {
   text-align: center;
 }
 #add-user .warning, #add-category .warning,
@@ -664,7 +664,7 @@ a {
 #delete-category .warning, #edit-user .warning,
 #delete-user .warning, #add-sub-category .warning,
 #edit-sub-category .warning, #delete-sub-category .warning,
-#mark-all-emails .warning {
+#mark-all-emails .warning, #mark-all-comments .warning {
   text-align: center;
   color: rgb(247, 68, 68);
 }
@@ -673,7 +673,7 @@ a {
 #delete-category form, #edit-user form,
 #delete-user form, #add-sub-category form,
 #edit-sub-category form, #delete-sub-category form,
-#mark-all-emails form {
+#mark-all-emails form, #mark-all-comments form {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -683,7 +683,7 @@ a {
 #delete-category .img, #edit-user .img,
 #delete-user .img, #add-sub-category .img,
 #edit-sub-category .img, #delete-sub-category .img,
-#mark-all-emails .img {
+#mark-all-emails .img, #mark-all-comments .img {
   align-self: center;
 }
 #add-user label, #add-category label,
@@ -691,7 +691,7 @@ a {
 #delete-category label, #edit-user label,
 #delete-user label, #add-sub-category label,
 #edit-sub-category label, #delete-sub-category label,
-#mark-all-emails label {
+#mark-all-emails label, #mark-all-comments label {
   font-size: 23px;
   font-family: "poppins-medium", sans-serif;
   margin-top: 20px;
@@ -706,7 +706,7 @@ a {
 #edit-sub-category input,
 #edit-sub-category select, #delete-sub-category input, #delete-sub-category select,
 #mark-all-emails input,
-#mark-all-emails select {
+#mark-all-emails select, #mark-all-comments input, #mark-all-comments select {
   height: 50px;
   border: 1px solid #71717A;
   border-radius: 10px;
@@ -717,7 +717,7 @@ a {
 #delete-category .btns, #edit-user .btns,
 #delete-user .btns, #add-sub-category .btns,
 #edit-sub-category .btns, #delete-sub-category .btns,
-#mark-all-emails .btns {
+#mark-all-emails .btns, #mark-all-comments .btns {
   display: flex;
   justify-content: center;
   margin-top: 30px;
@@ -732,7 +732,7 @@ a {
 #edit-sub-category a,
 #edit-sub-category button, #delete-sub-category a, #delete-sub-category button,
 #mark-all-emails a,
-#mark-all-emails button {
+#mark-all-emails button, #mark-all-comments a, #mark-all-comments button {
   font-family: "roboto-regular", sans-serif;
   padding: 10px 20px;
   font-size: 23px;
@@ -744,7 +744,7 @@ a {
 #delete-category a, #edit-user a,
 #delete-user a, #add-sub-category a,
 #edit-sub-category a, #delete-sub-category a,
-#mark-all-emails a {
+#mark-all-emails a, #mark-all-comments a {
   margin-right: 20px;
   background-color: #c967a3;
 }
@@ -753,7 +753,7 @@ a {
 #delete-category button, #edit-user button,
 #delete-user button, #add-sub-category button,
 #edit-sub-category button, #delete-sub-category button,
-#mark-all-emails button {
+#mark-all-emails button, #mark-all-comments button {
   background-color: #84CFBB;
   margin-left: 20px;
 }
@@ -762,7 +762,7 @@ a {
 #delete-category .delete, #edit-user .delete,
 #delete-user .delete, #add-sub-category .delete,
 #edit-sub-category .delete, #delete-sub-category .delete,
-#mark-all-emails .delete {
+#mark-all-emails .delete, #mark-all-comments .delete {
   background-color: rgb(247, 68, 68);
 }
 #add-user p, #add-category p,
@@ -770,7 +770,7 @@ a {
 #delete-category p, #edit-user p,
 #delete-user p, #add-sub-category p,
 #edit-sub-category p, #delete-sub-category p,
-#mark-all-emails p {
+#mark-all-emails p, #mark-all-comments p {
   text-align: center;
 }
 
@@ -827,68 +827,68 @@ a {
 
 /* Email and comment views */
 /* Mobile-First */
-#view-email {
+#view-email, #view-comment {
   margin-top: 80px;
   width: calc(100% - 32px);
   margin-left: 16px;
 }
-#view-email h1 {
+#view-email h1, #view-comment h1 {
   text-align: center;
 }
-#view-email h1, #view-email h2 {
+#view-email h1, #view-email h2, #view-comment h1, #view-comment h2 {
   color: #18181B;
 }
-#view-email .content-head {
+#view-email .content-head, #view-comment .content-head {
   display: flex;
   justify-content: space-between;
   margin: 20px 10px 0px 10px;
 }
-#view-email :nth-child(3) {
+#view-email :nth-child(3), #view-comment :nth-child(3) {
   margin-left: 10px;
 }
-#view-email p {
+#view-email p, #view-comment p {
   color: #71717A;
 }
-#view-email .content {
+#view-email .content, #view-comment .content {
   margin-top: 20px;
   border-top: 1px solid #71717A;
   border-bottom: 1px solid #71717A;
 }
-#view-email .content p {
+#view-email .content p, #view-comment .content p {
   margin: 20px 10px;
   color: #18181B;
 }
-#view-email .btns {
+#view-email .btns, #view-comment .btns {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
 }
-#view-email .btns a, #view-email .btns button {
+#view-email .btns a, #view-email .btns button, #view-comment .btns a, #view-comment .btns button {
   padding: 5px 20px;
   color: #18181B;
   border-radius: 10px;
 }
-#view-email .btns a {
+#view-email .btns a, #view-comment .btns a {
   background-color: #84CFBB;
 }
-#view-email .btns button {
+#view-email .btns button, #view-comment .btns button {
   background-color: rgb(248, 77, 77);
 }
-#view-email .btns button:hover {
+#view-email .btns button:hover, #view-comment .btns button:hover {
   cursor: pointer;
 }
 @media only screen and (min-width: 900px) {
-  #view-email {
+  #view-email, #view-comment {
     width: calc(100% - 300px);
     margin-left: 150px;
   }
-  #view-email .content-head {
+  #view-email .content-head, #view-comment .content-head {
     margin: 100px 20px 0px 20px;
   }
-  #view-email :nth-child(3) {
+  #view-email :nth-child(3), #view-comment :nth-child(3) {
     margin-left: 20px;
   }
-  #view-email .content p {
+  #view-email .content p, #view-comment .content p {
     margin: 20px 20px;
   }
 }

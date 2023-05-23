@@ -1,6 +1,6 @@
 /* Posts section */
 
-#posts, #categories, #users, #sub-categories, #emails {
+#posts, #categories, #users, #sub-categories, #emails, #comments {
 
     margin-top: 80px;
     width: calc(100% - 32px);
@@ -74,7 +74,7 @@
     }
 }
 
-#emails {
+#emails, #comments {
     td {
         height: 30px;
     }

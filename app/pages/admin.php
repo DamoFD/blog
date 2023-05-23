@@ -36,7 +36,13 @@
         require_once("../app/pages/admin/posts-controller.php");
 
     }elseif($section == 'emails'){
+
         require_once("../app/pages/admin/emails-controller.php");
+
+    }elseif($section == 'comments'){
+
+        require_once("../app/pages/admin/comments-controller.php");
+
     }
 
     
