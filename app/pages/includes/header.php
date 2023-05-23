@@ -9,8 +9,7 @@
     <link rel="icon" type="image/x-icon" href="<?=ROOT?>/assets/svg/icon-logo.svg" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <link href="<?php echo ROOT; ?>/assets/css/dashboard.css" rel="stylesheet" />
+    <link href="<?php echo ROOT; ?>/assets/css/page.css" rel="stylesheet" />
 </head>
 
 <!-- Google Analytics -->

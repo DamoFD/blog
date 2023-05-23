@@ -3,6 +3,7 @@
     "sass": "^1.62.1"
   },
   "scripts": {
-    "start": "sass ./public/assets/sass/admin.scss ./public/assets/css/admin.css --watch"
+    "start": "sass ./public/assets/sass/admin.scss ./public/assets/css/admin.css --watch",
+    "watch-page": "sass ./public/assets/sass/page.scss ./public/assets/css/page.css --watch"
   }
 }

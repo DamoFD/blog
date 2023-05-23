@@ -2,6 +2,30 @@
     include('../app/pages/includes/header.php');
 ?>
 
+<?php
+    include('../app/pages/includes/hero.php');
+?>
+
+<?php
+    include('../app/pages/includes/method.php');
+?>
+
+<?php
+    include('../app/pages/includes/skills.php');
+?>
+
+<?php
+    include('../app/pages/includes/about.php');
+?>
+
+<?php
+    include('../app/pages/includes/portfolio.php');
+?>
+
+<?php
+    include('../app/pages/includes/contact.php');
+?>
+
     <?php
     
     $query = "SELECT posts.*, categories.category, categories.slug as category_slug, sub_categories.sub_category, sub_categories.slug as sub_category_slug 

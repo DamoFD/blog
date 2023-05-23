@@ -1,0 +1,78 @@
+/* Skills Section */
+
+#skills {
+
+    background-image: url(../images/face-bg-left.webp);
+    background-position: -125px -30px;
+    background-attachment: fixed;
+
+    /* Mobile-First */
+
+    .skills-container {
+        background: linear-gradient(
+            90deg, rgba(0, 0, 0, .8) 0%,
+            rgba(38, 72, 63, .8) 100%
+        );
+        height: 100%;
+        width: 100%;
+        padding: 84px 0px;
+    }
+
+    .skills-head-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid {
+        margin-top: 50px;
+        display: grid;
+        width: calc(100% - 32px);
+        margin-left: 16px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .grid-item {
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-item img {
+        transition: transform 0.5s ease;
+    }
+
+    .grid-item img:hover {
+        transform: translateY(-5px);
+    }
+
+    .grid-item-text {
+        margin-top: 16px;
+    }
+
+    @media only screen and (min-width: 900px) {
+
+        background-position: left center;
+
+        .skills-container {
+            padding: 150px 0px;
+        }
+
+        .grid {
+            grid-template-columns: repeat(5, 1fr);
+            width: calc(100% - 300px);
+            margin-left: 150px;
+        }
+    }
+
+    /* Lovely Galaxy Fold */
+
+    @media only screen and (max-width: 300px) {
+        .grid-item img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}

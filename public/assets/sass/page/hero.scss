@@ -1,0 +1,159 @@
+/* Hero Section */
+
+#hero {
+
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 84px);
+    margin-top: 84px;
+
+    /* Mobile-First */
+
+    .hero-img {
+        position: absolute;
+        background-image: url(../images/hero-photo.webp);
+        background-position: -550px center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -2;
+    }
+
+    .hero-backdrop {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -3;
+    }
+
+    .hero-content-container {
+        display: flex;
+        width: calc(100% - 32px);
+        height: calc(100vh - 84px);
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 16px;
+    }
+
+    .hero-head {
+        margin-top: 10px;
+        width: 320px;
+    }
+
+    .hero-text {
+        margin-top: 20px;
+    }
+
+    .hero-overlay {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            90deg, rgba(12, 12, 12, 0.8) 0.37%,
+            rgba(38, 72, 63, 0.8) 109.27%
+        );
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .btn-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .social-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-icon {
+        width: 55px;
+        height: 55px;
+        margin: 40px 20px;
+    }
+
+    /* Desktop */
+
+    @media only screen and (min-width: 900px) {
+    
+
+    .hero-content-container {
+        width: 550px;
+        position: absolute;
+        left: 150px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .hero-overlay {
+        background: linear-gradient(
+            90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    }
+
+    .hero-img {
+        width: 100%;
+        height: 100%;
+        background-position: center center;
+    }
+
+    .hero-head {
+        width: 100%;
+    }
+
+    .btn-container {
+        width: 525px;
+    }
+
+    .social-container{
+        width: 525px;
+    }
+
+}
+
+/* Tablet */
+
+@media only screen and (min-width: 700px) and (max-width: 1000px) {
+
+    .hero-content-container {
+        width: calc(100% - 300px);
+        margin-left: 150px;
+    }
+
+    .hero-head {
+        width: 350px;
+    }
+}
+
+/* Sideways Mobile */
+
+@media only screen and (max-height: 500px) {
+
+    height: calc(200vh - 84px);
+
+    .hero-content-container {
+        height: calc(200vh - 84px);
+    }
+
+    .hero-img {
+        background-position: right center;
+    }
+}
+
+/* Lovely Galaxy Fold */
+
+@media only screen and (max-width: 300px) {
+
+    .hero-head {
+        width: 100%;
+    }
+}
+      
+}

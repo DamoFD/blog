@@ -1,0 +1,129 @@
+/* Portfolio Section */
+
+#portfolio {
+
+    background-image: url(../images/face-bg-right.webp);
+    background-position: 500px -30px;
+    background-attachment: fixed;
+    z-index: -4;
+
+    /* Mobile-First */
+
+    .portfolio-container {
+        background: linear-gradient(
+            270deg, rgba(0, 0, 0, .8) 0%,
+            rgba(38, 72, 63, .8) 100%
+        );
+        height: 100%;
+        width: 100%;
+        padding: 84px 0px;
+        z-index: -3;
+    }
+
+    .portfolio-head-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: calc(100% - 60px);
+        margin-left: 30px;
+    }
+
+    .grid-item {
+        position: relative;
+        width: 100%;
+        height: 252px;
+        margin-top: 50px;
+    }
+
+    .grid-content {
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid-content h3 {
+        z-index: 2;
+        margin-bottom: 10px;
+        font-size: 25px;
+    }
+
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .8);
+        top: 0;
+        left: 0;
+        z-index: 1;
+        border-radius: 10px;
+    }
+
+    .grid-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 3px 6px 10px 3px rgba(0, 0, 0, .3);
+    }
+
+    .grid .grid-item:nth-child(3) img {
+        object-position: -210px center;
+    }
+
+    .grid .grid-item:nth-child(4) img {
+        object-position: -40px center;
+    }
+
+    @media only screen and (min-width: 900px) {
+
+        background-position: right center;
+
+        .grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 100px 100px;
+            width: calc(100% - 430px);
+            margin-left: 215px;
+            margin-top: 50px;
+        }
+
+        .grid-item {
+            height: 375px;
+            margin-top: 0px;
+        }
+
+        .grid .grid-item:nth-child(3) img {
+            object-position: -70px center;
+        }
+
+        .grid .grid-item:nth-child(4) img {
+            object-position: center center;
+        }
+    }
+
+    /* Tablet */
+
+    @media only screen and (min-width: 700px) and (max-width: 1250px) {
+
+        .grid {
+            width: calc(100% - 300px);
+            margin-left: 150px;
+        }
+
+        .grid-item {
+            height: 300px;
+        }
+    }
+}

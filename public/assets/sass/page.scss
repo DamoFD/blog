@@ -1,0 +1,29 @@
+@font-face {
+    font-family: poppins-medium;
+    src: url(../fonts/Poppins-Medium.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: roboto-regular;
+    src: url(../fonts/Roboto-Regular.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: worksans-bold;
+    src: url(../fonts/WorkSans-Bold.ttf);
+    font-display: swap;
+}
+
+@import'./global/variables.scss';
+@import'./global/global.scss';
+@import'./global/typography.scss';
+@import'./global/color.scss';
+@import'./page/header.scss';
+@import'./page/hero.scss';
+@import'./page/method.scss';
+@import'./page/skills.scss';
+@import'./page/about.scss';
+@import'./page/portfolio.scss';
+@import'./page/contact.scss';

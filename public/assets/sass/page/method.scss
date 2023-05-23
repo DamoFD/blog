@@ -1,0 +1,123 @@
+/* Method Section */
+
+#method {
+
+    width: 100%;
+
+    /* Mobile-First */
+
+    .method-container {
+        width: calc(100% - 32px);
+        margin-left: 16px;
+        display: flex;
+        flex-direction: column;
+        padding: 84px 0px;
+    }
+
+    .method-head {
+        margin-top: 10px;
+    }
+
+    .method-text {
+        margin-top: 20px;
+    }
+
+    .btn-container {
+        margin-top: 30px;
+    }
+
+    .cards {
+        margin-top: 30px;
+    }
+
+    .card-container {
+        width: 100%;
+        background: linear-gradient(
+            360deg, #243833 0%,
+            #0C0C0C 38.69%
+        );
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 300px;
+        justify-content: space-around;
+        margin-top: 40px;
+    }
+
+    .card-icon {
+        width: 75px;
+        height: 75px;
+    }
+
+    .card-container p {
+        margin: 0px 32px;
+        text-align: center;
+    }
+
+    @media only screen and (min-width: 900px) {
+
+        .method-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: calc(100% - 300px);
+            margin-left: 150px;
+        }
+
+        .method-head-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .method-text {
+            padding-right: 150px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px 40px;
+        }
+
+        .cards > div:nth-child(2n) {
+            margin-top: 10%;
+        }
+
+        .card-container {
+            margin-top: 0px;
+        }
+
+        .card-container .font-size-header {
+            font-size: 30px;
+        }
+
+        .card-container .font-size-small {
+            font-size: 25px;
+        }
+    }
+
+    /* Tablet */
+
+    @media only screen and (min-width: 700px) and (max-width: 900px) {
+
+        .method-container {
+            width: calc(100% - 300px);
+            margin-left: 150px;
+        }
+    }
+
+    /* Sideways Tablet - Nest-Hub */
+
+    @media only screen and (min-width: 900px) and (max-width: 1450px) {
+
+        .method-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cards {
+            margin-top: 100px;
+        }
+    }
+}
