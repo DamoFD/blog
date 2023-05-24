@@ -92,7 +92,7 @@
                             <td><?= $row['id'] ?></td>
                             <td><?= $row['seen'] == 1 ? "<p class='green'>Read</p>" : "<p class='red'>Unread</p>"; ?></td>
                             <td><?= esc($row['name']) ?></td>
-                            <td><a href="<?=$row['website']?>"><?= esc($row['website']) ?></a></td>
+                            <td><a href="<?=$row['website']?>" target="_blank"><?= esc($row['website']) ?></a></td>
                             <td><?=$row['post_slug']?></td>
                             <td><?= date("jS M, Y", strtotime($row['date'])) ?></td>
                             <td>

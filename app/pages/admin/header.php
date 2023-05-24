@@ -67,8 +67,8 @@
                 <li class="nav-item"><a class="<?=$section == 'categories' ? 'active' : ''?>" href="<?=ROOT?>/admin/categories">Categories</a></li>
                 <li class="nav-item"><a class="<?=$section == 'users' ? 'active' : ''?>" href="<?=ROOT?>/admin/users">Users</a></li>
                 <li class="nav-item"><p>NOTIFICATIONS</p></li>
-                <li class="nav-item"><a class="<?=$section == 'emails' ? 'active' : ''?>" href="<?=ROOT?>/admin/emails">Emails</a><p class="color-secondary"><?=($unread['emails']) != 0 ? $unread['emails'] : '';?></p></li>
-                <li class="nav-item"><a class="<?=$section == 'comments' ? 'active' : ''?>" href="<?=ROOT?>/admin/comments">Comments</a><p class="color-secondary"><?=($unread['comments']) != 0 ? $unread['comments'] : '';?></p></li>
+                <li class="nav-item"><a class="<?=$section == 'emails' ? 'active' : ''?>" href="<?=ROOT?>/admin/emails">Emails</a><a class="color-secondary notification"><?=($unread['emails']) != 0 ? $unread['emails'] : '';?></a></li>
+                <li class="nav-item"><a class="<?=$section == 'comments' ? 'active' : ''?>" href="<?=ROOT?>/admin/comments">Comments</a><a class="color-secondary notification"><?=($unread['comments']) != 0 ? $unread['comments'] : '';?></a></li>
                 <li class="nav-item"><a href="<?=ROOT?>/logout">Log Out</a></li>
             </ul>
         </nav>

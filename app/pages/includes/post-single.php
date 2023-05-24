@@ -48,7 +48,29 @@
 
 <div>
     <img src="<?=get_image($row['image'])?>" style="width: 200px; height: 200px; object-fit: cover;" />
-    <h3><?=esc($row['title'])?></h3>
+    <h1><?=esc($row['title'])?></h1>
+    <nav>
+        <ul>
+            <li>
+                <a href="<?=ROOT?>">Home</a> >
+            </li>
+            <li>
+                <a href="<?=ROOT?>/blog">Blog</a> >
+            </li>
+            <li>
+                <a href="<?=ROOT?>/category">Categories</a> >
+            </li>
+            <li>
+                <a href="<?=ROOT?>/category/<?=$row['category_slug']?>"><?=$row['category']?></a> >
+            </li>
+            <li>
+                <a href="<?=ROOT?>/category/<?=$row['category_slug']?>/<?=$row['sub_category_slug']?>"><?=$row['sub_category']?></a> >
+            </li>
+            <li>
+                <p><?=esc($row['title'])?></p>
+            </li>
+        </ul>
+    </nav>
     <p><?=add_root_to_images($row['content'])?></p>
     <p><?=esc($row['category'] ?? 'Unknown') . '>' . esc($row['sub_category'] ?? 'Unknown')?></p>
     <p><?=esc(date("jS M, Y",strtotime($row['date'])))?></p>

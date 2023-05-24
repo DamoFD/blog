@@ -215,6 +215,8 @@ a {
 
 .nav-item {
   margin-top: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .nav-item a, .nav-item p {
@@ -239,6 +241,14 @@ a {
 
 .nav-item a:hover {
   color: gray;
+}
+
+.nav-item .notification {
+  color: #FFFFFF;
+  font-family: "roboto-regular", sans-serif;
+  background-color: #84CFBB;
+  padding: 0px 10px;
+  border-radius: 100px;
 }
 
 .active {
@@ -313,20 +323,23 @@ a {
     transition: transform 0.5s ease-out;
   }
   .navbar li {
-    padding: 15px;
     margin-left: 20px;
   }
   .navbar li:first-child {
-    margin-top: 50px;
+    margin-top: 10px;
   }
   .navbar li a {
-    font-size: 23px;
+    font-size: 18px;
     padding: 10px 20px;
     border-radius: 10px;
     font-family: "roboto-regular", sans-serif;
   }
   .navbar li p {
+    font-size: 20px;
     padding-left: 20px;
+  }
+  .navbar li p {
+    margin-top: 20px;
   }
   .menu-toggle, .bar {
     display: block;

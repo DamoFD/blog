@@ -2,36 +2,54 @@
     include('../app/pages/includes/header.php');
 ?>
 
-<h1>Category</h1>
-
     <?php
 
     $limit = 10;
     $offset = ($PAGE['page_number'] - 1) * $limit;
 
     $category_slug = $url[1] ?? null;
+    $sub_category_slug = $url[2] ?? null;
 
-    if($category_slug){
+    if(empty($category_slug)){
 
-    $query = "SELECT posts.*, categories.category, categories.slug as category_slug, sub_categories.sub_category, sub_categories.slug as sub_category_slug 
-          FROM posts 
-          JOIN categories ON posts.category_id = categories.id 
-          JOIN sub_categories ON posts.sub_category_id = sub_categories.id
-          WHERE posts.category_id IN
-          (SELECT id FROM categories WHERE slug = :category_slug)
-          ORDER BY posts.id DESC 
-          LIMIT $limit
-          OFFSET $offset";
+        $query = "SELECT * FROM categories ORDER BY category DESC LIMIT $limit OFFSET $offset";
 
-    $rows = query($query,['category_slug'=>$category_slug]);
+        $rows = query($query);
+
+    if(!empty($rows)){
+        include('../app/pages/includes/categories.php');
+    }else{
+        echo "no categories found!";
     }
+}
 
-    if(!empty($rows)) {
-        foreach($rows as $row){
-        include('../app/pages/includes/post-card.php');
-        }
+    elseif(!empty($category_slug) && empty($sub_category_slug)){
+
+    $query = "SELECT * FROM categories WHERE slug = :category_slug LIMIT 1";
+
+    $row = query_row($query,['category_slug'=>$category_slug]);
+    
+
+    if(!empty($row)) {
+        include('../app/pages/includes/sub-categories.php');
     }else{
         echo "No items found!";
+    }
+}
+
+    elseif(!empty($category_slug) && !empty($sub_category_slug)){
+        
+        $query = "SELECT * FROM sub_categories WHERE slug = :sub_category_slug LIMIT 1";
+        $sub_category = query_row($query,['sub_category_slug'=>$sub_category_slug]);
+
+        $query = "SELECT * FROM categories WHERE slug = :category_slug LIMIT 1";
+        $category = query_row($query,['category_slug'=>$category_slug]);
+
+        if(!empty($sub_category) && !empty($category)) {
+            include('../app/pages/includes/sub-category.php');
+        }else{
+            echo "No items found!";
+        }
     }
     
     ?>
