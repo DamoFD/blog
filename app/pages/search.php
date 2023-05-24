@@ -28,7 +28,7 @@
 
     if(!empty($rows)) {
         foreach($rows as $row){
-        include('../app/pages/includes/post-card.php');
+        include('../app/pages/blog/post-card.php');
         }
     }else{
         echo "No items found!";

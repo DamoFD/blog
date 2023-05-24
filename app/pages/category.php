@@ -17,7 +17,7 @@
         $rows = query($query);
 
     if(!empty($rows)){
-        include('../app/pages/includes/categories.php');
+        include('../app/pages/blog/categories.php');
     }else{
         echo "no categories found!";
     }
@@ -31,7 +31,7 @@
     
 
     if(!empty($row)) {
-        include('../app/pages/includes/sub-categories.php');
+        include('../app/pages/blog/sub-categories.php');
     }else{
         echo "No items found!";
     }
@@ -46,7 +46,7 @@
         $category = query_row($query,['category_slug'=>$category_slug]);
 
         if(!empty($sub_category) && !empty($category)) {
-            include('../app/pages/includes/sub-category.php');
+            include('../app/pages/blog/sub-category.php');
         }else{
             echo "No items found!";
         }

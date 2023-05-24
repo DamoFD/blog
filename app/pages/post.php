@@ -22,7 +22,7 @@
 
         $row = query_row($query, ['slug' => $slug, 'catslug' => $catSlug, 'subcatslug' => $subCatSlug]);
         if(!empty($row)) {
-            include('../app/pages/includes/post-single.php');
+            include('../app/pages/blog/post-single.php');
         } else {
             echo "No items found!";
         }
