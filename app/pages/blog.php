@@ -31,7 +31,7 @@ include('../app/pages/includes/header.php');
                 <li>Blog</li>
             </ul>
         </nav>
-        <h2 class="font-size-header font-sans">Featured Posts</h2>
+        <h2 class="font-size-header font-sans sub-head">Featured Posts</h2>
         <div class="feat-posts">
             <?php if ($rows) : ?>
                 <?php foreach ($rows as $row) : ?>
@@ -60,7 +60,7 @@ include('../app/pages/includes/header.php');
             <?php endif; ?>
         </div>
 
-        <h2 class="font-sans font-size-header">Top Categories</h2>
+        <h2 class="font-sans font-size-header sub-head">Top Categories</h2>
         <a class="font-poppins font-size-med" href="<?= ROOT ?>/category">See all categories</a>
 
         <?php
@@ -75,8 +75,10 @@ include('../app/pages/includes/header.php');
             <?php if ($rows) : ?>
                 <?php foreach ($rows as $row) : ?>
                     <div class="row">
-                        <img src="<?= get_image($row['image']) ?>" class="category-img" />
-                        <h3 class="font-sans"><?= esc($row['category']) ?></h3>
+                        <a href="<?= ROOT ?>/category/<?= $row['slug'] ?>">
+                            <img src="<?= get_image($row['image']) ?>" class="category-img" />
+                            <h3 class="font-sans"><?= esc($row['category']) ?></h3>
+                        </a>
                     </div>
                 <?php endforeach; ?>
             <?php else : ?>

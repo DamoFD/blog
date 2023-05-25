@@ -9,7 +9,12 @@
     <link rel="icon" type="image/x-icon" href="<?=ROOT?>/assets/svg/icon-logo.svg" />
 
     <!-- Custom CSS -->
-    <link href="<?php echo ROOT; ?>/assets/css/page.css" rel="stylesheet" />
+
+    <?php if($page_name == 'post') : ?>
+        <link href="<?=ROOT?>/assets/css/post.css" rel="stylesheet" />
+    <?php else: ?>
+        <link href="<?php echo ROOT; ?>/assets/css/page.css" rel="stylesheet" />
+    <?php endif; ?>
 </head>
 
 <!-- Google Analytics -->

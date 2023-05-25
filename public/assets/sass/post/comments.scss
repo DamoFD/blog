@@ -1,0 +1,106 @@
+/* Comments Section */
+
+/* Mobile-First */
+
+#comments {
+
+    width: calc(100% - 32px);
+    margin-left: 16px;
+
+    hr {
+        border: none;
+        margin: 20px 0px;
+        height: 2px;
+        width: 80%;
+        margin-left: 10%;
+        background-color: $color-primary;
+        color: $color-primary;
+    }
+
+    h2 {
+        margin-left: 16px;
+        margin-top: 16px;
+    }
+
+    .form-container {
+        background-color: rgb(240, 240, 240);
+        border-radius: 20px;
+    }
+
+    .error {
+        color: rgb(233, 78, 78);
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 32px);
+        margin-left: 16px;
+    }
+
+    label {
+        margin-top: 16px;
+    }
+
+    input, textarea {
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+        font-family: $font-roboto;
+        font-size: 23px;
+    }
+
+    input {
+        height: 30px;
+    }
+
+    textarea {
+        height: 75px;
+    }
+
+    button {
+        background-color: $color-primary;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+        margin-top: 16px;
+        width: calc(100% - 50px);
+        margin-left: 25px;
+        margin-bottom: 16px;
+    }
+
+    .comment-head {
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .date {
+        color: rgb(88, 88, 88);
+    }
+
+    /* Desktop */
+    @media only screen and (min-width: 900px) {
+
+        width: calc(100% - 300px);
+        margin-left: 150px;
+
+        form {
+            width: calc(100% - 150px);
+            margin-left: 75px;
+        }
+
+        h2 {
+            margin-left: 75px;
+            padding-top: 50px;
+        }
+
+        input {
+            height: 50px;
+        }
+
+        button {
+            margin-bottom: 50px;
+            margin-top: 50px;
+            width: calc(100% - 500px);
+            margin-left: 250px;
+        }
+    }
+
+}

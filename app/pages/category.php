@@ -4,7 +4,7 @@
 
     <?php
 
-    $limit = 10;
+    $limit = 12;
     $offset = ($PAGE['page_number'] - 1) * $limit;
 
     $category_slug = $url[1] ?? null;
