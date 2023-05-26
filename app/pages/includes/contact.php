@@ -25,13 +25,13 @@
               </p>
             </div>
             <div class="slide-up offset-300 icon-container">
-              <a href="tel:775-624-4327">
+              <a href="tel:775-230-7383">
                 <img class="bounce" src="<?=ROOT?>/assets/svg/phone.svg" />
               </a>
-              <a href="tel:775-624-4327">
+              <a href="tel:775-230-7383">
                 <div class="icon-text">
                   <h3 class="color-secondary font-sans">Call Me</h3>
-                  <p class="color-text font-roboto">(775) 624-4327</p>
+                  <p class="color-text font-roboto">(775) 230-7383</p>
                 </div>
               </a>
             </div>

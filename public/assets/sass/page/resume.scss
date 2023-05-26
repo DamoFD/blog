@@ -1,0 +1,26 @@
+/* Resume Section */
+
+/* Mobile-First */
+
+#resume {
+    margin-top: 100px;
+    width: calc(100% - 32px);
+    margin-left: 16px;
+
+    .head-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .resume {
+        width: 100%;
+    }
+
+    .download {
+        padding: 5px 10px;
+        background-color: $color-primary;
+        border-radius: 10px;
+        color: black;
+    }
+}

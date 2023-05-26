@@ -1079,24 +1079,34 @@ footer .created-by {
   opacity: 1;
 }
 
-.slide-up.offset-300 {
-  transition-delay: 300ms;
-}
-
-.slide-up.offset-600 {
-  transition-delay: 600ms;
-}
-
-.slide-up.offset-900 {
-  transition-delay: 900ms;
-}
-
 .bounce {
   transition: transform 0.5s ease;
 }
 
 .bounce:hover {
   transform: translateY(-5px);
+}
+
+/* Resume Section */
+/* Mobile-First */
+#resume {
+  margin-top: 100px;
+  width: calc(100% - 32px);
+  margin-left: 16px;
+}
+#resume .head-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#resume .resume {
+  width: 100%;
+}
+#resume .download {
+  padding: 5px 10px;
+  background-color: #84CFBB;
+  border-radius: 10px;
+  color: black;
 }
 
 /*# sourceMappingURL=page.css.map */

@@ -85,7 +85,7 @@
             <ul class="nav no-search">
                 <li class="nav-item"><a class="<?= $url[0] == 'home' ? 'active' : '' ?>" href="<?= ROOT ?>">Home</a></li>
                 <li class="nav-item"><a class="<?= $url[0] == 'about' ? 'active' : '' ?>" href="<?= ROOT ?>/about">About</a></li>
-                <li class="nav-item"><a class="<?= $url[0] == 'about' ? 'active' : '' ?>" href="<?= ROOT ?>/portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="<?= $url[0] == 'portfolio' ? 'active' : '' ?>" href="<?= ROOT ?>/portfolio">Portfolio</a></li>
                 <li class="nav-item"><a class="<?= $url[0] == 'blog' ? 'active' : '' ?>" href="<?= ROOT ?>/blog">Blog</a></li>
                 <li class="nav-item">
                     <a class="<?= $url[0] == 'contact' ? 'active' : '' ?>" href="<?= ROOT ?>/contact">Contact</a>
