@@ -6,25 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><?php
+    <?php if(empty($url[1]) && empty($url[2])) : ?>
+        <!-- Page Meta Data -->
 
-        if(empty($url[1]) && empty($url[2])){
-        echo ucfirst($page_name);
-        }elseif(!empty($url[1]) && empty($url[2])){
+        <title><?=ucfirst($page_name) . " - " . APP_NAME?></title>
+
+    <?php elseif(!empty($url[1]) && empty($url[2])) : ?>
+        <!-- Category Meta Data -->
+
+        <?php
             $query = "SELECT category FROM categories WHERE slug = :slug LIMIT 1";
             $row = query_row($query,["slug" => $url[1]]);
-            echo $row['category'];
-        }elseif(!empty($url[1]) && !empty($url[2]) && empty($url[3])){
+        ?>
+
+        <title><?=$row['category'] . " - " . APP_NAME?></title>
+
+        <?php elseif(!empty($url[1]) && !empty($url[2]) && empty($url[3])) : ?>
+            <!-- Sub-Category Meta Data -->
+
+            <?php
             $query = "SELECT sub_category FROM sub_categories WHERE slug = :slug LIMIT 1";
             $row = query_row($query,["slug" => $url[2]]);
-            echo $row['sub_category'];
-        }elseif(!empty($url[1]) && !empty($url[2]) && !empty($url[3])){
+            ?>
+
+            <title><?=$row['sub_category'] . " - " . APP_NAME?></title>
+
+        <?php elseif(!empty($url[1]) && !empty($url[2]) && !empty($url[3])) : ?>
+            <!-- Blog Post Meta Data -->
+
+            <?php
             $query = "SELECT title FROM posts WHERE slug = :slug LIMIT 1";
             $row = query_row($query,["slug" => $url[3]]);
-            echo $row['title'];
-        }
+            ?>
+
+            <title><?=$row['title'] . " - " . APP_NAME?></title>
         
-            ?> - <?= APP_NAME ?></title>
+        <?php endif; ?>
 
     <link rel="icon" type="image/x-icon" href="<?=ROOT?>/assets/svg/icon-logo.svg" />
 
