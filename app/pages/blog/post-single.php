@@ -57,7 +57,7 @@ if (!empty($_POST)) {
     <div class="content">
         <h1 class="font-sans font-size-header"><?= esc($row['title']) ?></h1>
         <nav>
-            <ul class="font-roboto">
+            <ul class="font-roboto font-size-small">
                 <li>
                     <a href="<?= ROOT ?>">Home</a> >
                 </li>

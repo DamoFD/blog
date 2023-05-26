@@ -941,12 +941,12 @@ a {
 
 /* Blog section */
 /* Mobile-First */
-#blog, #categories, #sub-categories {
-  margin-top: 80px;
+#blog, #categories, #sub-categories, #sub-category {
+  padding-top: 84px;
   width: 100%;
   /* Desktop */
 }
-#blog .hero, #categories .hero, #sub-categories .hero {
+#blog .hero, #categories .hero, #sub-categories .hero, #sub-category .hero {
   position: relative;
   width: 100%;
   height: 40vh;
@@ -955,66 +955,74 @@ a {
   justify-content: center;
   align-items: center;
 }
-#blog .header-text, #categories .header-text, #sub-categories .header-text {
+#blog h1, #categories h1, #sub-categories h1, #sub-category h1 {
+  text-align: center;
+}
+#blog .header-text, #categories .header-text, #sub-categories .header-text, #sub-category .header-text {
   color: rgb(206, 205, 205);
   text-align: center;
   width: calc(100% - 32px);
   margin-left: 16px;
 }
-#blog .overlay, #blog .hero-img, #categories .overlay, #categories .hero-img, #sub-categories .overlay, #sub-categories .hero-img {
+#blog .overlay, #blog .hero-img, #categories .overlay, #categories .hero-img, #sub-categories .overlay, #sub-categories .hero-img, #sub-category .overlay, #sub-category .hero-img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-#blog .overlay, #categories .overlay, #sub-categories .overlay {
+#blog .overlay, #categories .overlay, #sub-categories .overlay, #sub-category .overlay {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: -1;
 }
-#blog .hero-img, #categories .hero-img, #sub-categories .hero-img {
+#blog .hero-img, #categories .hero-img, #sub-categories .hero-img, #sub-category .hero-img {
   object-fit: cover;
   z-index: -2;
 }
-#blog .container, #categories .container, #sub-categories .container {
+#blog .container, #categories .container, #sub-categories .container, #sub-category .container {
   width: calc(100% - 32px);
   margin-left: 16px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
-#blog ul, #categories ul, #sub-categories ul {
+#blog ul, #categories ul, #sub-categories ul, #sub-category ul {
   display: flex;
+  flex-wrap: wrap;
 }
-#blog .sub-head, #categories .sub-head, #sub-categories .sub-head {
+#blog nav ul li a, #blog nav ul li p, #categories nav ul li a, #categories nav ul li p, #sub-categories nav ul li a, #sub-categories nav ul li p, #sub-category nav ul li a, #sub-category nav ul li p {
+  white-space: nowrap;
+}
+#blog .sub-head, #categories .sub-head, #sub-categories .sub-head, #sub-category .sub-head {
   margin-top: 20px;
 }
-#blog .feat-posts, #blog .feat-categories, #categories .feat-posts, #categories .feat-categories, #sub-categories .feat-posts, #sub-categories .feat-categories {
+#blog .feat-posts, #blog .feat-categories, #categories .feat-posts, #categories .feat-categories, #sub-categories .feat-posts, #sub-categories .feat-categories, #sub-category .feat-posts, #sub-category .feat-categories {
   display: grid;
   grid-template-columns: 1fr;
+  margin-top: 30px;
 }
-#blog .row, #categories .row, #sub-categories .row {
+#blog .row, #categories .row, #sub-categories .row, #sub-category .row {
   margin-top: 20px;
 }
-#blog .row h3, #blog .row .category-head, #categories .row h3, #categories .row .category-head, #sub-categories .row h3, #sub-categories .row .category-head {
+#blog .row h3, #blog .row .category-head, #categories .row h3, #categories .row .category-head, #sub-categories .row h3, #sub-categories .row .category-head, #sub-category .row h3, #sub-category .row .category-head {
   font-size: 30px;
 }
-#blog .post-img, #blog .category-img, #categories .post-img, #categories .category-img, #sub-categories .post-img, #sub-categories .category-img {
+#blog .post-img, #blog .category-img, #categories .post-img, #categories .category-img, #sub-categories .post-img, #sub-categories .category-img, #sub-category .post-img, #sub-category .category-img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
-#blog .date, #categories .date, #sub-categories .date {
+#blog .date, #categories .date, #sub-categories .date, #sub-category .date {
   color: rgb(83, 83, 83);
 }
 @media only screen and (min-width: 900px) {
-  #blog .feat-posts, #blog .feat-categories, #categories .feat-posts, #categories .feat-categories, #sub-categories .feat-posts, #sub-categories .feat-categories {
+  #blog .feat-posts, #blog .feat-categories, #categories .feat-posts, #categories .feat-categories, #sub-categories .feat-posts, #sub-categories .feat-categories, #sub-category .feat-posts, #sub-category .feat-categories {
     grid-template-columns: repeat(3, 1fr);
   }
-  #blog .post-img, #blog .category-img, #categories .post-img, #categories .category-img, #sub-categories .post-img, #sub-categories .category-img {
+  #blog .post-img, #blog .category-img, #categories .post-img, #categories .category-img, #sub-categories .post-img, #sub-categories .category-img, #sub-category .post-img, #sub-category .category-img {
     width: 90%;
     height: 400px;
   }
-  #blog .sub-head, #categories .sub-head, #sub-categories .sub-head {
+  #blog .sub-head, #categories .sub-head, #sub-categories .sub-head, #sub-category .sub-head {
     margin-top: 50px;
   }
 }
@@ -1049,6 +1057,14 @@ footer .created-by {
   margin-top: 50px;
   text-align: center;
   font-size: 16px;
+}
+@media only screen and (min-width: 900px) {
+  footer .list-footer {
+    flex-direction: row;
+  }
+  footer .footer-item {
+    margin: 30px;
+  }
 }
 
 /* Animations */

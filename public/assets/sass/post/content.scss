@@ -89,8 +89,21 @@
 
     .date-by {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         margin: 20px 10%;
+    }
+
+    .content-post {
+        width: calc(100% - 300px);
+        margin-left: 150px;
+    }
+
+    .date {
+        margin-right: 20px;
+    }
+
+    .by {
+        margin-left: 20px;
     }
 }
 }

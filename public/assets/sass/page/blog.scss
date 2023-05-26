@@ -2,8 +2,8 @@
 
 
 /* Mobile-First */
-#blog, #categories, #sub-categories {
-    margin-top: 80px;
+#blog, #categories, #sub-categories, #sub-category {
+    padding-top: 84px;
     width: 100%;
 
     .hero {
@@ -14,6 +14,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    h1 {
+        text-align: center;
     }
 
     .header-text {
@@ -50,6 +54,11 @@
 
     ul {
         display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav ul li a, nav ul li p {
+        white-space: nowrap;
     }
 
     .sub-head {
@@ -59,6 +68,7 @@
     .feat-posts, .feat-categories {
         display: grid;
         grid-template-columns: 1fr;
+        margin-top: 30px;
     }
 
     .row {

@@ -7,7 +7,7 @@
     </div>
     <div class="container">
         <nav>
-            <ul>
+            <ul class="font-roboto font-size-small">
                 <li>
                     <a href="<?= ROOT ?>">Home</a> >
                 </li>

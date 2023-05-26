@@ -17,11 +17,16 @@
 ?>
 
 
-<div>
-    <h1>Posts For <?=$sub_category['sub_category']?></h1>
-    <img src="<?=get_image($sub_category['image'])?>" />
+<section id="sub-category">
+<div class="hero">
+    <h1 class="font-sans font-size-header color-secondary">Posts For <?=$sub_category['sub_category']?></h1>
+    <p class="font-poppins font-size-med header-text">Explore, share, and find exactly what you're looking for in these posts.</p>
+    <div class="overlay"></div>
+    <img class="hero-img" src="<?=get_image($sub_category['image'])?>" />
+</div>
+<div class="container">
     <nav>
-        <ul>
+        <ul class="font-roboto font-size-small">
             <li>
                 <a href="<?=ROOT?>">Home</a> >
             </li>
@@ -32,7 +37,7 @@
                 <a href="<?=ROOT?>/category">Categories</a> >
             </li>
             <li>
-                <a href="<?=ROOT?>/category/<?=$category_slug?>"><?=$posts[0]['category']?></a> >
+                <a href="<?=ROOT?>/category/<?=$category_slug?>"><?=$category_slug?></a> >
             </li>
             <li>
                 <p><?=$sub_category['sub_category']?></p>
@@ -40,14 +45,17 @@
         </ul>
     </nav>
 
+    <div class="feat-posts">
     <?php if(!empty($posts)) : ?>
     <?php foreach($posts as $post) : ?>
         <a href="<?=ROOT?>/post/<?=$category_slug?>/<?=$sub_category_slug?>/<?=$post['slug']?>">
-        <img src="<?=get_image($post['image'])?>" />
-        <h2><?=$post['title']?></h2>
+        <img src="<?=get_image($post['image'])?>" class="category-img"/>
+        <h2 class="font-sans category-head"><?=$post['title']?></h2>
     </a>
     <?php endforeach; ?>
     <?php else : ?>
         <p>This category has no posts</p>
     <?php endif; ?>
-</div>
+    </div>
+    </div>
+    </section>

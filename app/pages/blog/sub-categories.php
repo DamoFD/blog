@@ -25,7 +25,7 @@ $sub_categories = query($query, ['category_slug' => $category_slug]);
     </div>
     <div class="container">
         <nav>
-            <ul>
+            <ul class="font-roboto font-size-small">
                 <li>
                     <a href="<?= ROOT ?>">Home</a> >
                 </li>

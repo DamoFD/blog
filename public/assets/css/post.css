@@ -340,6 +340,14 @@ footer .created-by {
   text-align: center;
   font-size: 16px;
 }
+@media only screen and (min-width: 900px) {
+  footer .list-footer {
+    flex-direction: row;
+  }
+  footer .footer-item {
+    margin: 30px;
+  }
+}
 
 /* Post Content Section */
 /* Mobile First */
@@ -416,8 +424,18 @@ footer .created-by {
   }
   #post .date-by {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin: 20px 10%;
+  }
+  #post .content-post {
+    width: calc(100% - 300px);
+    margin-left: 150px;
+  }
+  #post .date {
+    margin-right: 20px;
+  }
+  #post .by {
+    margin-left: 20px;
   }
 }
 
