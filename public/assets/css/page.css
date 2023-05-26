@@ -1109,4 +1109,13 @@ footer .created-by {
   color: black;
 }
 
+/* 404 Page */
+/* Mobile-First */
+#not-found {
+  margin-top: 100px;
+  width: calc(100% - 32px);
+  margin-left: 16px;
+  height: 50vh;
+}
+
 /*# sourceMappingURL=page.css.map */
