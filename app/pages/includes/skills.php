@@ -34,11 +34,11 @@
               </h3>
             </div>
             <div class="slide-up grid-item">
-              <img src="<?=ROOT?>/assets/svg/react.svg" />
+              <img src="<?=ROOT?>/assets/svg/apache.svg" />
               <h3
                 class="font-roboto font-size-small color-secondary grid-item-text"
               >
-                React
+                Apache
               </h3>
             </div>
             <div class="slide-up grid-item">
@@ -98,11 +98,11 @@
               </h3>
             </div>
             <div class="slide-up grid-item">
-              <img src="./assets/svg/firebase.svg" />
+              <img src="./assets/svg/laravel.svg" />
               <h3
                 class="font-roboto font-size-small color-secondary grid-item-text"
               >
-                Firebase
+                Laravel
               </h3>
             </div>
             <div class="slide-up grid-item">
@@ -122,11 +122,11 @@
               </h3>
             </div>
             <div class="slide-up grid-item">
-              <img src="./assets/svg/materialui.svg" />
+              <img src="./assets/svg/vscode.svg" />
               <h3
                 class="font-roboto font-size-small color-secondary grid-item-text"
               >
-                MaterialUI
+                VSCode
               </h3>
             </div>
           </div>

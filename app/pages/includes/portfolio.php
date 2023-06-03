@@ -31,15 +31,15 @@
         <img class="grid-img" src="<?= ROOT ?>/assets/images/SkyLinePress ScreenShot.png" />
       </div>
       </a>
-      <a href="<?= ROOT ?>/simplichat">
+      <a href="<?= ROOT ?>/reno-artistry">
         <div class="slide-up grid-item">
           <div class="grid-content">
             <h3 class="color-secondary font-poppins font-size-med">
-              Simpli<span class="color-primary">Chat</span>
+              Reno <span class="color-primary">Artistry</span>
             </h3>
           </div>
           <div class="overlay"></div>
-          <img class="grid-img" src="<?= ROOT ?>/assets/images/simplichat.png" />
+          <img class="grid-img" src="<?= ROOT ?>/assets/images/reno-artistry.webp" />
         </div>
       </a>
       <a href="<?=ROOT?>/portfolio-cms">

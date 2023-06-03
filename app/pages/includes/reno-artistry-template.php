@@ -1,11 +1,11 @@
-<!-- SimpliChat Template -->
+<!-- Reno Artistry Template -->
 
 <section id="project" class="color-bg-2">
     <div class="project-container">
-        <p class="slide-up color-primary font-size-med font-poppins">Messaging App</p>
-        <h1 class="slide-up font-size-header color-secondary font-sans">Simpli<span class="color-primary">Chat</span></h1>
+        <p class="slide-up color-primary font-size-med font-poppins">Laravel Art Directory</p>
+        <h1 class="slide-up font-size-header color-secondary font-sans">Reno <span class="color-primary">Artistry</span></h1>
         <div class="slide-up color-primary-bg line-break"></div>
-        <img class="thumbnail slide-up offset-300" src="./assets/images/simplichat.png" />
+        <img class="thumbnail slide-up offset-300" src="./assets/images/reno-artistry.webp" />
         <div class="grid slide-up offset-600">
             <div class="grid-item">
                 <img class="bounce" src="assets/svg/react.svg" />
@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="text-icon-container">
-            <p class="slide-up color-secondary font-size-small font-roboto description">This messaging app is made with a React, Tailwind, MaterialUI front-end, while using Firebase for the backend. This app is made with real time queries, and speedy performance.</p>
+            <p class="slide-up color-secondary font-size-small font-roboto description">This art directory is made with the PHP framework Laravel. </p>
             <div class="icons slide-up">
                 <div class="icon">
                     <img class="bounce" src="./assets/svg/github-grid.svg" />
@@ -40,4 +40,4 @@
     </div>
 </section>
 
-<!-- !SimpliChat Template -->
+<!-- !Reno Artistry Template -->
