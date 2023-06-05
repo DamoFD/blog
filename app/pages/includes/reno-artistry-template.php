@@ -8,24 +8,24 @@
         <img class="thumbnail slide-up offset-300" src="./assets/images/reno-artistry.webp" />
         <div class="grid slide-up offset-600">
             <div class="grid-item">
-                <img class="bounce" src="assets/svg/react.svg" />
-                <p class="color-secondary font-roboto">React</p>
+                <img class="bounce" src="assets/svg/laravel.svg" />
+                <p class="color-secondary font-roboto">Laravel</p>
             </div>
             <div class="grid-item">
-                <img class="bounce" src="assets/svg/tailwind.svg" />
-                <p class="color-secondary font-roboto">Tailwind</p>
+                <img class="bounce" src="assets/svg/sass.svg" />
+                <p class="color-secondary font-roboto">SASS/SCSS</p>
             </div>
             <div class="grid-item">
-                <img class="bounce" src="assets/svg/materialui.svg" />
-                <p class="color-secondary font-roboto">MaterialUI</p>
+                <img class="bounce" src="assets/svg/mysql.svg" />
+                <p class="color-secondary font-roboto">MySQL</p>
             </div>
             <div class="grid-item">
-                <img class="bounce" src="assets/svg/firebase.svg" />
-                <p class="color-secondary font-roboto">Firebase</p>
+                <img class="bounce" src="assets/svg/figma.svg" />
+                <p class="color-secondary font-roboto">Figma</p>
             </div>
         </div>
         <div class="text-icon-container">
-            <p class="slide-up color-secondary font-size-small font-roboto description">This art directory is made with the PHP framework Laravel. </p>
+            <p class="slide-up color-secondary font-size-small font-roboto description">This local art directory is a comprehensive platform that serves as a bridge between artists and art enthusiasts. This project was developed using the robust Laravel PHP framework, which provided the backbone for the CRUD functionality and user authentication system. Aided by the power of MySQL, the application reliably manages a substantial database that includes user profiles, art listings, and image uploads.<br />The project's aesthetics and user interface were meticulously crafted using Figma and brought to life with SASS, ensuring a responsive and intuitive user experience. The directory integrates an image upload feature, which allows artists to showcase their work, further enriching the local art community. By combining these technologies, the platform provides a streamlined and engaging way for users to explore, appreciate, and engage with the local art scene. </p>
             <div class="icons slide-up">
                 <div class="icon">
                     <img class="bounce" src="./assets/svg/github-grid.svg" />
