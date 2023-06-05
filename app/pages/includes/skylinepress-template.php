@@ -31,14 +31,18 @@
         <div class="text-icon-container">
             <p class="slide-up color-secondary font-size-small font-roboto description">In one of my prominent projects, I developed 'SkyLinePress', a WordPress theme built with a focus on performance, speed, and SEO. Notably, SkyLinePress features custom Gutenberg blocks, enabling users to tailor their content layout to their specific needs. This feature, integrated with the lightweight design of the theme, ensures swift load times, an effortless content creation process, and a seamless user experience. Through proficient coding and leveraging WordPress's built-in functionalities, SkyLinePress delivers excellent performance, even under high traffic scenarios. Moreover, this theme incorporates cutting-edge SEO strategies to optimize site visibility in search engines. By combining a clean design with usability and customizability through Gutenberg blocks, SkyLinePress not only accelerates page loading times but also offers flexibility in content presentation. This project demonstrates my ability to design user-centric, efficient, and optimized web solutions.</p>
             <div class="icons slide-up">
+            <a href="https://github.com/DamoFD/SkyLinePress" target="_blank">
                 <div class="icon">
                     <img class="bounce" src="./assets/svg/github-grid.svg" />
                     <p class="color-secondary font-roboto font-size-small">View Code</p>
                 </div>
+                </a>
+                <a href="https://damionv7.sg-host.com/" target="_blank">
                 <div class="icon">
                     <img class="bounce" src="./assets/svg/desktop.svg" />
                     <p class="color-secondary font-roboto font-size-small">Live Site</p>
                 </div>
+                </a>
             </div>
         </div>
     </div>

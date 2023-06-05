@@ -1132,6 +1132,7 @@ footer .created-by {
   height: 250px;
   object-fit: cover;
   margin-top: 30px;
+  border-radius: 20px;
 }
 #project .grid {
   display: grid;
@@ -1174,6 +1175,13 @@ footer .created-by {
   text-align: center;
   margin-top: 10px;
 }
+#project .performance-container p {
+  margin-top: 50px;
+}
+#project .speed-img {
+  width: 100%;
+  border-radius: 20px;
+}
 @media only screen and (min-width: 900px) {
   #project .project-container {
     width: calc(100% - 300px);
@@ -1181,7 +1189,6 @@ footer .created-by {
   }
   #project .thumbnail {
     height: 800px;
-    border-radius: 20px;
   }
   #project .grid-item {
     margin-top: 0px;
@@ -1194,7 +1201,7 @@ footer .created-by {
   #project .grid-item p {
     font-size: 32px;
   }
-  #project .text-icon-container {
+  #project .text-icon-container, #project .performance-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -1211,6 +1218,9 @@ footer .created-by {
   #project .icon img {
     width: 75px;
     height: 75px;
+  }
+  #project .speed-img {
+    width: 80%;
   }
 }
 

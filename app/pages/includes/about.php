@@ -18,10 +18,14 @@
             <p
               class="slide-up offset-300 color-text font-roboto font-size-small about-text"
             >
-              I am a full stack developer in Reno, Nevada. My background is full
-              service auto and appliance repair. Music is my passion, I love
-              music theory, and sound engineering. I am now pursuing a career in
-              software development.
+            I am a full stack developer based in Reno, Nevada, with a 
+            unique background in full service auto and appliance repair 
+            in local business/start-up environments, also creating basic 
+            websites to rank and gain exposure in the SERPs. With a knack for 
+            problem-solving and extreme patience developed from years in repair and 
+            maintenance, I found my technical skills seamlessly translated into the world 
+            of software development. I am fortunate to have a background that taught me how to be 
+            creative, patient, problem-solve, and doing whatever it takes to get the job done.
             </p>
             <div class="icons">
               <div class="slide-up offset-600 icon-container">

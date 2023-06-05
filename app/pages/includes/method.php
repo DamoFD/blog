@@ -19,7 +19,7 @@
             </p>
             <div class="slide-up offset-600 btn-container">
               <a
-                href="#portfolio"
+                href="<?=ROOT?>/portfolio"
                 class="btn color-black-2 color-primary-bg font-size-small font-roboto"
                 >Projects</a
               >

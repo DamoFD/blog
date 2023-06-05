@@ -31,16 +31,31 @@
         <div class="text-icon-container">
             <p class="slide-up color-secondary font-size-small font-roboto description">One of my hallmark projects is a fully integrated ecommerce site that effectively combines Stripe, PHP, SASS, MySQL, and file caching to provide a seamless online shopping experience. The site is equipped with a reliable shopping cart and wishlist, allowing users to manage their potential purchases effortlessly. Using Stripe as the payment gateway, I have ensured a secure and hassle-free checkout process, boosting customer confidence and satisfaction. The backend, built with PHP and MySQL, handles all the site's data operations, including inventory tracking, order management, and user profiles. The frontend, crafted using SASS, provides a stylish and user-friendly interface that enhances customer engagement. Additionally, I've incorporated a file caching system to speed up page load times, improving overall site performance and user experience. This project serves as a showcase of my ability to create practical, efficient, and user-centric web applications.</p>
             <div class="icons slide-up">
-                <div class="icon">
-                    <img class="bounce" src="./assets/svg/github-grid.svg" />
-                    <p class="color-secondary font-roboto font-size-small">View Code</p>
-                </div>
-                <div class="icon">
-                    <img class="bounce" src="./assets/svg/desktop.svg" />
-                    <p class="color-secondary font-roboto font-size-small">Live Site</p>
-                </div>
+                <a href="https://github.com/DamoFD/ecommerce-store" target="_blank">
+                    <div class="icon">
+                        <img class="bounce" src="./assets/svg/github-grid.svg" />
+                        <p class="color-secondary font-roboto font-size-small">View Code</p>
+                    </div>
+                </a>
+                <a href="https://damionv2.sg-host.com/" target="_blank">
+                    <div class="icon">
+                        <img class="bounce" src="./assets/svg/desktop.svg" />
+                        <p class="color-secondary font-roboto font-size-small">Live Site</p>
+                    </div>
+                </a>
             </div>
         </div>
+        <div class="performance-container">
+            <div>
+                <p class="slide-up font-poppins color-primary font-size-med">Desktop</p>
+                <img class="speed-img slide-up" src="<?= ROOT ?>/assets/images/luxe-style-society-speed-desktop.webp" />
+            </div>
+            <div>
+                <p class="slide-up font-poppins color-primary font-size-med">Mobile</p>
+                <img class="speed-img slide-up" src="<?= ROOT ?>/assets/images/luxe-style-society-speed-mobile.webp" />
+            </div>
+        </div>
+        <p class="slide-up color-secondary font-size-small font-roboto description">This site uses shared hosting on Siteground.</p>
     </div>
 </section>
 

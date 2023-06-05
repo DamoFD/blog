@@ -14,6 +14,7 @@
         height: 250px;
         object-fit: cover;
         margin-top: 30px;
+        border-radius: 20px;
     }
 
     .grid {
@@ -66,6 +67,18 @@
         }
     }
 
+    .performance-container {
+
+        p {
+            margin-top: 50px;
+        }
+    }
+
+    .speed-img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
     @media only screen and (min-width: 900px) {
         .project-container {
             width: calc(100% - 300px);
@@ -74,7 +87,6 @@
 
         .thumbnail {
             height: 800px;
-            border-radius: 20px;
         }
 
         .grid-item {
@@ -90,7 +102,7 @@
                 font-size: 32px;
             }
         }
-        .text-icon-container {
+        .text-icon-container, .performance-container {
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -111,6 +123,10 @@
                 width: 75px;
                 height: 75px;
             }
+        }
+
+        .speed-img {
+            width: 80%;
         }
     }
 }
