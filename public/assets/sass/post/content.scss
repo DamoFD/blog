@@ -70,7 +70,7 @@
 
     .content-post {
 
-        p {
+        p, div {
             font-size: 23px;
             font-family: $font-roboto;
         }
@@ -116,7 +116,7 @@
         width: calc(100% - 300px);
         margin-left: 150px;
 
-        p {
+        p, div {
             font-size: 23px;
         }
 

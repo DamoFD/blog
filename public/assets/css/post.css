@@ -409,7 +409,7 @@ footer .created-by {
   max-width: 100%;
   object-fit: cover;
 }
-#post .content-post p {
+#post .content-post p, #post .content-post div {
   font-size: 23px;
   font-family: "roboto-regular", sans-serif;
 }
@@ -444,7 +444,7 @@ footer .created-by {
     width: calc(100% - 300px);
     margin-left: 150px;
   }
-  #post .content-post p {
+  #post .content-post p, #post .content-post div {
     font-size: 23px;
   }
   #post .content-post h2 {
