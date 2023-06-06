@@ -77,7 +77,7 @@
         <!--Primary Navigation-->
         <nav class="navbar">
             <a href="<?=ROOT?>">
-                <img src="<?=ROOT?>/assets/svg/site-logo.svg" class="header-img" />
+                <img src="<?=ROOT?>/assets/svg/site-logo.svg" class="header-img" alt="damion voshall logo" />
             </a>
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
