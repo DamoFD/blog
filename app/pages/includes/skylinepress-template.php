@@ -5,7 +5,7 @@
         <p class="slide-up color-primary font-size-med font-poppins">Wordpress Theme</p>
         <h1 class="slide-up font-size-header color-secondary font-sans">SkyLine<span class="color-primary">Press</span></h1>
         <div class="slide-up color-primary-bg line-break"></div>
-        <img class="thumbnail slide-up offset-300" src="./assets/images/SkyLinePress ScreenShot.png" />
+        <img class="thumbnail slide-up offset-300" src="./assets/images/SkyLinePress ScreenShot.webp" />
         <div class="grid slide-up offset-600">
             <div class="grid-item">
                 <img class="bounce" src="assets/svg/html.svg" />

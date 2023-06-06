@@ -17,7 +17,7 @@
             </h3>
           </div>
           <div class="overlay"></div>
-          <img class="grid-img" src="<?= ROOT ?>/assets/images/portfolio-cms.webp" alt="portfolio cms" />
+          <img class="grid-img" src="<?= ROOT ?>/assets/images/portfolio-cms.webp" alt="portfolio cms" loading="lazy" />
         </div>
       </a>
       <a href="<?= ROOT ?>/reno-artistry">
@@ -28,7 +28,7 @@
             </h3>
           </div>
           <div class="overlay"></div>
-          <img class="grid-img" src="<?= ROOT ?>/assets/images/reno-artistry.webp" alt="reno artistry" />
+          <img class="grid-img" src="<?= ROOT ?>/assets/images/reno-artistry.webp" alt="reno artistry" loading="lazy" />
         </div>
       </a>
       <a href="<?= ROOT ?>/luxe-style-society">
@@ -39,7 +39,7 @@
             </h3>
           </div>
           <div class="overlay"></div>
-          <img class="grid-img" src="<?= ROOT ?>/assets/images/luxe-style-society.png" alt="luxe style society" />
+          <img class="grid-img" src="<?= ROOT ?>/assets/images/luxe-style-society.webp" alt="luxe style society" loading="lazy" />
         </div>
       </a>
       <a href="<?= ROOT ?>/skylinepress">
@@ -50,7 +50,7 @@
             </h3>
           </div>
           <div class="overlay"></div>
-          <img class="grid-img" src="<?= ROOT ?>/assets/images/SkyLinePress ScreenShot.png" alt="skylinepress" />
+          <img class="grid-img" src="<?= ROOT ?>/assets/images/SkyLinePress ScreenShot.webp" alt="skylinepress" loading="lazy" />
         </div>
       </a>
     </div>

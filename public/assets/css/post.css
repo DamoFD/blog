@@ -390,9 +390,6 @@ footer .created-by {
   justify-content: center;
   font-size: 16px;
 }
-#post nav ul li a, #post nav ul li p {
-  white-space: nowrap;
-}
 #post .date-by {
   display: flex;
   justify-content: space-around;
@@ -412,6 +409,22 @@ footer .created-by {
   max-width: 100%;
   object-fit: cover;
 }
+#post .content-post p {
+  font-size: 23px;
+  font-family: "roboto-regular", sans-serif;
+}
+#post .content-post h2 {
+  font-size: 28px;
+  font-family: "poppins-medium", sans-serif;
+}
+#post .content-post h3 {
+  font-size: 25px;
+  font-family: "poppins-medium", sans-serif;
+}
+#post .content-post h4, #post .content-post h5, #post .content-post h6 {
+  font-size: 23px;
+  font-family: "poppins-medium", sans-serif;
+}
 @media only screen and (min-width: 900px) {
   #post .content {
     width: calc(100% - 300px);
@@ -430,6 +443,18 @@ footer .created-by {
   #post .content-post {
     width: calc(100% - 300px);
     margin-left: 150px;
+  }
+  #post .content-post p {
+    font-size: 23px;
+  }
+  #post .content-post h2 {
+    font-size: 35px;
+  }
+  #post .content-post h3 {
+    font-size: 30px;
+  }
+  #post .content-post h4, #post .content-post h5, #post .content-post h6 {
+    font-size: 25px;
   }
   #post .date {
     margin-right: 20px;

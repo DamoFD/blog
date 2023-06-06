@@ -5,7 +5,7 @@
         <p class="slide-up color-primary font-size-med font-poppins">Ecommerce Site</p>
         <h1 class="slide-up font-size-header color-secondary font-sans">Luxe Style <span class="color-primary">Society</span></h1>
         <div class="slide-up color-primary-bg line-break"></div>
-        <img class="thumbnail slide-up offset-300" src="./assets/images/luxe-style-society.png" />
+        <img class="thumbnail slide-up offset-300" src="./assets/images/luxe-style-society.webp" />
         <div class="grid slide-up offset-600">
             <div class="grid-item">
                 <img class="bounce" src="assets/svg/html.svg" />

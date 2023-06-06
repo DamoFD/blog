@@ -45,6 +45,17 @@
                 </div>
             </div>
         </div>
+        <div class="performance-container">
+            <div>
+                <p class="slide-up font-poppins color-primary font-size-med">Admin Dashboard</p>
+                <img class="speed-img slide-up" src="<?= ROOT ?>/assets/images/dashboard.webp" />
+            </div>
+            <div>
+                <p class="slide-up font-poppins color-primary font-size-med">Desktop Performance</p>
+                <img class="speed-img slide-up" src="<?= ROOT ?>/assets/images/portfolio-cms-speed-desktop.webp" />
+            </div>
+        </div>
+        <p class="slide-up color-secondary font-size-small font-roboto description">This site uses shared hosting on Siteground.</p>
     </div>
 </section>
 

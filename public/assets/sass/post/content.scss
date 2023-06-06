@@ -45,10 +45,6 @@
         font-size: 16px;
     }
 
-    nav ul li a, nav ul li p {
-        white-space: nowrap;
-    }
-
     .date-by {
         display: flex;
         justify-content: space-around;
@@ -69,6 +65,29 @@
         img {
             max-width: 100%;
             object-fit: cover;
+        }
+    }
+
+    .content-post {
+
+        p {
+            font-size: 23px;
+            font-family: $font-roboto;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-family: $font-poppins;
+        }
+
+        h3 {
+            font-size: 25px;
+            font-family: $font-poppins;
+        }
+
+        h4, h5, h6 {
+            font-size: 23px;
+            font-family: $font-poppins;
         }
     }
 
@@ -96,6 +115,22 @@
     .content-post {
         width: calc(100% - 300px);
         margin-left: 150px;
+
+        p {
+            font-size: 23px;
+        }
+
+        h2 {
+            font-size: 35px;
+        }
+
+        h3 {
+            font-size: 30px;
+        }
+
+        h4, h5, h6 {
+            font-size: 25px;
+        }
     }
 
     .date {

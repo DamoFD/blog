@@ -6,6 +6,7 @@
               class="grid-img"
               src="<?=ROOT?>/assets/images/white-pic-drinking.webp"
               alt="white silhouette drinking coffee"
+              loading="lazy"
             />
           </div>
           <div id="about" class="about-container">
@@ -30,13 +31,13 @@
             </p>
             <div class="icons">
               <div class="slide-up offset-600 icon-container">
-                <img class="bounce" src="<?=ROOT?>/assets/svg/repair.svg" alt="repair" />
+                <img class="bounce" src="<?=ROOT?>/assets/svg/repair.svg" alt="repair" loading="lazy" />
                 <h3 class="font-sans color-secondary icon-text">
                   Problem Solving
                 </h3>
               </div>
               <div class="slide-up offset-600 icon-container">
-                <img class="bounce" src="<?=ROOT?>/assets/svg/team.svg" alt="team" />
+                <img class="bounce" src="<?=ROOT?>/assets/svg/team.svg" alt="team" loading="lazy" />
                 <h3 class="font-sans color-secondary icon-text">Team Collab</h3>
               </div>
             </div>
