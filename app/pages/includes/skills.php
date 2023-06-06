@@ -10,7 +10,7 @@
           </div>
           <div class="grid">
             <div class="slide-up grid-item">
-              <img src="<?=ROOT?>/assets/svg/html.svg" />
+              <img src="<?=ROOT?>/assets/svg/html.svg" alt="html" />
               <h3
                 class="font-roboto font-size-small color-secondary grid-item-text"
               >
@@ -18,7 +18,7 @@
               </h3>
             </div>
             <div class="slide-up grid-item">
-              <img src="<?=ROOT?>/assets/svg/css.svg" />
+              <img src="<?=ROOT?>/assets/svg/css.svg" alt="css" />
               <h3
                 class="font-roboto font-size-small color-secondary grid-item-text"
               >
@@ -26,7 +26,7 @@
               </h3>
             </div>
             <div class="slide-up grid-item">
-              <img src="<?=ROOT?>/assets/svg/javascript.svg" />
+              <img src="<?=ROOT?>/assets/svg/javascript.svg" alt="javascript" />
               <h3
                 class="font-roboto font-size-small color-secondary grid-item-text"
               >
@@ -34,7 +34,7 @@
               </h3>
             </div>
             <div class="slide-up grid-item">
-              <img src="<?=ROOT?>/assets/svg/apache.svg" />
+              <img src="<?=ROOT?>/assets/svg/apache.svg" alt="apache" />
               <h3
                 class="font-roboto font-size-small color-secondary grid-item-text"
               >
@@ -42,7 +42,7 @@
               </h3>
             </div>
             <div class="slide-up grid-item">
-              <img src="<?=ROOT?>/assets/svg/tailwind.svg" />
+              <img src="<?=ROOT?>/assets/svg/tailwind.svg" alt="tailwind" />
               <h3
                 class="font-roboto font-size-small color-secondary grid-item-text"
               >
@@ -50,7 +50,7 @@
               </h3>
             </div>
             <div class="slide-up grid-item">
-              <img src="<?=ROOT?>/assets/svg/github-grid.svg" />
+              <img src="<?=ROOT?>/assets/svg/github-grid.svg" alt="github" />
               <h3
                 class="font-roboto font-size-small color-secondary grid-item-text"
               >
@@ -58,7 +58,7 @@
               </h3>
             </div>
             <div class="slide-up grid-item">
-              <img src="<?=ROOT?>/assets/svg/git.svg" />
+              <img src="<?=ROOT?>/assets/svg/git.svg" alt="git" />
               <h3
                 class="font-roboto font-size-small color-secondary grid-item-text"
               >
@@ -66,7 +66,7 @@
               </h3>
             </div>
             <div class="slide-up grid-item">
-              <img src="<?=ROOT?>/assets/svg/figma.svg" />
+              <img src="<?=ROOT?>/assets/svg/figma.svg" alt="figma" />
               <h3
                 class="font-roboto font-size-small color-secondary grid-item-text"
               >
@@ -74,7 +74,7 @@
               </h3>
             </div>
             <div class="slide-up grid-item">
-              <img src="./assets/svg/php.svg" />
+              <img src="./assets/svg/php.svg" alt="php" />
               <h3
                 class="font-roboto font-size-small color-secondary grid-item-text"
               >
@@ -82,7 +82,7 @@
               </h3>
             </div>
             <div class="slide-up grid-item">
-              <img src="./assets/svg/mysql.svg" />
+              <img src="./assets/svg/mysql.svg" alt="mysql" />
               <h3
                 class="font-roboto font-size-small color-secondary grid-item-text"
               >
@@ -90,7 +90,7 @@
               </h3>
             </div>
             <div class="slide-up grid-item">
-              <img src="./assets/svg/sass.svg" />
+              <img src="./assets/svg/sass.svg" alt="sass" />
               <h3
                 class="font-roboto font-size-small color-secondary grid-item-text"
               >
@@ -98,7 +98,7 @@
               </h3>
             </div>
             <div class="slide-up grid-item">
-              <img src="./assets/svg/laravel.svg" />
+              <img src="./assets/svg/laravel.svg" alt="laravel" />
               <h3
                 class="font-roboto font-size-small color-secondary grid-item-text"
               >
@@ -106,7 +106,7 @@
               </h3>
             </div>
             <div class="slide-up grid-item">
-              <img src="./assets/svg/jquery.svg" />
+              <img src="./assets/svg/jquery.svg" alt="jquery" />
               <h3
                 class="font-roboto font-size-small color-secondary grid-item-text"
               >
@@ -114,7 +114,7 @@
               </h3>
             </div>
             <div class="slide-up grid-item">
-              <img src="./assets/svg/wordpress.svg" />
+              <img src="./assets/svg/wordpress.svg" alt="wordpress" />
               <h3
                 class="font-roboto font-size-small color-secondary grid-item-text"
               >
@@ -122,7 +122,7 @@
               </h3>
             </div>
             <div class="slide-up grid-item">
-              <img src="./assets/svg/vscode.svg" />
+              <img src="./assets/svg/vscode.svg" alt="vscode" />
               <h3
                 class="font-roboto font-size-small color-secondary grid-item-text"
               >
