@@ -18,10 +18,10 @@
     </div>
     <div class="slide-up offset-900 social-container">
       <a href="https://github.com/DamoFD" target="_blank">
-        <img class="social-icon bounce" src="<?= ROOT ?>/assets/svg/github.svg" />
+        <img class="social-icon bounce" src="<?= ROOT ?>/assets/svg/github.svg" alt="github" />
       </a>
       <a href="https://www.linkedin.com/in/damion-voshall/" target="_blank">
-        <img class="social-icon bounce" src="<?= ROOT ?>/assets/svg/linkedin.svg" />
+        <img class="social-icon bounce" src="<?= ROOT ?>/assets/svg/linkedin.svg" alt="linkedin" />
       </a>
     </div>
   </div>
