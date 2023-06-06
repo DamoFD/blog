@@ -316,6 +316,7 @@ a {
   height: calc(100vh - 84px);
   margin-top: 84px;
   /* Mobile-First */
+  /* Hero Image Resize */
   /* Desktop */
   /* Tablet */
   /* Sideways Mobile */
@@ -323,8 +324,8 @@ a {
 }
 #hero .hero-img {
   position: absolute;
-  background-image: url(../images/hero-photo.webp);
-  background-position: -550px center;
+  background-image: url(../images/hero-photo-mobile.webp);
+  background-position: left center;
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -379,6 +380,11 @@ a {
   width: 55px;
   height: 55px;
   margin: 40px 20px;
+}
+@media only screen and (min-width: 800px) {
+  #hero .hero-img {
+    background-image: url(../images/hero-photo.webp);
+  }
 }
 @media only screen and (min-width: 900px) {
   #hero .hero-content-container {
