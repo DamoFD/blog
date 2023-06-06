@@ -13,7 +13,7 @@
       websites and applications.
     </p>
     <div class="slide-up offset-600 btn-container">
-      <a class="font-roboto font-size-small color-black-2 color-primary-bg btn bounce">Resume</a>
+      <a href="<?=ROOT?>/resume" class="font-roboto font-size-small color-black-2 color-primary-bg btn bounce">Resume</a>
       <a href="<?= ROOT ?>/contact" class="font-roboto font-size-small color-black-2 color-primary-bg btn bounce">Contact</a>
     </div>
     <div class="slide-up offset-900 social-container">

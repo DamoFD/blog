@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore the portfolio of Damion Voshall, a full-stack developer specializing in PHP, MySQL, and SASS. Discover a dynamic CMS site showcasing innovative projects, honed skills, and a unique blend of experiences.">
+
 
     <?php if(empty($url[1]) && empty($url[2])) : ?>
         <!-- Page Meta Data -->
