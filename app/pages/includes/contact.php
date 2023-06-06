@@ -24,7 +24,7 @@ include('../app/core/send-email.php');
       </div>
       <div class="slide-up offset-300 icon-container">
         <a href="tel:775-230-7383">
-          <img class="bounce" src="<?= ROOT ?>/assets/svg/phone.svg" />
+          <img class="bounce" src="<?= ROOT ?>/assets/svg/phone.svg" alt="phone" />
         </a>
         <a href="tel:775-230-7383">
           <div class="icon-text">
@@ -35,7 +35,7 @@ include('../app/core/send-email.php');
       </div>
       <div class="slide-up offset-300 icon-container">
         <a href="mailto: contact@damionvoshall.com">
-          <img class="bounce" src="<?= ROOT ?>/assets/svg/email.svg" />
+          <img class="bounce" src="<?= ROOT ?>/assets/svg/email.svg" alt="email" />
         </a>
         <a href="mailto: contact@damionvoshall.com">
           <div class="icon-text">
@@ -48,10 +48,10 @@ include('../app/core/send-email.php');
       </div>
       <div class="slide-up offset-600 social-container">
         <a href="https://github.com/DamoFD" target="_blank">
-          <img class="bounce" src="<?= ROOT ?>/assets/svg/github.svg" />
+          <img class="bounce" src="<?= ROOT ?>/assets/svg/github.svg" alt="github" />
         </a>
         <a href="https://www.linkedin.com/in/damion-voshall/" target="_blank">
-          <img class="bounce" src="<?= ROOT ?>/assets/svg/linkedin.svg" />
+          <img class="bounce" src="<?= ROOT ?>/assets/svg/linkedin.svg" alt="linkedin" />
         </a>
       </div>
     </div>
