@@ -27,7 +27,7 @@
           </div>
           <div class="cards">
             <div class="slide-up card-container bounce">
-              <img class="card-icon" src="<?=ROOT?>/assets/svg/devices.svg" />
+              <img class="card-icon" src="<?=ROOT?>/assets/svg/devices.svg" alt="devices" />
               <h3 class="color-secondary font-poppins font-size-header">
                 <span class="color-primary">R</span>esponsive
               </h3>
@@ -37,7 +37,7 @@
               </p>
             </div>
             <div class="slide-up card-container bounce">
-              <img class="card-icon" src="<?=ROOT?>/assets/svg/maintainable.svg" />
+              <img class="card-icon" src="<?=ROOT?>/assets/svg/maintainable.svg" alt="maintainable" />
               <h3 class="color-secondary font-poppins font-size-header">
                 <span class="color-primary">M</span>aintainable
               </h3>
@@ -47,7 +47,7 @@
               </p>
             </div>
             <div class="slide-up card-container bounce">
-              <img class="card-icon" src="<?=ROOT?>/assets/svg/gears.svg" />
+              <img class="card-icon" src="<?=ROOT?>/assets/svg/gears.svg" alt="gears" />
               <h3 class="color-secondary font-poppins font-size-header">
                 <span class="color-primary">P</span>erformance
               </h3>
@@ -57,7 +57,7 @@
               </p>
             </div>
             <div class="slide-up card-container bounce">
-              <img class="card-icon" src="<?=ROOT?>/assets/svg/secure.svg" />
+              <img class="card-icon" src="<?=ROOT?>/assets/svg/secure.svg" alt="security" />
               <h3 class="color-secondary font-poppins font-size-header">
                 <span class="color-primary">S</span>ecure
               </h3>
